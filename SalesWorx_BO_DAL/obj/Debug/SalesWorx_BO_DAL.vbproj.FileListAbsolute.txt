@@ -1,0 +1,72 @@
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbprojResolveAssemblyReference.cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbprojResolveAssemblyReference.cache

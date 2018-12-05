@@ -1,0 +1,1029 @@
+﻿<UserRights LastPageID="P231" LastMenuID="M7" LastHHPageID="HP16" LastHHMenuID="HM2">
+
+  <Menu id="M1" type="BackOffice">
+
+    <Title>Main</Title>
+
+    <Pages>
+
+      <Page id="P78" asp="Welcome.aspx" gid="">
+
+        <Title>Welcome</Title>
+
+      </Page>
+
+      
+      <Page id="P56" asp="AdminAppControl.aspx" gid="">
+
+        <Title>Application Control</Title>
+
+      </Page>
+
+      <Page id="P80" asp="CurrencyCode.aspx" gid="">
+
+        <Title>Currency Management</Title>
+
+      </Page>
+
+      <Page id="P84" asp="ReasonCodes.aspx" gid="">
+
+        <Title>Reason Code Management</Title>
+
+      </Page>
+
+      <Page id="P92" asp="DivisionalConfiguration.aspx" gid="">
+
+        <Title>Sales Org Configuration</Title>
+
+      </Page>
+		<Page id="P87" asp="Dashboard.aspx" gid="">
+
+			<Title>Dashboard</Title>
+
+		</Page>
+		<Page id="P217" asp="VanToOrgAndSalesMan.aspx" gid="">
+
+			<Title>Organization Setup</Title>
+
+		</Page>
+		
+    </Pages>
+
+  </Menu>
+
+  <Menu id="M2" type="BackOffice">
+
+    <Title>Call Planning</Title>
+
+    <Pages>      
+
+      <Page id="P65" asp="DefaultPlan.aspx" gid="">
+
+        <Title>Create Default Plan</Title>
+
+      </Page>
+
+      <Page id="P82" asp="ImportRoutePlan.aspx" gid="">
+
+        <Title>Import Route Plan</Title>
+
+      </Page>
+
+      <Page id="P69" asp="PlansForApproval.aspx" gid="">
+
+        <Title>Approve Route Plan</Title>
+
+      </Page>
+
+      <Page id="P66" asp="CreateRoutePlan.aspx" gid="">
+
+        <Title>Create Route Plan</Title>
+
+      </Page>
+
+      <Page id="P67" asp="ModDelRoutePlan.aspx" gid="">
+
+        <Title>Edit/Delete Route Plan</Title>
+
+      </Page>
+
+      <Page id="P74" asp="CopyRoutePlan.aspx" gid="">
+
+        <Title>Copy Route Plan</Title>
+
+      </Page>
+
+      <Page id="P75" asp="CopyRoutePlanByWeekdays.aspx" gid="">
+
+        <Title>Copy Route Plan By Week Days</Title>
+
+      </Page>
+
+      <!--Page id="P68" asp="ApproveRoutePlan.aspx" gid="">
+
+        <Title>Approve Route Plan</Title>
+
+      </Page-->
+
+      <Page id="P70" asp="AdminMsg.aspx" gid="">
+
+        <Title>Send Message</Title>
+
+      </Page>
+
+      <Page id="P88" asp="IncomingMsg.aspx" gid="">
+
+        <Title>Incoming Messages</Title>
+
+      </Page>
+
+      <Page id="P71" asp="ReviewMsg.aspx" gid="">
+
+        <Title>Message Status</Title>
+
+      </Page>
+
+    </Pages>
+
+  </Menu>
+
+  <Menu id="M3" type="BackOffice">
+
+    <Title>Product Management</Title>
+
+    <Pages>
+
+      <Page id="P8" asp="AdminMSL.aspx" gid="">
+
+        <Title>MSL Management</Title>
+
+      </Page>
+
+		<Page id="P218" asp="Customer-Product-Code.aspx" gid="">
+
+			<Title>Customer Product Code</Title>
+
+		</Page>
+      <Page id="P220" asp="BonusDefinition.aspx" gid="">
+
+        <Title>Bonus Definition</Title>
+
+      </Page>
+      <Page id="P222" asp="ImportBonusRules.aspx" gid="">
+
+        <Title>Import Bonus Rules</Title>
+
+      </Page>
+      <Page id="P221" asp="AdminBonusAssortment.aspx" gid="">
+
+        <Title>Bonus Assortment Plan Listing</Title>
+
+      </Page>
+		<Page id="P219" asp="StockRequisition.aspx" gid="">
+
+			<Title>Stock Requisition</Title>
+
+		</Page>
+
+      <!--<Page id="P9" asp="AdminFSRProdList.aspx" gid="">
+
+        <Title>Assign Products to FSRs</Title>
+
+      </Page>
+
+      <Page id="P10" asp="AdminTargetSales.aspx" gid="">
+
+        <Title>Set FSR Sales Target</Title>
+
+      </Page>
+
+      <Page id="P72" asp="AdminCatProdList.aspx" gid="">
+
+        <Title>Create Product Groups</Title>
+
+      </Page>
+
+      <Page id="P73" asp="AdminFSRProductGroups.aspx" gid="">
+
+        <Title>Assign Product Group to Salesperson</Title>
+
+      </Page>
+
+      <Page id="P77" asp="AdminTargetSalesByBrand.aspx" gid="">
+
+        <Title>Set FSR Sales Target By Brand (Skincare)</Title>
+
+      </Page>
+
+      <Page id="P51" asp="AdminPromoStock.aspx" gid="">
+
+        <Title>Set Promotional Stock</Title>
+
+      </Page>
+
+      <Page id="P54" asp="AdminBNSCustomerTypes.aspx" gid="">
+
+        <Title>Set Bonus Customer Types</Title>
+
+      </Page>
+
+      <Page id="P55" asp="AdminBNSCustExclusion.aspx" gid="">
+
+        <Title>Set Bonus Exclusion List</Title>
+
+      </Page>
+
+      <Page id="P79" asp="AdminIncetivePlanning.aspx" gid="">
+
+        <Title>Incentive Planning</Title>
+
+      </Page>-->
+
+     
+
+    </Pages>
+
+  </Menu>
+
+  <Menu id="M4" type="BackOffice">
+
+    <Title>Approval</Title>
+
+    <Pages>
+
+      <Page id="P11" asp="CollectionListing.aspx" gid="">
+
+        <Title>Held PDC</Title>
+
+      </Page>
+
+      <!--Page id="P43" asp="VanRequisitions.aspx" gid="">
+
+        <Title>Open Van Requisitions</Title>
+
+      </Page-->
+
+  </Pages>
+
+  </Menu>
+
+  <Menu id="M5" type="BackOffice" cpoint="CP4">
+
+    <Title>Survey</Title>
+
+    <Pages>
+
+      <Page id="P12" asp="AdminSurvey.aspx" gid="">
+
+        <Title>Manage Survey</Title>
+
+      </Page>
+
+      <Page id="P13" asp="AdminSurveyQues.aspx" gid="">
+
+        <Title>Survey Questions</Title>
+
+      </Page>
+
+      <Page id="P14" asp="AdminSurveyResp.aspx" gid="">
+
+        <Title>Survey Responses</Title>
+
+      </Page>
+
+      <Page id="P50" asp="AdminSurveyFSRCustomers.aspx" gid="">
+
+        <Title>Assign Customers to Van for Survey</Title>
+
+      </Page>
+      <Page id="P97" asp="EditCashVanAudit.aspx" gid="">
+
+        <Title>Modify Cash Van Audit Survey</Title>
+
+      </Page>
+    </Pages>
+
+  </Menu>
+
+
+
+  <Menu id="M7" type="BackOffice">
+
+    <Title>Reports</Title>
+
+    <Pages>
+      <!--<Page id="P18" asp="CustomerListing.aspx" gid="Customers">
+        <Title>Customer List</Title>
+      </Page>-->
+	  <!--<Page id="P89" asp="CustomerVisits.aspx" gid="Customers">
+		<Title>Customer Visits</Title>
+	  </Page>-->
+	  <!--<Page id="P90" asp="CustomerVisitDetails.aspx" gid="Customers">
+		<Title>Visit Details</Title>
+	  </Page>-->
+	  <!--<Page id="P96" asp="DistributionCheckList.aspx" gid="Customers">
+		<Title>Distribution Checks</Title>
+	  </Page>		
+	  <Page id="P91" asp="Orders.aspx" gid="Visits">
+		<Title>Orders</Title>
+	  </Page>-->
+		
+      <!--<Page id="P31" asp="RepCustomerListFSR.aspx" gid="Customers">
+
+        <Title>Customer List (FSR)</Title>
+
+      </Page>
+
+      <Page id="P63" asp="RepCustomerShipAddList.aspx" gid="Customers">
+
+        <Title>Customer List [By Ship-To]</Title>
+
+      </Page>
+
+      <Page id="P64" asp="RepCustomerShipAddListFSR.aspx" gid="Customers">
+
+        <Title>Customer List [By Ship-To] (FSR)</Title>
+
+      </Page>
+
+      <Page id="P47" asp="RepCustomerSalesHistory.aspx" gid="Customers">
+
+        <Title>Customer Sales History</Title>
+
+      </Page>
+
+      <Page id="P52" asp="RepCollections.aspx" gid="Customers">
+
+        <Title>Collections</Title>
+
+      </Page>
+
+      <Page id="P53" asp="RepCollectionsFSR.aspx" gid="Customers">
+
+        <Title>Collections (FSR)</Title>
+
+      </Page>-->
+
+      <!--<Page id="P32" asp="RepProductListFSR.aspx" gid="Products">
+
+        <Title>Product List (FSR)</Title>
+
+      </Page>-->
+	<!--<Page id="P94" asp="CollectionListingAll.aspx" gid="Collection">
+
+		<Title>All Collection</Title>
+
+	</Page>-->
+      <!--<Page id="P19" asp="ProductListing.aspx" gid="Products">
+
+        <Title>Product List</Title>
+
+      </Page>-->
+
+      <!--<Page id="P45" asp="RepProductAchievement.aspx" gid="Products">
+
+        <Title>Product Achievement</Title>
+
+      </Page>
+
+      <Page id="P46" asp="RepProductHistory.aspx" gid="Products">
+
+        <Title>Product History</Title>
+
+      </Page>-->
+
+      <!--<Page id="P81" asp="PriceListing.aspx" gid="Price">
+
+        <Title>Price List</Title>
+
+      </Page>-->
+
+      <Page id="P200" asp="RepPriceListing.aspx" gid="Price">
+
+        <Title>Price Listing</Title>
+
+      </Page>
+
+      <Page id="P201" asp="RepProductListing.aspx" gid="Products">
+
+        <Title>Product Listing</Title>
+
+      </Page>
+      <Page id="P223" asp="RepOutletSKUwiseSalesReturn.aspx" gid="Products">
+
+        <Title>Outletwise - SKU wise Sales / Returns</Title>
+
+      </Page>
+      <Page id="P225" asp="RepOutletwiseSalesReturns.aspx" gid="Products">
+
+        <Title>Outletwise - Sales/Returns </Title>
+
+      </Page>
+      <Page id="P226" asp="RepSKUwiseSalesReturnsValue.aspx" gid="Products">
+
+        <Title>SKU wise Sales / Returns Quantity / Value</Title>
+
+      </Page>
+		
+      <Page id="P227" asp="RepOutletSKUwiseSalesReturnAlert.aspx" gid="Products">
+
+        <Title>Outletwise - SKU wise Returns</Title>
+
+      </Page>
+
+      <Page id="P230" asp="RepSalesmanOutletwiseSaleReturn.aspx" gid="Products">
+
+        <Title>Salesman - Outletwise Sales/Return</Title>
+
+      </Page>
+	
+      <Page id="P224" asp="RepWarehousePurchase.aspx" gid="Products">
+
+			<Title>Warehouse Purchase</Title>
+
+		</Page>
+      <Page id="P202" asp="RepCustomerListing.aspx" gid="Customers">
+
+        <Title>Customer Listing</Title>
+
+      </Page>
+
+      <Page id="P203" asp="RepCollectionListing.aspx" gid="Collection">
+
+        <Title>Collection Listing</Title>
+
+      </Page>
+
+    
+
+      <Page id="P206" asp="RepCustomerVisits.aspx" gid="Visits">
+
+        <Title>Customer Visits</Title>
+
+      </Page>
+	  <Page id="P214" asp="RepRouteMaster.aspx" gid="Visits">
+
+			<Title>Route  Master</Title>
+
+		</Page>
+		<Page id="P216" asp="RepDailyReport.aspx" gid="Visits">
+
+			<Title>Daily Report</Title>
+
+		</Page>
+      <Page id="P213" asp="RepExportCustomerVisits.aspx" gid="Visits">
+
+        <Title>Export Customer Visits</Title>
+
+      </Page>
+      <Page id="P207" asp="RepDistributionCheck.aspx" gid="Visits">
+
+        <Title>Distribution Check List</Title>
+
+      </Page>
+
+      <Page id="P204" asp="RepOrders.aspx" gid="Visits">
+
+        <Title>Orders</Title>
+
+      </Page>
+      <Page id="P205" asp="RepReturns.aspx" gid="Visits">
+
+        <Title>Credit Notes</Title>
+
+      </Page>
+
+      <Page id="P212" asp="RepInvoiceDiscount.aspx" gid="Visits">
+
+        <Title>Invoice Discount Details</Title>
+
+      </Page>
+
+
+      <Page id="P208" asp="RepCustomerSurvey.aspx" gid="Survey">
+
+        <Title>Customer Survey</Title>
+
+      </Page>
+
+      <Page id="P209" asp="RepAuditSurvey.aspx" gid="Survey">
+
+        <Title>Audit Survey</Title>
+
+      </Page>
+
+      <Page id="P210" asp="RepCashVanAudit.aspx" gid="Survey">
+
+        <Title>Cash Van Audit Survey</Title>
+
+      </Page>
+
+     
+      <Page id="P211" asp="RepSurveyStatistics.aspx" gid="Survey">
+
+        <Title>Survey Statistics</Title>
+
+      </Page>
+
+      <!--<Page id="P21" asp="CustomerVisits.aspx" gid="Visits">
+
+        <Title>Customer Visits</Title>
+
+      </Page>
+      <Page id="P96" asp="DistributionCheckList.aspx" gid="Visits">
+		<Title>Distribution Checks</Title>
+	  </Page>		
+	  <Page id="P91" asp="Orders.aspx" gid="Visits">
+		<Title>Orders</Title>
+	  </Page>
+      <Page id="P93" asp="OrdersReturn.aspx" gid="Visits">
+
+        <Title>Credit Notes</Title>
+
+      </Page>-->
+      <!--<Page id="P22" asp="CustomerVisitDetails.aspx" gid="Visits">
+
+        <Title>Visit Details</Title>
+
+      </Page>-->
+      
+      <!--<Page id="P21" asp="RepDailyVisits.aspx" gid="Visits">
+
+        <Title>Daily Visits</Title>
+
+      </Page>
+
+      <Page id="P22" asp="RepAllVisits.aspx" gid="Visits">
+
+        <Title>Customer Visits</Title>
+
+      </Page>
+
+      <Page id="P33" asp="RepAllVisitsFSR.aspx" gid="Visits">
+
+        <Title>Customer Visits (FSR)</Title>
+
+      </Page>
+
+      <Page id="P38" asp="RepAverageVisitTime.aspx" gid="Visits">
+
+        <Title>Average Visit Time</Title>
+
+      </Page>
+
+      <Page id="P61" asp="RepActiveCalls.aspx" gid="Visits">
+
+        <Title>Active Calls</Title>
+
+      </Page>
+
+      <Page id="P76" asp="VisitTracker.aspx" gid="Visits">
+
+        <Title>Skincare Customer Visits</Title>
+
+      </Page>
+
+      <Page id="P62" asp="RepVisitsScannedVsNonScanned.aspx" gid="Visits">
+
+        <Title>Scanned vs Non-Scanned Visits</Title>
+
+      </Page>
+
+      <Page id="P23" asp="RepMonthlyCoverage.aspx" gid="Coverage">
+
+        <Title>Monthly Coverage</Title>
+
+      </Page>
+
+      <Page id="P40" asp="RepMonthlyCoverageFSR.aspx" gid="Coverage">
+
+        <Title>Monthly Coverage (FSR)</Title>
+
+      </Page>
+
+      <Page id="P59" asp="RepPlannedCoverage.aspx" gid="Coverage">
+
+        <Title>Planned Coverage</Title>
+
+      </Page>
+
+      <Page id="P60" asp="RepPlannedCoverageFSR.aspx" gid="Coverage">
+
+        <Title>Planned Coverage (FSR)</Title>
+
+      </Page>
+
+      <Page id="P24" asp="RepWeeklyCoverageTvsA.aspx" gid="Coverage">
+
+        <Title>Weekly Coverage</Title>
+
+      </Page>
+
+      <Page id="P37" asp="RepCoverageByCustomerType.aspx" gid="Coverage">
+
+        <Title>Coverage By Customer Type</Title>
+
+      </Page>
+
+      <Page id="P39" asp="RepSalesStaffCoverage.aspx" gid="Coverage">
+
+        <Title>Sales Staff Coverage</Title>
+
+      </Page>
+
+      <Page id="P97" asp="RepDistributionCheck.aspx" gid="">
+
+        <Title>Distribution Check</Title>
+
+      </Page>-->
+
+      
+      <!--<Page id="P28" asp="Orders.aspx" gid="Orders">
+
+        <Title>Orders</Title>
+
+      </Page>
+		<Page id="P93" asp="OrdersReturn.aspx" gid="Orders">
+
+			<Title>Orders Return</Title>
+
+		</Page>-->
+      <!--Page id="P95" asp="VanRequisitionsListing.aspx" gid="Requisitions">
+
+			<Title>All Van Requisitions</Title>
+
+		</Page-->
+     
+		<!--<Page id="P97" asp="SurveyList.aspx" gid="Survey">
+
+			<Title>Customer Survey</Title>
+
+		</Page>
+      <Page id="P120" asp="AuditSurvey.aspx" gid="Survey">
+
+        <Title>Audit Survey</Title>
+
+      </Page>
+		<Page id="P98" asp="SurveyStatistics.aspx" gid="Survey">
+
+			<Title>Survey Statistics</Title>
+
+		</Page>
+      <Page id="P99" asp="CashVanAuditReport.aspx" gid="Survey">
+
+        <Title>Cash Van Audit Report</Title>
+
+      </Page>-->
+      <Page id="P100" asp="ViewReports.aspx?id=QAKqWJflGlo4kdhwhVHDs+D/razpqXTJsIE54d99IKdpFnEuX76YfA==&amp;title=Article Movement " gid="Summary Reports">
+        <Title>Article Movement</Title>
+      </Page>
+      <Page id="P116" asp="ViewReports.aspx?id=RxqXldN1lmS6o1zVYEbIen+bfirrVks0qC0qCksQsYhoE9DvGpxpkA==&amp;title=Coverage Report " gid="Summary Reports">
+        <Title>Coverage Report</Title>
+      </Page>
+		<Page id="P215" asp="RepRoutCoverage.aspx" gid="Summary Reports">
+			<Title>Route Coverage</Title>
+		</Page>	
+      <Page id="P101" asp="ViewReports.aspx?id=ThgugXwI4Gs4x5xpbjvKW0lwJipP1pAXi4kJtNlpPeS0kihKNJzJKQ==&amp;title=Daily Coverage Report " gid="Summary Reports">
+        <Title>Daily Coverage Report</Title>
+      </Page>
+      <Page id="P102" asp="ViewReports.aspx?id=Jq/qXybprTflCNco44XRdjHUmPuHY/xQQSd8HyapvA8=&amp;title=Device Sync Log " gid="Summary Reports">
+        <Title>Device Sync Log</Title>
+      </Page>
+      <Page id="P103" asp="ViewReports.aspx?id=5aIbsrXF/FAHQrvx8S1uDeDp1ougDRls3CrXnNzzmGM=&amp;title=Goods Receipt Report " gid="Summary Reports">
+        <Title>Goods Receipt Report</Title>
+      </Page>
+      <Page id="P104" asp="ViewReports.aspx?id=RMZublV2iUZueZyFTxl0wqvkSgXRsxYgZuq2NTiVHjUceWso8fze6g==&amp;title=Journey Plan Adherance " gid="Summary Reports">
+      <Title>Journey Plan Adherance</Title>
+      </Page>
+      <Page id="P105" asp="ViewReports.aspx?id=D3qW7St5qx5jvhVtUndcP7QBN4jiWQDQZPBQtvcsCX8=&amp;title=Log Report " gid="Summary Reports">
+        <Title>Log Report</Title>
+      </Page>
+      <Page id="P106" asp="ViewReports.aspx?id=FmG8ntahzMb+sZU7DkrVXUO9+RXQR2e5kBqJSUVYYiHu1QRR/Jneg4qwvGp4QAM3&amp;title=Payment Received Summary " gid="Summary Reports">
+        <Title>Payment Received Summary</Title>
+      </Page>
+      <!--<Page id="P107" asp="ViewReports.aspx?id=RLsmJFM+gecrHDu9Z15UkVMoAR7JyUluB3hazG9rTTFDgGBLe2elC/bCGwaalAn/&amp;title=Product Availability Report " gid="Summary Reports">
+        <Title>Product Availability Report</Title>
+      </Page>-->
+      <Page id="P107" asp="ProductAvailabilityReport.aspx" gid="Summary Reports">
+        <Title>Product Availability Report</Title>
+      </Page>
+          
+      <Page id="P110" asp="ViewReports.aspx?id=5Oi9f0aNJ9niQeJH/9hVfJrMelE/zoo0eeKEsUxS448=&amp;title=Sales By Agency " gid="Summary Reports">
+        <Title>Sales By Agency</Title>
+      </Page>
+      <Page id="P111" asp="ViewReports.aspx?id=ewWE4cXLHHQBKGeanHb0hb3RKMZpzccNTR6QQGCCRSg=&amp;title=Sales By Van " gid="Summary Reports">
+        <Title>Sales By Van</Title>
+      </Page>
+      <Page id="P122" asp="ViewReports.aspx?id=ytaCeST+1U25g1lCXjH/Fyp8OcVAd5KceTWU2v3yTsqLVvk8HBoEIg==&amp;title=Sales By Van/Agency(Qty) " gid="Summary Reports">
+        <Title>Sales By Van/Agency(Qty)</Title>
+      </Page>
+      <Page id="P127" asp="ViewReports.aspx?id=99HdtimYYKXLe8kml27TaN9wAttXBkTbrqSPzPLPjxrmmCZtN1QdfA==&amp;title=Sales By Van/Agency " gid="Summary Reports">
+        <Title>Sales By Van/Agency</Title>
+      </Page>
+      <Page id="P112" asp="ViewReports.aspx?id=msMS3kUf2eP8ZbB10KhaDcrpZVH+ohqVI11V1b+9tzw=&amp;title=Sales Summary " gid="Summary Reports">
+        <Title>Sales Summary</Title>
+      </Page>
+		<Page id="P228" asp="RepSales_WeeklyMonthly.aspx" gid="Summary Reports">
+
+			<Title>Outletwise - Weekly/Monthly Sales </Title>
+
+		</Page>
+		<Page id="P229" asp="RepSKUwiseSales.aspx" gid="Summary Reports">
+
+			<Title>SKU wise Sales</Title>
+
+		</Page>
+		<Page id="P231" asp="RepPrincipal-SalesManWiseSales.aspx" gid="Summary Reports">
+
+			<Title>Sales By Principal/Sales Man </Title>
+
+		</Page>
+      <Page id="P114" asp="ViewReports.aspx?id=03QrUZsaIY8FRdj59uQ2a7epqH3O5mIXw/ItK+uqL8QBUqM9VAsElg==&amp;title=Van Stock Summary " gid="Summary Reports">
+        <Title>Van Stock Summary</Title>
+      </Page>
+
+      <Page id="P115" asp="ViewReports.aspx?id=PQq26HOxDieQTffaMDCWxMIU3+TVg+eKp/Haw7ngtWoFJsWw4cbp8A==&amp;title=Van Unload Report " gid="Summary Reports">
+        <Title>Van Unload Report</Title>
+      </Page>
+      
+      <Page id="P109" asp="ViewReports.aspx?id=W27J6MJePekkTQbSZfXJpGLUOIsT85eRbDOYfQRgWQ24v8b/STg/DA==&amp;title=Revenue Dispersion " gid="Revenue">
+        <Title>Revenue Dispersion</Title>
+      </Page>
+      <Page id="P113" asp="ViewReports.aspx?id=RnbWUqiY+2MraXlC2QNW8CyhdIsQqPdiByeOGGsXido=&amp;title=SKU Dispersion " gid="Revenue">
+        <Title>SKU Dispersion</Title>
+      </Page>
+      <Page id="P123" asp="ViewReports.aspx?id=uCUqX3sa7GHNE+umMCDGxCfOkjeZYq0YT8v4TtSpbwKOHyoEMcq+Iw==&amp;title=Market Receivables " gid="Revenue">
+        <Title>Market Receivables</Title>
+      </Page>
+      <Page id="P121" asp="ViewReports.aspx?id=FNg+hZoIfzOx/WACssPPYuizVbnMqrEuQylPu90aTIvjxKA6EKCnpg==&amp;title=PDC Receivables " gid="Revenue">
+        <Title>PDC Receivables</Title>
+      </Page>
+      <Page id="P108" asp="ViewReports.aspx?id=HhLq3NFReTTLRL1QZ/PmqTMgOe335UCghPGwdV6QP8w=&amp;title=Receivables for a month " gid="Revenue">
+        <Title>Receivables for a month</Title>
+      </Page>
+      <Page id="P117" asp="ViewReports.aspx?id=vy3/bMY9jIjswXahSOVIZUJZwab8AxYC0adyY+JjJmCxwJWLznyVuw==&amp;title=Productive Calls " gid="Productivity">
+        <Title>Productive Calls</Title>
+      </Page>
+      <Page id="P118" asp="ViewReports.aspx?id=2FTp9CCT7JT680Mg0pGM4ibgMOy02hj7K7oHMlWTbdJCOyIkZDU85qrjuh5urXBi&amp;title=Productivity per MSL Items " gid="Productivity">
+        <Title>Productivity per MSL Items</Title>
+      </Page>
+      <Page id="P119" asp="ViewReports.aspx?id=IgfMhLNVKXpe8m+Cd3EX9dtRLHPloN1ob9CKxcKeSGBJKQUu7Q94Qfjzr2tXCB90&amp;title=Distribution for MSL Items " gid="Productivity">
+        <Title>Distribution for MSL Items</Title>
+      </Page>
+      <Page id="P124" asp="ViewReports.aspx?id=VlIWEg+pHkCgD8FtQKXsEbdlO6SjJg+sb2v4up7O5y8=&amp;title=Held PDCs " gid="Miscellaneous">
+        <Title>Held PDCs</Title>
+      </Page>
+      <Page id="P125" asp="ViewReports.aspx?id=8ILR6/WfQmXOwIwMo+YCK4Jh63H//86+ZFRMPYk/D79s9M9FxBPLaw==&amp;title=Device Ownership Report " gid="Miscellaneous">
+        <Title>Device Ownership Report</Title>
+      </Page>
+      <Page id="P126" asp="ViewReports.aspx?id=3JeZFtyznBJPNKWPSkxjHgzwiemubhh6gXadyKr4VfkVshxrSX4qxQE+f+82xctH&amp;title=Distribution Check Details " gid="Miscellaneous">
+        <Title>Distribution Check Details</Title>
+      </Page>
+      <!--<Page id="P29" asp="RepOrdersAddlBns.aspx" gid="Orders">
+
+        <Title>Orders With Addl. Bonus</Title>
+
+      </Page>
+
+      <Page id="P48" asp="RepOrdersLotsSelected.aspx" gid="Orders">
+
+        <Title>Orders With Lots Selected</Title>
+
+      </Page>
+
+      <Page id="P49" asp="RepOrdersWithoutSignature.aspx" gid="Orders">
+
+        <Title>Orders Without Signature</Title>
+
+      </Page>
+
+      <Page id="P34" asp="RepSurveyStats.aspx" gid="Survey" cpoint="CP4">
+
+        <Title>Survey Statistics</Title>
+
+      </Page>
+
+      <Page id="P35" asp="RepSurveyFSRWise.aspx" gid="Survey" cpoint="CP4">
+
+        <Title>Customers Surveyed</Title>
+
+      </Page>
+
+      <Page id="P36" asp="RepSurveyCustomerWise.aspx" gid="Survey" cpoint="CP4">
+
+        <Title>Surveys</Title>
+
+      </Page>-->
+
+      <!--<Page id="P100" asp="RepCustomerVisits.aspx" gid="Skincare">
+
+        <Title>Customer Visits</Title>
+
+      </Page>
+
+      <Page id="P101" asp="RepTotalHoursPerMonth.aspx" gid="Skincare">
+
+        <Title>Total Hours Per Month</Title>
+
+      </Page>
+
+      <Page id="P102" asp="RepPlannedVsActaulVisits.aspx" gid="Skincare">
+
+        <Title>Planned vs. Actual Visits</Title>
+
+      </Page>
+
+      <Page id="P103" asp="RepDailySales.aspx" gid="Skincare">
+
+        <Title>Daily Sales</Title>
+
+      </Page>
+
+      <Page id="P104" asp="RepTargetAcheivement.aspx" gid="Skincare">
+
+        <Title>Target Achievement</Title>
+
+      </Page>
+
+      <Page id="P105" asp="RepSalesReview.aspx" gid="Skincare">
+
+        <Title>Sales Review</Title>
+
+      </Page>
+
+      <Page id="P106" asp="RepSalesPromoterRoutePlan.aspx" gid="Skincare">
+
+        <Title>Sales Promoter Route Plan</Title>
+
+      </Page>
+
+      <Page id="P107" asp="RepTotalSalesbyPromoter.aspx" gid="Skincare">
+
+        <Title>Total Sales By Promoter</Title>
+
+      </Page>
+
+      <Page id="P108" asp="RepCustomerStocks.aspx" gid="Skincare">
+
+        <Title>Orders - Sell Out</Title>
+
+      </Page>-->
+
+      <!--<Page id="P25" asp="RepDeviceSync.aspx" gid="Miscellaneous">
+
+        <Title>Device Synchronization</Title>
+
+      </Page>
+
+      <Page id="P42" asp="RepFSRSyncStatistics.aspx" gid="Miscellaneous">
+
+        <Title>FSR Sync Statistics</Title>
+
+      </Page>-->
+
+
+      <Page id="P238" asp="RepUserChangLog.aspx" gid="">
+
+        <Title>User Log Report</Title>
+
+      </Page>
+    </Pages>
+
+  </Menu>
+
+  <Menu id="M6" type="BackOffice">
+
+    <Title>User Management</Title>
+
+    <Pages>
+
+      <Page id="P15" asp="ChangePassword.aspx" gid="">
+
+        <Title>Change Password</Title>
+
+      </Page>
+
+      <Page id="P16" asp="ManageUsers.aspx" gid="">
+
+        <Title>Manage Users</Title>
+
+      </Page>
+
+      <Page id="P17" asp="ManageUserTypes.aspx" gid="">
+
+        <Title>Manage User Types</Title>
+
+      </Page>
+
+      <Page id="P83" asp="AreaVanMapping.aspx" gid="">
+
+        <Title>Van Territory Mapping</Title>
+
+      </Page>
+
+      
+		
+    </Pages>
+
+  </Menu>
+
+  <Menu id="HM1" type="Handheld">
+
+    <Title>Optional Modules(HH)</Title>
+
+    <Pages>
+
+      <!--<Page id="HP1" cpoint="CP5">
+
+        <Title>Order Templates</Title>
+
+      </Page>-->
+
+      <Page id="HP2" cpoint="CP3">
+
+        <Title>Take Collections</Title>
+
+      </Page>
+
+      <Page id="HP3" cpoint="CP4">
+
+        <Title>Market Survey</Title>
+
+      </Page>
+
+      <Page id="HP15">
+
+        <Title>Order Taking/Stock Requisitions</Title>
+
+      </Page>
+
+    </Pages>
+
+  </Menu>
+
+  <!--<Menu id="HM2" type="Handheld">
+
+    <Title>Order Taking(HH)</Title>
+
+    <Pages>
+
+      <Page id="HP4" cpoint="CP6">
+
+        <Title>Lot Selection</Title>
+
+      </Page>
+
+      <Page id="HP5" cpoint="CP7">
+
+        <Title>Wholesale order</Title>
+
+      </Page>
+
+      <Page id="HP6" cpoint="CP9">
+
+        <Title>Skip consolidation</Title>
+
+      </Page>
+
+      <Page id="HP7" cpoint="CP11">
+
+        <Title>Allow order date modification</Title>
+
+      </Page>
+
+      <Page id="HP8" cpoint="CP12">
+
+        <Title>Allow request date modification</Title>
+
+      </Page>
+
+      <Page id="HP9" cpoint="CP13">
+
+        <Title>Allow ship date modification</Title>
+
+      </Page>
+
+      <Page id="HP10" cpoint="CP15">
+
+        <Title>Signature capture</Title>
+
+      </Page>
+
+      <Page id="HP11" cpoint="CP24">
+
+        <Title>Transfer orders</Title>
+
+      </Page>
+
+      <Page id="HP12">
+
+        <Title>Excess Bonus</Title>
+
+      </Page>
+
+      <Page id="HP13">
+
+        <Title>Selective Bonus</Title>
+
+      </Page>
+
+      <Page id="HP14">
+
+        <Title>Allow over-stock ordering</Title>
+
+      </Page>
+
+      <Page id="HP16">
+
+        <Title>Allow FOC on walk-in orders</Title>
+
+      </Page>
+
+    </Pages>
+
+  </Menu>-->
+
+</UserRights>
+
+
+

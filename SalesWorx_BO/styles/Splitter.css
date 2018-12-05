@@ -1,0 +1,71 @@
+﻿.contentPaneDecorator * {
+     margin: 0;
+     padding: 0;
+}
+.contentPaneDecorator p {
+     margin-top: 1em;
+}
+.fontSizeSliderDecorator {
+     width: 165px;
+     padding: 25px;
+     float: left;
+}
+.contentPaneDecorator {
+     background: #698ebe;
+}
+.splitterWrapper {
+     width: 640px;
+     height: 500px;
+     margin: 7px;
+}
+.pages {
+     width: 452px;
+     height: 640px;
+     background: #fff;
+     margin: 0 auto 10px;
+     padding: 50px 20px;
+     overflow: hidden;
+}
+.indexes {
+     float: left;
+     list-style: none;
+     cursor: pointer;
+     color: #001119;
+     text-align: center;
+     width: 32px;
+     height: 32px;
+     line-height: 32px;
+     background: url(./img/page_icon.png);
+     _background: url(./img/page_icon.gif); /*IE6*/
+     border: none;
+     font-size: 15px;
+     margin: 9px;
+     _margin-left: 4px; /*IE6*/
+}
+.indexes:hover {
+     color: #0b25d4;
+     background: url(./img/page_icon_hover.png);
+     _background: url(./img/page_icon_hover.gif); /*IE6*/
+     border: 2px solid #39B8E3;
+     border: none;
+}
+.colorPickerWrapper {
+     width: 165px;
+     padding: 20px;
+     float: left;
+}
+.verticalIndexes {
+     width: 50px;
+     _width: 32px; /*IE6*/
+     margin: 0 auto;
+}
+.horizontalIndexes {
+     width: 250px;
+     margin: 0 auto;
+}
+.clear {
+     clear: both;
+     line-height: 1px;
+     margin-top: -1px;
+     list-style: none;
+}

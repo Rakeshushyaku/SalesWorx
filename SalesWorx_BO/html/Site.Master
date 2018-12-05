@@ -1,0 +1,1274 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="SalesWorx_BO.SiteMaster" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder> 
+
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+   <style>
+        /*Chrome hack*/
+body:nth-of-type(1) #MainContent_RVMain > div > div > div
+{
+display: inline-block !important;
+background-color:#ECE9D8;
+}
+/*Chrome hack*/
+body:nth-of-type(1) #MainContent_RVMain > div > div > table
+{
+display: inline-block !important;
+background-color:#ECE9D8;
+}
+.ibeaconlogo{
+    background-image: url("../images/ibeacon.png");
+    background-repeat: no-repeat;
+    background-size: 26px auto;
+    height: 26px;
+    vertical-align: middle !important;
+}
+</style>
+</head>
+
+<body>
+
+    <form runat="server" id="frm">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"  AsyncPostBackTimeOut="36000">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
+                <%--Framework scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+            <%--    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />--%>
+              <%--  <asp:ScriptReference Name="WebFormsBundle" />--%>
+                <%--Site scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        
+        <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        <script src="../assets/js/jquery.scrollbar.min.js" type="text/javascript"></script>
+
+
+      <script src="../assets/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="../assets/js/core.js" type="text/javascript"></script>
+
+
+        <script>
+            function Show() {
+                $('.toggle').show();
+
+
+            }
+        </script>
+
+        <!-- BEGIN HEADER -->
+        <div class="header navbar navbar-inverse ">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="navbar-inner">
+                <div class="header-quick-nav">
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="pull-left">
+                        <ul class="nav quick-section">
+
+                            <li class="quicklinks"><a href="javascript:void(0);" class="" id="layout-condensed-toggle">
+                                <div class="iconset top-menu-toggle-dark"></div>
+                            </a></li>
+
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                    <!-- BEGIN CHAT TOGGLER -->
+                    <div class="pull-right">
+                        <div class="chat-toggler">
+                            <a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom" data-content='' data-toggle="dropdown" data-original-title="Notifications">
+                                <div class="user-details">
+                                    <div class="username"><span class="bold">
+                                        <asp:Label ID="lblLoginUser" runat="server"></asp:Label></span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="nav quick-section ">
+                            <li class="quicklinks"><span class="h-seperate"></span></li>
+                            <li class="quicklinks"><a href="#" id="logout" runat ="server"    title="Logout"><i class="fa fa-power-off"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- END CHAT TOGGLER -->
+                </div>
+                <div class="header-seperation">
+                    <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display: none">
+                        <li class="dropdown"><a id="main-menu-toggle" href="#main-menu" class="">
+                            <div class="iconset top-menu-toggle-white"></div>
+                        </a></li>
+                    </ul>
+                    <!-- BEGIN LOGO -->
+                    <a href="ASRDashboard.aspx" style="text-align: center;" id="dash" runat="server" visible="true">
+
+                        <img  style="width: 100px !important;" width="155" class="logo"  id="ilogodash" runat="server"  />
+
+                    </a>
+                    <a href="Welcome.aspx" style="text-align: center;" id="welcome" runat="server" visible="false">
+
+                        <img  style="width: 100px !important;" width="155" class="logo"    id="ilogoWelcome" runat="server" />
+
+                    </a>
+                    <!-- END LOGO -->
+                </div>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+        <div class="page-container row-fluid">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar" id="main-menu">
+
+
+                <div class="page-sidebar-wrapper scrollbar-inner" id="main-menu-wrapper">
+
+
+                    <asp:Label runat="server" ID="lblrole" Text="Admin" Visible="false"></asp:Label>
+                    <ul id="menu" runat="server">
+
+
+
+                        <li id="Li1" runat="server">
+                            <a href="#" id="M1" runat="server" visible="false"   title="Main"><i class="fa fa-cog"></i>
+                                <span class="title">Main</span></a>
+
+                            <ul id="sm0" class="sub-menu">
+                                 <li><a href="#" id="A1" runat="server"   visible ="false"  title="System Settings">
+                                     <i class="fa fa-file-text"></i><span class="title">System Settings</span></a>
+                                    <ul id="Ul13" class="sub-menu">
+
+
+
+                                       <li id="Li2" runat="server"><a href="~/html/CopyAdminAppControl.aspx" visible="false"
+                                    id="P56" runat="server"   title="Application Control"><i></i>
+                                    <span class="title">Application Control</span></a></li>
+
+                                         <li id="Li3" runat="server"><a href="~/html/ManageAppCodes.aspx" visible="false"
+                                    id="P332" runat="server"   title="Application Control"><i></i>
+                                    <span class="title">Application Codes</span></a></li>
+
+                                 <li id="Li6" runat="server"><a href="~/html/CurrencyCode.aspx" visible="false"
+                                    id="P80" runat="server"   title="Manage Currency"><i></i>
+                                    <span class="title">Manage Currency</span></a></li>
+
+                                        <li id="Li7" runat="server"><a href="~/html/ReasonCodes.aspx" visible="false"
+                                    id="P84" runat="server"   title="Manage Reason Code"><i></i>
+                                    <span class="title">Manage Reason Code</span></a></li>
+
+                                         <li id="Li21" runat="server"><a href="~/html/BankCodes.aspx" visible="false"
+                                    id="P85" runat="server"   title="Manage Bank Code"><i></i>
+                                    <span class="title">Manage Bank Code</span></a></li>
+
+                                        <li id="Li5" runat="server"><a href="~/html/ManageSyncCutOffDate.aspx"  visible="false"
+                                    id="P336" runat="server"   title="Sync Cut Off Date"><i></i>
+                                    <span class="title">Sync Cut Off Date</span></a></li>
+
+                                     <li id="Li26" runat="server"><a href="~/html/ManageDeliveryCalender.aspx"  visible="false"
+                                    id="P81" runat="server"   title="Manage Delivery Calender"><i></i>
+                                    <span class="title">Manage Delivery Calender</span></a></li>
+
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" id="A2" runat="server"   visible ="false"  title="Organization Settings">
+                                     <i class="fa fa-file-text"></i><span class="title">Organization Settings</span></a>
+                                    <ul id="Ul4" class="sub-menu">
+
+                                            
+
+                                         <li id="Li4" runat="server"><a href="~/html/DivisionalConfiguration.aspx" visible="false"
+                                    id="P92" runat="server"   title="Sales Org Configuration"><i></i>
+                                    <span class="title">Sales Org Configuration</span></a></li>
+
+                                       <li id="Li15" runat="server"><a href="~/html/Dashboard.aspx" visible="false"
+                                    id="P87" runat="server"   title="Dashboard"><i></i>
+                                    <span class="title">Dashboard</span></a></li>
+
+                                    
+
+                                     <li id="Li16" runat="server"><a href="~/html/VanToOrgAndSalesMan.aspx" visible="false"
+                                    id="P217" runat="server"   title="Organization Setup"><i></i>
+                                    <span class="title">Organization Setup</span></a></li>
+
+
+                                        <li id="Li17" runat="server"><a href="~/html/AreaVanMapping.aspx" visible="false"
+                                    id="P83" runat="server"   title="Van Territory Mapping"><i></i>
+                                    <span class="title">Van Territory Mapping</span></a></li>
+
+                                            <li id="Li18" runat="server"><a href="~/html/AdminPrintHeaders.aspx" visible="false"
+                                    id="P259" runat="server"   title="Invoice Print Headers"><i></i>
+                                    <span class="title">Invoice Print Headers</span></a></li>
+
+                                          <li id="Li19" runat="server"><a href="~/html/VanDeviceConfig.aspx" visible="false"
+                                    id="P261" runat="server"   title="Van Device Configuration"><i></i>
+                                    <span class="title">Van Device Configuration</span></a></li>
+
+                                         <li id="Li20" runat="server"><a href="~/html/AdminOrgLvlDiscountRule.aspx" visible="false"
+                                    id="P308" runat="server"   title="Org-Level Discount Limits"><i></i>
+                                    <span class="title">Org-Level Discount Limits</span></a></li>
+
+                                        <li id="Li23" runat="server"><a href="~/html/ManageOrganization.aspx" visible="false"
+                                    id="P93" runat="server"   title="Manage Organization"><i></i>
+                                    <span class="title">Manage Organization</span></a></li>
+                                    
+                                     
+                                         <li id="Li24" runat="server"><a href="~/html/ManageVan.aspx" visible="false"
+                                    id="P94" runat="server"   title="Manage VAN"><i></i>
+                                    <span class="title">Manage VAN</span></a></li>
+
+                                    <li id="Li25" runat="server"><a href="~/html/Admin_DistributionCheck_ctl.aspx" visible="false"
+                                    id="P95" runat="server"   title="Distribution Check Control"><i></i>
+                                    <span class="title">Distribution Check Control</span></a></li>
+
+                                          <li id="Li261" runat="server"><a href="~/html/VanUserSyncSetting.aspx" visible="false"
+                                    id="P408" runat="server"   title="User Sync Settings"><i></i>
+                                    <span class="title">User Sync Settings</span></a></li>
+                                    </ul>
+
+                                </li>
+                                
+                                
+
+                                 
+
+                                  <li id="Li13" runat="server"><a href="~/html/AdminBGReports.aspx" visible="false"
+                                    id="P299" runat="server"   title="Manage Back Ground Reports"><i></i>
+                                    <span class="title">Manage Background Reports</span></a></li>
+
+                                  
+                            </ul>
+                        </li>
+
+
+                        <li><a href="#" id="M9" runat="server" visible ="false"   title="Customer Management">
+                            <i class="fa fa-university"></i>
+                            <span class="title">Customer Management</span></a>
+                            <ul id="Ul25" class="sub-menu">
+
+                               <li id="Li9" runat="server"><a href="~/html/AdminSalesDistrict.aspx" visible="false"
+                                    id="P284" runat="server"   title="Manage Sales Distric"><i></i>
+                                    <span class="title">Manage Sales District</span></a></li>
+
+                                        <li id="Li10" runat="server"><a href="~/html/AdminCustomerSegment.aspx" visible="false"
+                                    id="P285" runat="server"   title=">Manage Customer Segment"><i></i>
+                                    <span class="title">Manage Customer Segment</span></a></li>
+
+                                        <li id="Li11" runat="server"><a href="~/html/ListCustomers.aspx" visible="false"
+                                    id="P286" runat="server"   title="Manage Customer"><i></i>
+                                    <span class="title">Manage Customer</span></a></li>
+
+                                 <li id="Li12" runat="server"><a href="~/html/MngLatiLongitude.aspx" visible="false"
+                                    id="P262" runat="server"   title="Manage Geolocation"><i></i>
+                                    <span class="title">Manage Geolocation</span></a></li>
+                                <li id="Li8" runat="server"><a href="~/html/AssignCollectionGroupToFSR.aspx" visible="false"
+                                    id="P402" runat="server"   title="Bill Collector Assignment"><i></i>
+                                    <span class="title">Bill Collector Assignment</span></a></li>
+                                 <li id="Li14" runat="server"><a href="~/html/VanCustomerAssignment.aspx" visible="false"
+                                  id="P387" runat="server" title="Van Customer Assignment">
+                                  <span class="title">Van Customer Assignment</span></a></li>
+                                 <li id="Li22" runat="server"><a href="~/html/ListingBlockCustomers.aspx" visible="false"
+                                  id="P388" runat="server" title="Customer Blocking">
+                                  <span class="title">Customer Blocking</span></a></li>
+                            </ul>
+                       
+                        </li>
+
+
+                        <li><a href="#" id="M2" runat="server" visible ="false"    title="Call Planning">
+                            <i class="fa fa-calendar"></i>
+                            <span class="title">Call Planning</span></a>
+                            <ul id="Ul1" class="sub-menu">
+
+                                 <li><a href="#" id="A3" runat="server"   visible ="false"  title="Route Management">
+                                     <i class="fa fa-file-text"></i><span class="title">Route Management</span></a>
+                                    <ul id="Ul5" class="sub-menu">
+
+                                       <li><a href="~/html/DefaultPlan.aspx" id="P65" visible ="false"  runat="server"  
+                                    title="Create Default Route Plan"><i></i><span class="title">Create Default Plan</span> </a></li>
+
+                                <li><a href="~/html/CreateRoutePlan.aspx" visible ="false"  id="P66" runat="server"  
+                                    title="Create Route Plan"><i></i><span class="title">Create Route Plan</span> </a></li>
+
+                                <li><a href="~/html/ModDelRoutePlan.aspx" visible ="false"  id="P67" runat="server"  
+                                    title="Edit/Delete Route Plan"><i></i><span class="title">Edit/Delete Route Plan</span> </a></li>
+
+                                <li><a href="~/html/ImportRoutePlan.aspx" visible ="false"  id="P82" runat="server"  
+                                    title="Import Route Plan"><i></i><span class="title">Import Route Plan</span> </a></li>
+
+                                <li><a href="~/html/PlansForApproval.aspx" visible ="false"  id="P69" runat="server"  
+                                    title="Approve Route Plan"><i></i><span class="title">Approve Route Plan</span> </a></li>
+
+                                 <li><a href="~/html/ReviewRoutePlan.aspx" visible ="false"  id="P79" runat="server"  
+                                    title="Review Route Plan"><i></i><span class="title">Review Route Plan</span> </a></li>
+
+                                <li><a href="~/html/CopyRoutePlan.aspx" visible ="false"  id="P74" runat="server"  
+                                    title="Copy Route Plan"><i></i><span class="title">Copy Route Plan</span> </a></li>
+
+                                <li><a href="~/html/CopyRoutePlanByWeekdays.aspx" visible ="false"  id="P75" runat="server"  
+                                    title="Copy Route Plan By Week Days"><i></i><span class="title">Copy Route Plan By Week Days</span> </a></li>
+
+                                <li><a href="~/html/AdminHolidays.aspx" visible ="false"  id="P333" runat="server"  
+                                    title="Manage Holidays"><i></i><span class="title">Manage Holidays</span> </a></li>
+
+                                           <li><a href="~/html/RoutePath_IntelliServ.aspx" visible ="false"  id="P86" runat="server"  
+                                    title="Request Suggested Route plan"><i></i><span class="title">Request Suggested Route plan</span> </a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li><a href="#" id="A4" runat="server"   visible ="false"  title="Messaging">
+                                     <i class="fa fa-file-text"></i><span class="title">Messaging</span></a>
+                                    <ul id="Ul7" class="sub-menu">
+                                         <li><a href="~/html/AdminMsg.aspx" id="P70" visible ="false"  runat="server"  
+                                    title="Send Messages"><i></i><span class="title">Send Messages</span> </a></li>
+
+                                       <li><a href="~/html/IncomingMsg.aspx" id="P88" visible ="false"  runat="server"  
+                                    title="Incoming Messages"><i></i><span class="title">Incoming Messages</span> </a></li>
+
+                                <li><a href="~/html/ReviewMsg.aspx" visible ="false"  id="P71" runat="server"  
+                                    title="Message Status"><i></i><span class="title">Message Status</span> </a></li>
+                           <li><a href="~/html/ManagePushNotification.aspx" visible ="false"  id="P375" runat="server"  
+                                    title="Send Push Notifications"><i></i><span class="title">Send Push Notifications</span> </a></li>
+                                    </ul>
+                                </li>
+
+                               
+                            </ul>
+
+                        </li>
+                        
+                        <li><a href="#" id="M3" runat="server" visible ="false"   title="Product Management"><i class="fa fa-suitcase"></i>
+                            <span class="title">Product Management</span></a>
+                            <ul id="Ul3" class="sub-menu">
+
+                                  <li><a href="~/html/AdminMSL.aspx" id="P8" visible ="false"  runat="server"  
+                                    title="MSL Management"><i></i><span class="title">MSL Management</span> </a></li>
+
+                                <li><a href="~/html/Customer-Product-Code.aspx" id="P218" visible ="false"  runat="server"  
+                                    title="Customer Product Code"><i></i><span class="title">Customer Product Code</span> </a></li>
+
+                                    <li><a href="~/html/Supplier-Product-Code.aspx" id="P330" visible ="false"  runat="server"  
+                                    title="Supplier Product Code"><i></i><span class="title">Supplier Product Code</span> </a></li>
+
+                                <li><a href="~/html/FSRSalesTarget.aspx" id="P410" visible ="false"  runat="server"  
+                                    title="FSR Target Definition"><i></i><span class="title">FSR Target Definition</span> </a></li>
+                                <li><a href="~/html/SalesTargetDefinition.aspx" id="P288" visible ="false"  runat="server"  
+                                    title="SKU Wise Target Definition"><i></i><span class="title">SKU Wise Target Definition</span> </a></li>
+
+                                
+
+                                <li><a href="#" id="A5" runat="server"   visible ="false"  title="Bonus/Discount Management">
+                                     <i class="fa fa-file-text"></i><span class="title">Bonus/Discount Management</span></a>
+                                    <ul id="Ul2" class="sub-menu">
+
+                                <li><a href="~/html/AdminBonusSimple.aspx?OID=" id="P220" visible ="false"  runat="server"  
+                                    title="Simple Bonus Listing"><i></i><span class="title">Simple Bonus Listing</span> </a></li>
+
+                                <li><a href="~/html/AdminBonusAssortment.aspx?OID=''" id="P221" visible ="false"  runat="server"  
+                                    title="Bonus Assortment Plan Listing"><i></i><span class="title">Bonus Assortment Plan Listing</span> </a></li>
+
+                                <li><a href="~/html/AdminDiscountPlan.aspx" id="P266" visible ="false"  runat="server"  
+                                    title="Discount Definition"><i></i><span class="title">Discount Definition</span> </a></li>
+
+                              
+                                  <li><a href="~/html/AdminOrderlvlCustomerFOC.aspx" id="P309" visible ="false"  runat="server"  
+                                    title="Customer FOC Discount Rules"><i></i><span class="title">Customer FOC Discount Rules</span> </a></li>
+
+                                  <li><a href="~/html/ManagePriceList.aspx?OID=" id="P365" visible ="false"  runat="server"  
+                                    title="Manage Price List"><i></i><span class="title">Manage Price List</span> </a></li>
+
+                                       
+                                  <li><a href="~/html/ManageCostPrice.aspx" id="P366" visible ="false"  runat="server"  
+                                    title="Manage Cost List"><i></i><span class="title">Manage Cost Price</span> </a></li>
+                                          <li><a href="~/html/AdminRedemptionRule.aspx" id="P369" visible ="false"  runat="server"  
+                                    title="Redemption Rules"><i></i><span class="title">Redemption Rules</span> </a></li>
+                                           <li><a href="~/html/AdminMultiTransRule.aspx" id="P371" visible ="false"  runat="server"  
+                                    title="Multi Transaction Bonus Rules"><i></i><span class="title">Multi Transaction Bonus Rules</span> </a></li>
+                                     
+                            </ul>
+
+                        </li>
+                                <li><a href="~/html/CustomerOrderlvlDiscount.aspx" id="P315" visible ="false"  runat="server"  
+                                    title="Customer-Level Discount Limits"><i></i><span class="title">Customer-Level Discount Limits</span> </a></li>
+                                         <li><a href="~/html/Admin_VATRule.aspx" visible="false"
+                                    id="P334" runat="server"   title="VAT Rules"><i></i>
+                                    <span class="title">VAT Rules</span></a></li>
+
+                                        <li><a href="~/html/ManageProductImage.aspx" visible="false"
+                                    id="P335" runat="server"   title="Manage Product Images"><i></i>
+                                    <span class="title">Manage Product Images</span></a></li>
+                                <li><a href="~/html/AssignProductToFSR.aspx" visible="false"
+                                    id="P377" runat="server"   title="Product Assignment"><i></i>
+                                    <span class="title">Product Assignment</span></a></li>
+
+                                 <li><a href="~/html/ProductGroupListing.aspx" visible="false"
+                                    id="P376" runat="server"   title="Manage Product Group"><i></i>
+                                    <span class="title">Manage Product Group</span></a></li>
+                                <li><a href="~/html/AssignProductGroupToFSR.aspx" visible="false"
+                                    id="P378" runat="server"   title="Assign Product Group"><i></i>
+                                    <span class="title">Assign Product Group</span></a></li>
+
+                                 <li><a href="~/html/ProductMSLGroupListing.aspx" visible="false"
+                                    id="P400" runat="server"   title="Manage Product MSL Group"><i></i>
+                                    <span class="title">Manage Product MSL Group</span></a></li>
+                                 <li><a href="~/html/AssignMSLGroupToCustomer.aspx" visible="false"
+                                    id="P401" runat="server"   title="Product MSL Group Assignment"><i></i>
+                                    <span class="title">Product MSL Group Assignment</span></a></li>
+                                 <li><a href="~/html/ManageProductsNew.aspx" visible="false"
+                                    id="P455" runat="server"   title="Manage Products"><i></i>
+                                    <span class="title">Manage Products</span></a></li>
+
+                        </ul>
+                        </li>
+                       
+
+                        <li><a href="#" id="M4" runat="server"   visible ="false"  title="Approvals">
+                            <i class="fa fa-thumbs-up"></i><span class="title">Approvals</span></a>
+                            <ul id="Ul9" class="sub-menu">
+                                <li><a href="~/html/CollectionListing.aspx" id="P11" runat="server" visible ="false"    title="Held PDCs"><i></i>
+                                    <span class="title">Held PDCs</span></a></li>
+                                 <li><a href="~/html/AccessApprovalCode.aspx" id="P256" runat="server" visible ="false"    title="Access Approval Code"><i></i>
+                                    <span class="title">Access Approval Code</span></a></li>
+
+                                <li><a href="~/html/HeldNewCustomer.aspx" id="P91" runat="server" visible ="false"    title="Held New Customer"><i></i>
+                                    <span class="title">Held New Customer</span></a></li>
+
+                                <li><a href="~/html/ReconcileReturns.aspx" id="P292" runat="server" visible ="false"    title="Reconcile Returns"><i></i>
+                                    <span class="title">Reconcile Returns</span></a></li>
+
+                                <li><a href="~/html/StockRequisition.aspx" id="P219" runat="server" visible ="false"    title="Stock Requisition"><i></i>
+                                    <span class="title">Stock Requisition</span></a></li>
+
+                                <li><a href="~/html/ImportVanLoad.aspx" id="P305" runat="server" visible ="false"    title="Import Van Load"><i></i>
+                                    <span class="title">Import Van Load</span></a></li>
+
+                                 <li><a href="~/html/ImportStock_update.aspx" id="P304" runat="server" visible ="false"    title="Import VanLoad"><i></i>
+                                    <span class="title">Import VanLoad </span></a></li>
+                                 
+                                 <li><a href="~/html/ListReturnNotesForApproval.aspx" id="P417" runat="server" visible ="false"    title="Return Notes"><i></i>
+                                    <span class="title">Return Notes</span></a></li>
+
+                                <li><a href="~/html/RequestStock.aspx" id="P3630" runat="server" visible ="false"    title="Request Stock"><i></i>
+                                    <span class="title">Request Stock</span></a></li>
+
+                                 <li><a href="~/html/StockRequisition_ByVan.aspx" id="P415" runat="server" visible ="false"    title="Unconfirmed Stock Requisition"><i></i>
+                                    <span class="title">Unconfirmed Stock Requests</span></a></li>
+                            </ul>
+                        </li>
+
+                          <li><a href="#" id="M15" runat="server"   visible ="false"  title="Incentive">
+                            <i class="fa fa-money"></i><span class="title">Incentive</span></a>
+                            <ul id="Ul26" class="sub-menu">
+                                <li><a href="~/html/ManageIncentive.aspx" id="P150" runat="server" visible ="false"    title="Manage Incentive"><i></i>
+                                    <span class="title">Manage Incentive</span></a></li>
+                                 <li><a href="~/html/ManageIncentiveTarget.aspx" id="P151" runat="server" visible ="false"    title="Manage Incentive Target"><i></i>
+                                    <span class="title">Manage Target </span></a></li>
+                                 <li><a href="~/html/ManageIncentiveCommission.aspx" id="P152" runat="server" visible ="false"    title="Manage Incentive Commission"><i></i>
+                                    <span class="title">Manage Commission </span></a></li>
+                                 <li><a href="~/html/GenerateIncentive.aspx" id="P153" runat="server" visible ="false"    title="Generate Incentive"><i></i>
+                                    <span class="title">Generate Incentive </span></a></li>
+                                <li><a href="~/html/IncentiveStatement.aspx" id="P154" runat="server" visible ="false"    title="Incentive Statement"><i></i>
+                                    <span class="title">Incentive Statement </span></a></li>
+                                </ul>
+                        </li>
+
+                        <li><a href="#" id="M5" runat="server"   visible ="false"  title="Survey"><i class="fa fa-star"></i><span class="title">Survey</span></a>
+                            <ul id="Ul10" class="sub-menu">
+                                <li><a href="~/html/ManageSurvey.aspx" id="P12" runat="server" visible ="false"    title="Manage Survey"><i></i>
+                                    <span class="title">Manage Survey</span></a></li>
+                                <%--<li><a href="~/html/AdminSurveyQues.aspx" id="P13" runat="server" visible ="false"    title="Survey Questions"><i></i>
+                                    <span class="title">Survey Questions</span></a></li>
+                                <li><a href="~/html/AdminSurveyResp.aspx" id="P14" runat="server" visible ="false"    title="Survey Responses"><i></i>
+                                    <span class="title">Survey Responses</span></a></li>
+
+                                <li><a href="~/html/AdminSurveyFSRCustomers.aspx" id="P50" visible ="false"  runat="server"   title="Survey Assignment"><i></i>
+                                    <span class="title">Survey Assignment</span></a></li>--%>
+
+                                 <li><a href="~/html/EditCashVanAudit.aspx" id="P97" visible ="false"  runat="server"   title="Survey Assignment"><i></i>
+                                    <span class="title">Modify Cash Van Audit Survey</span></a></li>
+                                <%-- <li><a href="~/html/AdminPOS_MasterSetUp.aspx" id="P276" visible ="false"  runat="server"   title="POSM Survey Questions"><i></i>
+                                    <span class="title">POSM Survey Questions</span></a></li>
+                                 <li><a href="~/html/ManagePOSMSurvey.aspx" id="P277" visible ="false"  runat="server"   title="POSM Survey"><i></i>
+                                    <span class="title">POSM Survey</span></a></li>--%>
+                                 <li><a href="~/html/Van_Audit_Plan.aspx" id="P326" visible ="false"  runat="server"   title="POSM Survey"><i></i>
+                                    <span class="title">Van Audit Plan</span></a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="#" id="M10" runat="server"   visible ="false"  title="Asset Management"><i  class="fa fa-shopping-cart"></i><span class="title">Asset Management</span></a>
+                            <ul id="Ul14" class="sub-menu">
+                                <li><a href="~/html/AssetType.aspx" id="P263" runat="server" visible ="false"    title="Manage Asset Types"><i></i>
+                                    <span class="title">Manage Asset Types</span></a></li>
+                                <li><a href="~/html/ManageAssets.aspx" id="P264" runat="server" visible ="false"    title="Manage Assets"><i></i>
+                                    <span class="title">Manage Assets</span></a></li>
+                                
+                            </ul>
+                        </li>
+
+                        <li><a href="#" id="M7" runat="server"   visible ="false"  title="Reports"><i class="fa fa-file-text"></i><span class="title">Reports</span></a>
+                            <ul id="Ul11" class="sub-menu">
+
+
+
+                                 <li><a href="#" id="A6" runat="server"   visible ="false"  title="Products">
+                                     <i class="fa fa-file-text"></i><span class="title">Products</span></a>
+                                    <ul id="Ul15" class="sub-menu">
+
+                                        
+
+                                        <li><a href="~/html/RepPriceListing.aspx" id="P200" visible ="false"  runat="server"   title="Price Listing"><i></i>
+                                            <span class="title">Price Listing</span></a></li>
+
+                                         <li><a href="~/html/RepProductListing.aspx" id="P201" visible ="false"  runat="server"   title="Product Listing"><i></i>
+                                            <span class="title">Product Listing</span></a></li>
+
+                                         <li><a href="~/html/RepProductSales.aspx" id="P279" visible ="false"  runat="server"   title="Product Sales Report"><i></i>
+                                            <span class="title">Product Sales Report</span></a></li>
+
+                                         <li><a href="~/html/RepWarehousePurchase.aspx" id="P224" visible ="false"  runat="server"   title="Warehouse Purchase"><i></i>
+                                            <span class="title">Warehouse Purchase</span></a></li>
+
+                                        <li><a href="~/html/Rep_WareHousePurchase.aspx" id="P374" visible ="false"  runat="server"   title="Warehouse Purchase-Download"><i></i>
+                                            <span class="title">Warehouse Purchase-Download</span></a></li>
+
+                                         <li><a href="~/html/Rep_ProductStock.aspx" id="P243" visible ="false"  runat="server"   title="Product Stock"><i></i>
+                                            <span class="title">Product Stock</span></a></li>
+
+
+                                         <li><a href="~/html/Rep_NearExpiry.aspx" id="P281" visible ="false"  runat="server"   title="Near Expiry Report"><i></i>
+                                            <span class="title">Near Expiry Report</span></a></li>
+
+                                         <li><a href="~/html/Rep_OutofStock.aspx" id="P251" visible ="false"  runat="server"   title="Product Out of Stock"><i></i>
+                                            <span class="title">Product Out of Stock</span></a></li>
+
+                                         <li><a href="~/html/Rep_FSRSalesTarget.aspx" id="P289" visible ="false"  runat="server"   title="FSR Sales Target"><i></i>
+                                            <span class="title">FSR Sales Target</span></a></li>
+                                       
+                                          <li><a href="~/html/RepOfferDetails.aspx" id="P361" visible ="false"  runat="server"   title="FOC Promotions"><i></i>
+                                            <span class="title">FOC Promotions</span></a></li>
+
+                                        <li><a href="~/html/Rep_MutliTrxFOC.aspx" id="P372" visible ="false"  runat="server"   title="Multi-Transaction FOC"><i></i>
+                                            <span class="title">Multi-Transaction FOC</span></a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li><a href="#" id="A7" runat="server"   visible ="false"  title="Customers"><i class="fa fa-file-text"></i><span class="title">Customers</span></a>
+                                    <ul id="Ul6" class="sub-menu">
+
+
+
+                                        <li><a href="~/html/RepCustomerListing.aspx" id="P202" visible ="false"  runat="server"   title="Customer List"><i></i>
+                                            <span class="title">Customer List</span></a></li>
+
+                                          <li><a href="~/html/Rep_CustomerLocation.aspx" id="P323" visible ="false"  runat="server"   title="Customer Location"><i></i>
+                                            <span class="title">Customer Location</span></a></li>
+
+                                         <li><a href="~/html/RepAssets.aspx" id="P265" runat="server" visible ="false"    title="Assets Review Report"><i></i>
+                                            <span class="title">Assets Review Report</span></a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                
+
+                         
+
+                                 
+                                <li><a href="#" id="A9" runat="server" visible ="false"    title="Visits"><i class="fa fa-file-text"></i><span class="title">Visits</span></a>
+                                    <ul id="Ul22" class="sub-menu">
+
+
+
+                                        <li><a href="~/html/RepCustomerVisits.aspx" id="P206" visible ="false"  runat="server"   title="Customer Visits"><i></i>
+                                            <span class="title">Customer Visits</span></a></li>
+
+                                        <li><a href="~/html/Rep_MonthlyVisitReport.aspx" id="P298" visible ="false"  runat="server"   title="Monthly Customer Visits"><i></i>
+                                            <span class="title">Monthly Customer Visits</span></a></li>
+
+
+                                        <li><a href="~/html/RepDailyReport.aspx" id="P216" visible ="false"  runat="server"   title="Daily Report"><i></i>
+                                            <span class="title">Daily Report</span></a></li>
+
+                                        <li><a href="~/html/RepDistributionCheck.aspx" id="P207" visible ="false"  runat="server"   title="Distribution Checks"><i></i>
+                                            <span class="title">Distribution Checks</span></a></li>
+
+                                        <li><a href="~/html/RepOrders.aspx" id="P204" runat="server" visible ="false"    title="Orders"><i></i>
+                                            <span class="title">Orders</span></a></li>
+
+                                        <li><a href="~/html/RepReturns.aspx" id="P205" runat="server" visible ="false"    title="Credit Notes"><i></i>
+                                            <span class="title">Credit Notes</span></a></li>
+
+                                         <li><a href="~/html/Rep_SR.aspx" id="P407" runat="server" visible ="false"    title="Sales Returns"><i></i>
+                                            <span class="title">Sales Returns</span></a></li>
+
+                                          <li><a href="~/html/RepInvoiceDiscount.aspx" id="P212" runat="server" visible ="false"    title="Invoice Discount Details"><i></i>
+                                            <span class="title">Invoice Discount Details</span></a></li>
+
+                                          <li><a href="~/html/FSRVisitTracking.aspx" id="P267" runat="server" visible ="false"    title="Visits Tracking Report"><i></i>
+                                            <span class="title">Visits Tracking Report</span></a></li>
+
+                                         <li><a href="~/html/RepVisitException.aspx" id="P367" runat="server" visible ="false"    title="Visit Exception"><i></i>
+                                            <span class="title">Visit Exception Report</span></a></li>
+                                          <li><a href="~/html/Rep_FuelExpense.aspx" id="P282" runat="server" visible ="false"    title="Fuel Expenses"><i></i>
+                                            <span class="title">Fuel Expenses</span></a></li>
+
+                                         <li><a href="~/html/Rep_ExpenseLocation.aspx" id="P283" runat="server" visible ="false"    title="Fuel Expenses Location"><i></i>
+                                            <span class="title">Fuel Expenses Location</span></a></li>
+
+                                         <li><a href="~/html/Rep_TravelReport.aspx" id="P301" runat="server" visible ="false"    title="Travel Report"><i></i>
+                                            <span class="title">Travel Report</span></a></li>
+
+                                         <li><a href="~/html/Rep_FOCFeedBack.aspx" id="P306" runat="server" visible ="false"    title="FOC Feedback"><i></i>
+                                            <span class="title">FOC Feedback</span></a></li>
+                                        <li><a href="~/html/Rep_OutletsCoveredBilled.aspx" id="P355" runat="server" visible ="false"    title="Outlets Covered vs Billed"><i></i>
+                                            <span class="title">Outlets Covered vs Billed</span></a></li>
+                                        <li><a href="~/html/Rep_VanPerformance.aspx" id="P356" runat="server" visible ="false"    title="Van Performance"><i></i>
+                                            <span class="title">Van Performance</span></a></li>
+                                        <li><a href="~/html/Rep_ZeroBilledOutlet.aspx" id="P357" runat="server" visible ="false"    title="Zero Billed Customers"><i></i>
+                                            <span class="title">Zero Billed Customers</span></a></li>
+
+                                        <li><a href="~/html/Rep_ZeroBilledCustomers.aspx" id="P422" runat="server" visible ="false"    title="Detailed Zero Billed Customers"><i></i>
+                                            <span class="title">Detailed Zero Billed Customers</span></a></li>
+
+                                        <li><a href="~/html/Rep_MissedVisits.aspx" id="P373" runat="server" visible ="false"    title="Missed Visits"><i></i>
+                                            <span class="title">Missed Visits</span></a></li>
+                                        <li><a href="~/html/Rep_WindowCustServKPI.aspx" id="P416" runat="server" visible ="false"    title="Window of Customer Service-KPI"><i></i>
+                                            <span class="title">Window of Customer Service-KPI</span></a></li>
+
+                                        <li><a href="~/html/Rep_StockNotes.aspx" id="P420" runat="server" visible ="false"    title="Stock Notes"><i></i>
+                                            <span class="title">Stock Notes</span></a></li>
+
+                                         <li><a href="~/html/RepDistributionCheckDetails.aspx" id="P421" visible ="false"  runat="server"   title="Distribution Checks Details"><i></i>
+                                            <span class="title">Distribution Checks Details</span></a></li>
+                                    </ul>
+
+                                    
+                                </li>
+
+                                <li><a href="#" id="A8" runat="server"  visible ="false"   title="Collections"><i class="fa fa-file-text"></i><span class="title">Collections</span></a>
+                                    <ul id="Ul8" class="sub-menu">
+
+
+
+                                        <li><a href="~/html/RepCollectionListing.aspx" id="P203"  visible ="false"  runat="server"   title="Collection Listing"><i></i>
+                                            <span class="title">Collection Listing</span></a></li>
+
+
+                                        <li><a href="~/html/Rep_PaymentReceived.aspx" id="P106"  visible ="false"  runat="server"   title="Payment Received Summary"><i></i>
+                                            <span class="title">Payment Received Summary</span></a></li>
+
+                                        <li><a href="~/html/Rep_HeldPDC.aspx" id="P124"  visible ="false"  runat="server"   title="Held PDCs"><i></i>
+                                            <span class="title">Held PDCs</span></a></li>
+
+                                        <li><a href="~/html/Rep_FSRCollection.aspx" id="P337"  visible ="false"  runat="server"   title="FSR Collection"><i></i>
+                                            <span class="title">FSR Collection</span></a></li>
+
+                                        <li><a href="~/html/Rep_PDCReceivables.aspx" id="P121"  visible ="false"  runat="server"   title="PDC Receivables"><i></i>
+                                            <span class="title">PDC Receivables</span></a></li>
+
+                                        <li><a href="~/html/Rep_MonthlyReceivables.aspx" id="P108"  visible ="false"  runat="server"   title="Receivables for a month"><i></i>
+                                            <span class="title">Receivables for a month</span></a></li>
+
+                                       
+                                        <li><a href="~/html/Rep_CashCollectionPrint.aspx" id="P287"  visible ="false"  runat="server"   title="Cash Collection Print"><i></i>
+                                            <span class="title">Cash Collection Print</span></a></li>
+
+
+                                       
+
+                                        <li><a href="~/html/Rep_MarketReceivables.aspx" id="P123"  visible ="false"  runat="server"   title="Market Receivables"><i></i>
+                                            <span class="title">Market Receivables</span></a></li>
+
+                                        <li><a href="~/html/Rep_Collections.aspx" id="P307"  visible ="false"  runat="server"   title="Collections"><i></i>
+                                            <span class="title">Collections</span></a></li>
+
+                                        <li><a href="~/html/Rep_DivisionwiseCollections.aspx" id="P327"  visible ="false"  runat="server"   title="Division Wise Collection"><i></i>
+                                            <span class="title">Division Wise Collection</span></a></li>
+                                     
+                                        <li><a href="~/html/DelayedCustomerCount.aspx" id="P328"  visible ="false"  runat="server"   title="Delayed Customer Count"><i></i>
+                                            <span class="title">Delayed Customer Count</span></a></li>
+                                        <li><a href="~/html/Rep_DelayedTrendByVan.aspx" id="P340"  visible ="false"  runat="server"   title="Delayed Trend By Van"><i></i>
+                                            <span class="title">Delayed Trend By Van</span></a></li>
+                                        <li><a href="~/html/Rep_DelayedTrendBySupervisor.aspx" id="P341"  visible ="false"  runat="server"   title="Delayed Trend By Supervisor"><i></i>
+                                            <span class="title">Delayed Trend By Supervisor</span></a></li>
+
+                                        <li><a href="~/html/RepCollectionTrendByLoc.aspx" id="P329"  visible ="false"  runat="server"   title="Delayed Trend By Location"><i></i>
+                                            <span class="title">Delayed Trend By Location</span></a></li>
+
+                                         <li><a href="~/html/Rep_DelayedTrendByDiv.aspx" id="P344"  visible ="false"  runat="server"   title="Delayed Trend By Division"><i></i>
+                                            <span class="title">Delayed Trend By Division</span></a></li>
+
+
+                                         <li><a href="~/html/Rep_CollectionDiscount.aspx" id="P383"  visible ="false"  runat="server"   title="Collection Discount"><i></i>
+                                            <span class="title">Collection Discount</span></a></li>
+
+                                         <li><a href="~/html/Rep_OpenInvoices.aspx" id="P430"  visible ="false"  runat="server"   title="Open Invoices"><i></i>
+                                            <span class="title">Open Invoices</span></a></li>
+
+                                    </ul>
+                                </li>
+
+                                 <li><a href="#" id="A10" runat="server"  visible ="false"   title="Survey">
+                                     <i class="fa fa-file-text"></i><span class="title">Survey</span></a>
+                                    <ul id="Ul12" class="sub-menu">
+
+
+
+                                        <li><a href="~/html/RepCustomerSurvey.aspx" id="P208"  visible ="false"  runat="server"   title="Customer Survey"><i></i>
+                                            <span class="title">Customer Survey</span></a></li>
+
+
+                                        <li><a href="~/html/RepAuditSurvey.aspx" id="P209"  visible ="false"  runat="server"   title="Audit Survey"><i></i>
+                                            <span class="title">Audit Survey</span></a></li>
+
+                                         <li><a href="~/html/Rep_MerchandasingSurveyResp.aspx" id="P384"  visible ="false"  runat="server"   title="Merchandising Survey"><i></i>
+                                            <span class="title">Merchandising Survey</span></a></li>
+
+                                        <li><a href="~/html/RepMarketSurvey.aspx" id="P268"  visible ="false"  runat="server"   title="Market Survey"><i></i>
+                                            <span class="title">Market Survey</span></a></li>
+
+                                        <li><a href="~/html/Rep_POSMSurvey.aspx" id="P278"  visible ="false"  runat="server"   title="POSM Survey"><i></i>
+                                            <span class="title">POSM Survey</span></a></li>
+
+                                        <li><a href="~/html/RepCashVanAudit.aspx" id="P210"  visible ="false"  runat="server"   title="Cash Van Audit Survey"><i></i>
+                                            <span class="title">Cash Van Audit Survey</span></a></li>
+
+                                        <li><a href="~/html/Rep_AuditMissedVans.aspx" id="P352"  visible ="false"  runat="server"   title="Audit Missed Van"><i></i>
+                                            <span class="title">Audit Missed Van</span></a></li>
+                                       
+                                        <li><a href="~/html/RepSurveyStatistics.aspx" id="P211"  visible ="false"  runat="server"   title="Cash Collection Print"><i></i>
+                                            <span class="title">Survey Statistics</span></a></li>
+
+
+
+
+                                    </ul>
+                                </li>
+
+
+                                <li><a href="#" id="A11" runat="server"   visible ="false"  title="Coverage Reports"><i class="fa fa-file-text"></i><span class="title">Coverage Reports</span></a>
+                                    <ul id="Ul23" class="sub-menu">
+
+
+
+                                        <li><a href="~/html/RepPlannedCoverage.aspx" id="P255" visible ="false"  runat="server"   title="Planned Coverage Report"><i></i>
+                                            <span class="title">Planned Coverage Report</span></a></li>
+
+                                        
+                                         <li><a href="~/html/Rep_OverallCoverage.aspx" id="P360" visible ="false"  runat="server"   title="Overall Coverage Report"><i></i>
+                                            <span class="title">Overall Coverage Report</span></a></li>
+
+                                        <li><a href="~/html/RepRoutCoverage.aspx" id="P101" visible ="false"  runat="server"   title="Daily Coverage Report"><i></i>
+                                            <span class="title">Daily Coverage Report</span></a></li>
+
+                                        <li><a href="~/html/RepRoutCoverage.aspx" id="P215" runat="server" visible ="false"    title="Route Coverage "><i></i>
+                                            <span class="title">Route Coverage </span></a></li>
+
+                                        <li><a href="~/html/Rep_JournPlanAd.aspx" id="P104" visible ="false"  runat="server"   title="Journey Plan Adherance"><i></i>
+                                            <span class="title">Journey Plan Adherance</span></a></li>
+
+                                        <li><a href="~/html/Rep_CoverageReport.aspx" id="P116" runat="server" visible ="false"    title="Customer Coverage Report "><i></i>
+                                            <span class="title">Customer Coverage Report </span></a></li>
+                                        
+                                        
+                                    </ul>
+                                </li>
+
+                                 <li><a href="#" id="A12" runat="server"   visible ="false"  title="Stock Movement Reports"><i class="fa fa-file-text"></i><span class="title">Stock Movement Reports</span></a>
+                                    <ul id="Ul16" class="sub-menu">
+
+
+
+                                        <li><a href="~/html/Rep_GoodsReceipt.aspx" id="P103" visible ="false"  runat="server"   title="Goods Receipt Report"><i></i>
+                                            <span class="title">Goods Receipt Report</span></a></li>
+
+                                        <li><a href="~/html/Rep_ArticleMovements.aspx" id="P100" runat="server" visible ="false"    title="Article Movement"><i></i>
+                                            <span class="title">Article Movement </span></a></li>
+
+                                        <li><a href="~/html/Rep_VanStockSummary.aspx" id="P114" visible ="false"  runat="server"   title="Van Stock Summary"><i></i>
+                                            <span class="title">Van Stock Summary</span></a></li>
+
+                                        <li><a href="~/html/RepVanLoad.aspx" id="P234" runat="server" visible ="false"    title="Van Load Report"><i></i>
+                                            <span class="title">Van Load Report </span></a></li>
+
+                                        <li><a href="~/html/Rep_UnloadREport.aspx" id="P115" visible ="false"  runat="server"   title="Van Unload Report"><i></i>
+                                            <span class="title">Van Unload Report</span></a></li>
+
+                                          <li><a href="~/html/Rep_StockRequisition.aspx" id="P302" visible ="false"  runat="server"   title="Stock Requisition"><i></i>
+                                            <span class="title">Stock Requisition</span></a></li>
+
+                                        <li><a href="~/html/RepVanRequisitionVsLoad.aspx" id="P311" runat="server" visible ="false"    title="Van Requisition vs Load"><i></i>
+                                            <span class="title">Van Requisition vs Load </span></a></li>
+
+                                        <li><a href="~/html/Rep_MonthlyLoadReport.aspx" id="P317" visible ="false"  runat="server"   title="Monthly Van Load"><i></i>
+                                            <span class="title">Monthly Van Load</span></a></li>
+
+                                        <li><a href="~/html/Rep_DailyStockReconciliation.aspx" id="P386" visible ="false"  runat="server"   title="Daily Stock Report"><i></i>
+                                            <span class="title">Daily Stock Report</span></a></li>
+                                     
+                                          <li><a href="~/html/Rep_StockMovement.aspx" id="P394" runat="server" visible ="false"    title="Stock Movement Report"><i></i>
+                                            <span class="title">Stock Movement Report</span></a></li>
+                                    </ul>
+                                </li>
+
+
+                                  <li><a href="#" id="A13" runat="server"   visible ="false"  title="Summary Reports"><i class="fa fa-file-text"></i><span class="title">Summary Reports</span></a>
+                                    <ul id="Ul17" class="sub-menu">
+
+
+                                       
+                                        <li><a href="~/html/Rep_LogReport.aspx" id="P105" runat="server" visible ="false"    title="Van Log Report "><i></i>
+                                            <span class="title">Van Log Report </span></a></li>
+                                          
+                                        <li><a href="~/html/Rep_Summary.aspx" id="P254" runat="server" visible ="false"    title="Purchase Vs Sales Vs Returns"><i></i>
+                                            <span class="title">Purchase Vs Sales Vs Returns</span></a></li>
+
+
+                                          
+                                        <li><a href="~/html/RepVanTransactions.aspx" id="P310" runat="server" visible ="false"    title="Van Activity "><i></i>
+                                            <span class="title">Van Activity </span></a></li>
+
+
+                                          
+                                        <li><a href="~/html/Rep_VanSummary.aspx" id="P290" runat="server" visible ="false"    title="Van Summary by Product"><i></i>
+                                            <span class="title">Van Summary by Product </span></a></li>
+
+
+                                          
+                                        <li><a href="~/html/Rep_StatementofVanSales.aspx" id="P294" runat="server" visible ="false"    title="Statement Of Van Sales"><i></i>
+                                            <span class="title">Statement Of Van Sales </span></a></li>
+
+
+                                        <li><a href="~/html/Rep_StatementofCustomerAccount.aspx" id="P295" runat="server" visible ="false"    title="Statement Of Customer Account"><i></i>
+                                            <span class="title">Statement Of Customer Account</span></a></li>
+                                          
+                                        <li><a href="~/html/Rep_PriceVariation.aspx" id="P296" runat="server" visible ="false"    title="Price Variation Report"><i></i>
+                                            <span class="title">Price Variation Report</span></a></li>
+
+                                         <li><a href="~/html/RepMBRReport.aspx" id="P342" runat="server" visible ="false"    title="Monthly Business Report -  Overall"><i></i>
+                                            <span class="title">Monthly Business Report -  Overall </span></a></li>
+                                          <li><a href="~/html/RepMBRByVan.aspx" id="P370" runat="server" visible ="false"    title="Monthly Business Report - By Van"><i></i>
+                                            <span class="title">Monthly Business Report - By Van </span></a></li>
+
+                                         <li><a href="~/html/RepSMScoreCard.aspx" id="P343" runat="server" visible ="false"    title="Sales Manager Scorecard"><i></i>
+                                            <span class="title">Sales Manager Scorecard </span></a></li>
+
+                                           <li><a href="~/html/RepBestSellers.aspx" id="P345" runat="server" visible ="false"    title="Best Sellers"><i></i>
+                                            <span class="title">Best Sellers </span></a></li>
+
+                                             <li><a href="~/html/RepDistribution.aspx" id="P348" runat="server" visible ="false"    title="Distribution Report"><i></i>
+                                            <span class="title">Distribution Report </span></a></li>
+
+                                            <li><a href="~/html/RepTargetvsSalesByVan.aspx" id="P349" runat="server" visible ="false"    title="Target vs Sales By Van"><i></i>
+                                            <span class="title">Target vs Sales By Van </span></a></li>
+
+                                        <li><a href="~/html/Rep_MonthlySalesTargetbyVan.aspx" id="P385" runat="server" visible ="false"    title="Monthly Target vs Sales By Van"><i></i>
+                                            <span class="title">Monthly Target vs Sales By Van </span></a></li>
+
+                                          <li><a href="~/html/RepScoreCardSummary.aspx" id="P398" runat="server" visible ="false"    title="Score Card Summary By Van"><i></i>
+                                            <span class="title">Score Card Summary By Van </span></a></li>
+                                          <li><a href="~/html/RepDSRSummary.aspx" id="P399" runat="server" visible ="false"    title="Daily Sales Report Summary"><i></i>
+                                            <span class="title">Daily Sales Report Summary </span></a></li>
+                                                                                  <li><a href="~/html/RepSMACObjective.aspx" id="P403" runat="server" visible ="false"    title="Daily Objective Report"><i></i>
+                                            <span class="title">Daily Objective Report </span></a></li>
+
+                                               <li><a href="~/html/RepVanKPI.aspx" id="P404" runat="server" visible ="false"    title="Van KPI Report"><i></i>
+                                            <span class="title">Van KPI Report </span></a></li>
+
+                                          <li><a href="~/html/RepMonthlyFOC.aspx" id="P362" runat="server" visible ="false"    title="Monthly FOC Report"><i></i>
+                                            <span class="title">Monthly FOC Report </span></a></li>
+                                              <li><a href="~/html/RepBillCutsByVan.aspx" id="P363" runat="server" visible ="false"    title="Bill Cuts By Van"><i></i>
+                                            <span class="title">Bill Cuts By Van</span></a></li>
+                                           <li><a href="~/html/RepLineCutsByVan.aspx" id="P364" runat="server" visible ="false"    title="Line Cuts By Van"><i></i>
+                                            <span class="title">Line Cuts By Van</span></a></li>
+
+                                     
+                                        <li><a href="~/html/Rep_Ageing.aspx" id="P297" runat="server" visible ="false"    title="Ageing Report"><i></i>
+                                            <span class="title">Ageing Report</span></a></li>
+
+
+                                          
+                                        <li><a href="~/html/Rep_VanCreditReview.aspx" id="P300" runat="server" visible ="false"    title="Van Credit Limit Report"><i></i>
+                                            <span class="title">Van Credit Limit Report</span></a></li>
+
+
+                                        <li><a href="~/html/Rep_PurchaseReport.aspx" id="P312" runat="server" visible ="false"    title="Purchase Report"><i></i>
+                                            <span class="title">Purchase Report </span></a></li>
+
+                                          
+                                        <li><a href="~/html/Rep_MonthlySales.aspx" id="P318" runat="server" visible ="false"    title="Monthly Sales Report"><i></i>
+                                            <span class="title">Monthly Sales Report</span></a></li>
+
+
+
+                                        <li><a href="~/html/Monthly_WastageReport.aspx" id="P319" runat="server" visible ="false"    title="Monthly Wastage Report"><i></i>
+                                            <span class="title">Monthly Wastage Report</span></a></li>
+
+                                        
+
+                                         <li><a href="~/html/Rep_monthlyOffTakeSummary.aspx" id="P320" runat="server" visible ="false"    title="Off Take Summary Report"><i></i>
+                                    <span class="title">Off Take Summary Report</span></a></li>
+                                          
+                                        <li><a href="~/html/Rep_TransactionStatus.aspx" id="P324" runat="server" visible ="false"    title="TransactionStatus"><i></i>
+                                    <span class="title">Transaction Status</span></a></li>
+                                     
+                                      <li><a href="~/html/Rep_VanActivityReport.aspx" id="P325" runat="server" visible ="false"    title="Vehicle Activity Report"><i></i>
+                                    <span class="title">Vehicle Activity Report</span></a></li>
+                                        
+                                         <li><a href="~/html/SKUDistribution.aspx" id="P350" runat="server" visible ="false"    title="SKU Distribution"><i></i>
+                                    <span class="title">SKU Distribution</span></a></li>  
+
+                                         <li><a href="~/html/Rep_SKUDispersion.aspx" id="P113"  visible ="false"  runat="server"   title="SKU Dispersion"><i></i>
+                                            <span class="title">SKU Dispersion</span></a></li>
+
+                                        <li><a href="~/html/Rep_RevenueDispersion.aspx" id="P109"  visible ="false"  runat="server"   title="Revenue Dispersion"><i></i>
+                                            <span class="title">Revenue Dispersion</span></a></li>
+
+                                         <li><a href="~/html/Rep_EOTSummary.aspx" id="P358" runat="server" visible ="false"    title="Van EOT"><i></i>
+                                            <span class="title">Van EOT</span></a></li>
+
+                                         <li><a href="~/html/Rep_DailyProductSales.aspx" id="P405" runat="server" visible ="false"    title="DailyProduct Sales"><i></i>
+                                            <span class="title">DailyProduct Sales</span></a></li>
+                                        
+                                         <li><a href="~/html/Rep_Reconciliation.aspx" id="P406" runat="server" visible ="false"    title="Reconciliation"><i></i>
+                                            <span class="title">Reconciliation</span></a></li>
+
+                                         <li><a href="~/html/EOT_RepSummary.aspx" id="P409" runat="server" visible ="false"    title="EOT"><i></i>
+                                            <span class="title">EOT</span></a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li><a href="#" id="A14" runat="server"  visible ="false"   title="Sales/Returns Reports"><i class="fa fa-file-text"></i><span class="title">Sales/Returns Reports</span></a>
+                                    <ul id="Ul24" class="sub-menu">
+
+                                        <li><a href="~/html/Rep_SalesbyAgency.aspx" id="P110" runat="server" visible ="false"    title="Sales By Agency"><i></i>
+                                            <span class="title">Sales By Agency</span></a></li>
+
+                                        
+                                         <li><a href="~/html/Rep_SalesByvan.aspx" id="P111" runat="server" visible ="false"    title="Sales By Van -Summary"><i></i>
+                                            <span class="title">Sales By Van</span></a></li>
+
+                                        <li><a href="~/html/Rep_SalesBySKU.aspx" id="P353" runat="server" visible ="false"    title="Sales By Product"><i></i>
+                                            <span class="title">Sales By Product</span></a></li>
+
+                                         <li><a href="~/html/Rep_SalesByCustomer.aspx" id="P354" runat="server" visible ="false"    title="Sales By Customer"><i></i>
+                                            <span class="title">Sales By Customer</span></a></li>
+                                                                                
+
+                                        <li><a href="~/html/Rep_MonthlySalesbyVan.aspx" id="P338" runat="server" visible ="false"    title="Monthly Sales by Van"><i></i>
+                                            <span class="title">Monthly Sales by Van</span></a></li>
+
+                                        <li><a href="~/html/Rep_SalesByVanAgencyQty.aspx" id="P122" runat="server" visible ="false"    title="Sales By Van/Agency(Qty)"><i></i>
+                                            <span class="title">Sales By Van/Agency(Qty)</span></a></li>
+
+
+                                         <li><a href="~/html/SalesByVanAgency.aspx" id="P127" runat="server" visible ="false"    title="Sales By Van/Agency"><i></i>
+                                            <span class="title">Sales By Van/Agency</span></a></li>
+
+                                                                                
+                                         <li><a href="~/html/Rep_SalesVsReturnByCustomerType.aspx" id="P339" runat="server" visible ="false"    title="Sales Vs Return By CustomerType"><i></i>
+                                            <span class="title">Sales Vs Return By CustomerType</span></a></li>
+
+                                         <li><a href="~/html/RepOutletwiseSalesReturns.aspx" id="P225" runat="server" visible ="false"    title="Outletwise - SKU wise Sales / Returns"><i></i>
+                                            <span class="title">Outletwise - Sales/Returns</span></a></li>
+
+                                        <li><a href="~/html/RepOutletSKUwiseSalesReturn.aspx" id="P223" visible ="false"  runat="server"   title=">Outletwise - SKU wise Sales / Returns"><i></i>
+                                            <span class="title">Outletwise - SKU wise Sales / Returns</span></a></li>
+
+                                        <li><a href="~/html/RepOutletSKUwiseSalesReturnAlert.aspx" id="P227" visible ="false"  runat="server"   title="Outletwise - SKU wise Returns"><i></i>
+                                            <span class="title">Outletwise - SKU wise Returns</span></a></li>
+
+                                        <li><a href="~/html/RepSKUwiseSales.aspx" id="P229" visible ="false"  runat="server"   title="SKU wise Sales (Period Wise)"><i></i>
+                                            <span class="title">SKU wise Sales (Period Wise)</span></a></li>
+
+                                       
+
+                                        <li><a href="~/html/RepSKUwiseSalesReturnsValue.aspx" id="P226" visible ="false"  runat="server"   title="SKU wise Sales / Returns Quantity / Value"><i></i>
+                                            <span class="title">SKU wise Sales / Returns Quantity / Value</span></a></li>
+
+                                        <li><a href="~/html/RepSalesmanOutletwiseSaleReturn.aspx" id="P230" visible ="false"  runat="server"   title="SKU wise Returns Periodwise"><i></i>
+                                            <span class="title">Salesman - Outletwise Sales/Return</span></a></li>
+
+                                        <li><a href="~/html/RepSKUwiseSalesReturn.aspx" id="P253" runat="server" visible ="false"    title="Order Approval Report"><i></i>
+                                            <span class="title">SKU wise Returns Periodwise</span></a></li>
+
+                                        <li><a href="~/html/RepClientWiseSalesReturns.aspx" id="P247" runat="server" visible ="false"    title="Client Wise Sales/Returns"><i></i>
+                                            <span class="title">Client Wise Sales/Returns</span></a></li>
+
+                                        <li><a href="~/html/RepPrincipalWiseSales.aspx" id="P250" runat="server" visible ="false"    title="Sales By Principal"><i></i>
+                                            <span class="title">Sales By Principal</span></a></li>
+
+                                        <li><a href="~/html/RepPrincipal-SalesManWiseSales.aspx" id="P231" runat="server" visible ="false"    title="Sales By Principal/Sales Man"><i></i>
+                                            <span class="title">Sales By Principal/Sales Man</span></a></li>
+
+                                        <li><a href="~/html/Rep_SalesSummary.aspx" id="P112" runat="server" visible ="false"    title="Sales Summary"><i></i>
+                                            <span class="title">Sales Summary</span></a></li>
+
+                                                  
+                                        <li><a href="~/html/RepTotalGrpSummarySalesReturns.aspx" id="P245" runat="server" visible ="false"    title="Total Group Summary Sales / Return"><i></i>
+                                            <span class="title">Total Group Summary Sales / Return</span></a></li>
+
+
+                                         <li><a href="~/html/RepGrpSummarySalesReturns.aspx" id="P246" runat="server" visible ="false"    title="Group Summary Sales / Return"><i></i>
+                                            <span class="title">Group Summary Sales / Return</span></a></li>
+
+                                         <li><a href="~/html/RepExcessReturns.aspx" id="P252" runat="server" visible ="false"    title="Excess Returns"><i></i>
+                                            <span class="title">Excess Returns</span></a></li>
+
+                                        <li><a href="~/html/Rep_DailySales.aspx" id="P321" runat="server" visible ="false"    title="Daily Sales Report"><i></i>
+                                            <span class="title">Daily Sales Report</span></a></li>
+
+                                        <li><a href="~/html/Rep_FSRCreditNotes.aspx" id="P322" runat="server" visible ="false"    title="FSR Credit Notes"><i></i>
+                                            <span class="title">FSR Credit Notes</span></a></li>
+
+                                        <li><a href="~/html/Rep_WeeklyReturnSummary.aspx" id="P359" runat="server" visible ="false"    title="Weekly Return Summary"><i></i>
+                                            <span class="title">Weekly Return Summary</span></a></li>
+
+                                        <li><a href="~/html/Rep_SalesAndDiscount.aspx" id="P379" runat="server" visible ="false"    title="Sales and Discount"><i></i>
+                                            <span class="title">Sales and Discount</span></a></li>
+
+                                         <li><a href="~/html/RepBrandWise.aspx" id="P381" runat="server" visible ="false"    title="Brand Wise Sales Report"><i></i>
+                                            <span class="title">Brand Wise Sales Report</span></a></li>
+                                       
+                                        <li><a href="~/html/RepSalesbyProducts.aspx" id="P390" runat="server" visible ="false"    title="Sales By Product Report"><i></i>
+                                            <span class="title">Sales By Product Report</span></a></li>
+
+<%--                                          <li><a href="~/html/RepReturnbyProducts.aspx" id="P392" runat="server" visible ="false"    title="Return By Product Report"><i></i>
+                                            <span class="title">Return By Product Report</span></a></li>--%>
+                                       
+                                        <li><a href="~/html/Rep_SalesVolumebyProduct.aspx" id="P393" runat="server" visible ="false"    title="Sales Volume By Product"><i></i>
+                                            <span class="title">Sales Volume By Product</span></a></li>
+                                       
+                                    </ul>
+                                </li>
+
+
+
+
+
+                                <li><a href="#" id="A15" runat="server"  visible ="false"   title="Productivity">
+                                    <i class="fa fa-file-text"></i><span class="title">Productivity</span></a>
+                                    <ul id="Ul18" class="sub-menu">
+
+                                        <li><a href="~/html/Rep_ProductiveCalls.aspx" id="P117" runat="server" visible ="false"    title="Productive Calls"><i></i>
+                                            <span class="title">Productive Calls</span></a></li>
+
+
+                                         <li><a href="~/html/Rep_ProductperMSL.aspx" id="P118" runat="server" visible ="false"    title="MSL Productivity"><i></i>
+                                            <span class="title">MSL Productivity</span></a></li>
+
+                                         <li><a href="~/html/ProductAvailabilityReport.aspx" id="P107" visible ="false"  runat="server"   title="Product Availability Report"><i></i>
+                                            <span class="title">Product Availability Report</span></a></li>
+
+                                        
+
+                                        <li><a href="~/html/Rep_DistributionforMSL.aspx" id="P119" runat="server" visible ="false"    title="Distribution for MSL Items"><i></i>
+                                            <span class="title">Distribution for MSL Items</span></a></li>
+
+
+                                         <li><a href="~/html/Rep_DistributionDetails.aspx" id="P126" runat="server" visible ="false"    title="Distribution Check Details"><i></i>
+                                            <span class="title">Distribution Check Details</span></a></li>
+
+                                           <li><a href="~/html/RepProductivityByVan.aspx" id="P368" runat="server" visible ="false"    title="Productivity By Van"><i></i>
+                                            <span class="title">Productivity By Van</span></a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#" id="A16" runat="server"  visible ="false"   title="Logs"><i class="fa fa-file-text"></i><span class="title">Logs</span></a>
+                                    <ul id="Ul19" class="sub-menu">
+
+                                        <li><a href="~/html/RepUserChangLog.aspx" id="P238" runat="server" visible ="false"    title="User Log Report"><i></i>
+                                            <span class="title">User Log Report</span></a></li>
+
+                                         <li><a href="~/html/Rep_DeviceSyncLog.aspx" id="P102" runat="server" visible ="false"    title="Device Sync Log"><i></i>
+                                            <span class="title">Device Sync Log</span></a></li>
+                                         
+                                         <li><a href="~/html/Rep_LastDeviceSyncLog.aspx" id="P260" runat="server" visible ="false"    title="Sync Exception Report"><i></i>
+                                            <span class="title">Sync Exception Report</span></a></li>
+
+                                         
+                                         <li><a href="~/html/RepVanTransProcess.aspx" id="P258" runat="server" visible ="false"    title="Van Process Transactions"><i></i>
+                                            <span class="title">Van Process Transactions</span></a></li>
+
+                                         <li><a href="~/html/Rep_ERPBOSyncLog.aspx" id="P380" runat="server" visible ="false"    title="ERP to BO Sync Exception Log"><i></i>
+                                            <span class="title">ERP to BO Sync Exception Log</span></a></li>
+                                       
+                                          <li><a href="~/html/Rep_CreditDetHistory.aspx" id="P391" runat="server" visible ="false"    title="History of Credit Details"><i></i>
+                                            <span class="title">History of Credit Details</span></a></li>
+                                        
+                                    </ul>
+                                </li>
+
+
+                                 <li><a href="#" id="A18" runat="server"  visible ="false"   title="Logs"><i class="fa fa-file-text"></i><span class="title">Incentive</span></a>
+                                    <ul id="Ul27" class="sub-menu">
+
+                                        <li><a href="~/html/RepIncentive.aspx" id="P181" runat="server" visible ="false"    title="Incentive Report"><i></i>
+                                            <span class="title">Incentive Report</span></a></li>
+                                                                               
+                                    </ul>
+                                </li>
+
+                         <li><a href="#" id="A17" runat="server"  visible ="false"   title="Others"><i class="fa fa-file-text"></i><span class="title">Others</span></a>
+                                    <ul id="Ul20" class="sub-menu">
+
+                                        <li><a href="~/html/Rep_ExportRightsbyUserType.aspx" id="P313" runat="server" visible ="false"    title="Export User Rights By User Type"><i></i>
+                                            <span class="title">Export Rights By User Type</span></a></li>
+
+                                         <li><a href="~/html/Rep_ExportRightsbyUsers.aspx" id="P314" runat="server" visible ="false"    title="Export User Rights By Users"><i></i>
+                                            <span class="title">Export User Rights By Users</span></a></li>
+                                         
+                                         <li><a href="~/html/RepApprCodeUsage.aspx" id="P257" runat="server" visible ="false"    title="Approval Code Usage"><i></i>
+                                            <span class="title">Approval Code Usage</span></a></li>
+
+                                         <li><a href="~/html/Rep_BankList.aspx" id="P346" runat="server" visible ="false"    title="Bank Listing"><i></i>
+                                            <span class="title">Bank Listing </span></a></li>
+                                        
+                                         <li><a href="~/html/Rep_HolidayList.aspx" id="P347" runat="server" visible ="false"    title="Holiday Listing"><i></i>
+                                            <span class="title">Holiday Listing </span></a></li>
+
+                                           <li><a href="~/html/Rep_App_Control_Flag.aspx" id="P351" runat="server" visible ="false"    title="App Control Flag"><i></i>
+                                            <span class="title">App Control Flag </span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                   
+                         <li><a href="#" id="M6" runat="server"   visible ="false"  title="User Management">
+                            <i class="fa fa-users"></i><span class="title">User Management</span></a>
+                            <ul id="Ul21" class="sub-menu">
+                                <li><a href="~/html/ManageUserTypes.aspx" id="P17" runat="server" visible ="false"    title="Manage User Types"><i></i>
+                                    <span class="title">Manage User Types</span></a></li>
+                                 <li><a href="~/html/ManageUsers.aspx" id="P16" runat="server" visible ="false"    title="Manage Users"><i></i>
+                                    <span class="title">Manage Users</span></a></li>
+                                 <li><a href="~/html/AdminUserGroup.aspx" id="P382" runat="server" visible ="false"    title="Manage User Groups"><i></i>
+                                    <span class="title">Manage User Groups</span></a></li>
+                                <li><a href="~/html/ChangePassword.aspx" id="P15" runat="server" visible ="false"    title="Change Password"><i></i>
+                                    <span class="title">Change Password</span></a></li>
+
+                               
+
+                            </ul>
+                        </li>
+                        <li><a href="https://panel.kontakt.io/signin" target="_blank"><i class="ibeaconlogo"></i><span class="title">Beacon Management</span></a></li>
+
+                            </ul>
+                     
+
+
+
+                    <div class="clearfix"></div>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+            </div>
+
+            <!-- END SIDEBAR -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- BEGIN PAGE CONTAINER-->
+            <div class="page-content">
+                <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                <div id="portlet-config" class="modal hide">
+                    <div class="modal-header">
+                        <button data-dismiss="modal" class="close" type="button"></button>
+                        <h3>Widget Settings</h3>
+                    </div>
+                    <div class="modal-body">Widget settings form goes here </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="content">
+                    <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                    <section class="content-wrapper main-content clear-fix">
+                        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                    </section>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN CORE JS FRAMEWORK-->
+
+        <!--[if lt IE 9]>
+<script src="assets/js/respond.js"></script>
+<![endif]-->
+
+
+
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN CORE TEMPLATE JS -->
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\BO Application\SalesWorx_VS\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SWX_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO_Common\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO_Common\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\RestSharp.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO_Common\bin\Debug\RestSharp.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\log4net.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\bin\Debug\log4net.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbprojResolveAssemblyReference.cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb

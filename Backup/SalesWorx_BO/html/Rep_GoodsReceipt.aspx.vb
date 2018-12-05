@@ -1,0 +1,275 @@
+﻿Imports System.Configuration.ConfigurationManager
+Imports SalesWorx.BO.Common
+Imports System.Resources
+Imports System.Web.UI.WebControls
+Imports System.Data
+Imports log4net
+Imports System.IO
+Imports Microsoft.Reporting.WebForms
+Partial Public Class Rep_GoodsReceipt
+    Inherits System.Web.UI.Page
+
+    Dim Err_No As Long
+    Dim Err_Desc As String
+    Dim ErrorResource As ResourceManager
+    Dim ObjCommon As Common
+    Dim ObjCustomer As Customer
+
+    Private ReportPath As String = "GoodsReceipt"
+
+    Private Const PageID As String = "P103"
+    Dim alVisitInfo As New ArrayList
+    Dim objInfo As New Vist_Info
+    Dim TotInvoice As Single
+    Dim TotCreditNotes As Single
+    Dim TotPayment As Single
+
+    Private Shared ReadOnly log As ILog = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+
+    Private Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
+        If Not IsNothing(Me.Master) Then
+
+            Dim masterScriptManager As ScriptManager
+            masterScriptManager = CType(Master.FindControl("ScriptManager1"), ScriptManager)
+
+            ' Make sure our master page has the script manager we're looking for
+            If Not IsNothing(masterScriptManager) Then
+
+                ' Turn off partial page postbacks for this page
+                masterScriptManager.EnablePartialRendering = False
+            End If
+
+        End If
+
+    End Sub
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If IsNothing(Session("USER_ACCESS")) Then
+            Response.Redirect("Login.aspx")
+        End If
+        If Not IsPostBack Then
+            Dim HasPermission As Boolean = False
+            ManageAuthentication.HasPermission(CType(Session.Item("USER_ACCESS"), UserAccess), PageID, HasPermission)
+            If Not HasPermission Then
+                Err_No = 500
+                Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_Unauthorized") & "&next=Welcome.aspx&Title=Message", False)
+            End If
+            ErrorResource = New ResourceManager("SWX_ALP.ErrorResource", System.Reflection.Assembly.GetExecutingAssembly())
+            Try
+                ObjCommon = New Common()
+                Dim SubQry As String = ObjCommon.GetSalesRepQry(CType(Session("User_Access"), UserAccess).UserID)
+                ddlOrganization.DataSource = ObjCommon.GetOrganisation(Err_No, Err_Desc, SubQry)
+                ddlOrganization.DataBind()
+                ddlOrganization.Items.Insert(0, New ListItem("-- Select a value --"))
+                If Not Request.QueryString("ID") Is Nothing Then
+                    txtFromDate.Text = Format(DateAdd(DateInterval.Day, IIf(Day(Now) - 1 = 0, 0, -1 * (Day(Now) - 1)), Now().Date), "dd-MMM-yyyy")
+                    txtToDate.Text = Format(Now().Date, "dd-MMM-yyyy")
+
+                    Dim dt As New DataTable
+                    dt = (New SalesWorx.BO.Common.Common).GetSalesOrgbyFsr(Err_No, Err_Desc, Request.QueryString("ID"))
+                    If dt.Rows.Count > 0 Then
+                        If Not ddlOrganization.Items.FindByValue(dt.Rows(0)("MAS_Org_ID").ToString) Is Nothing Then
+                            ddlOrganization.ClearSelection()
+                            ddlOrganization.Items.FindByValue(dt.Rows(0)("MAS_Org_ID").ToString).Selected = True
+
+                            Dim objUserAccess As UserAccess
+                            objUserAccess = CType(Session.Item("USER_ACCESS"), UserAccess)
+
+                            ddlVan.DataSource = ObjCommon.GetVanByOrg(Err_No, Err_Desc, ddlOrganization.SelectedValue, objUserAccess.UserID)
+                            ddlVan.DataBind()
+                            ddlVan.Items.Insert(0, New ListItem("-- Select a value --"))
+                            If Not ddlVan.Items.FindByValue(Request.QueryString("ID")) Is Nothing Then
+                                ddlVan.ClearSelection()
+                                ddlVan.Items.FindByValue(Request.QueryString("ID")).Selected = True
+                            End If
+
+
+
+                        End If
+                    End If
+                Else
+                    txtFromDate.Text = Format(Now().Date, "dd-MMM-yyyy")
+                    txtToDate.Text = Format(Now().Date, "dd-MMM-yyyy")
+                End If
+
+
+                If Not Err_Desc Is Nothing Then
+                    log.Error(Err_Desc)
+                    Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_RoutePlanner_001") & "&next=Welcome.aspx&Title=Messages", False)
+                End If
+            Catch ex As Exception
+                Err_No = "74066"
+                If Err_Desc Is Nothing Then
+                    log.Error(GetExceptionInfo(ex))
+                Else
+                    log.Error(Err_Desc)
+                End If
+                Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_RoutePlanner_001") & "&next=Welcome.aspx&Title=Messages", False)
+            Finally
+                ObjCommon = Nothing
+                ErrorResource = Nothing
+            End Try
+        End If
+    End Sub
+    Private Sub BindData()
+        Dim SearchQuery As String = ""
+        Dim SalesRepId As Integer = 0
+        Dim CustId As Integer = 0
+        Dim fromdate As DateTime
+        Dim todate As DateTime
+        fromdate = System.Data.SqlTypes.SqlDateTime.Null
+        todate = System.Data.SqlTypes.SqlDateTime.Null
+
+
+        Try
+            ObjCustomer = New Customer()
+            ObjCommon = New Common()
+            Dim objUserAccess As UserAccess
+            objUserAccess = CType(Session.Item("USER_ACCESS"), UserAccess)
+
+            fromdate = CDate(txtFromDate.Text)
+            todate = CDate(txtToDate.Text)
+
+            If Not (ddlOrganization.SelectedItem.Value = "-- Select a value --") Then
+                InitReportViewer(fromdate, todate, CType(Session("User_Access"), UserAccess).UserID)
+            Else
+                MessageBoxValidation("Select an Organization.")
+            End If
+
+
+        Catch ex As Exception
+            If Err_Desc IsNot Nothing Then
+                log.Error(Err_Desc)
+            Else
+                log.Error(GetExceptionInfo(ex))
+            End If
+            Err_No = "74067"
+            '  Err_Desc = ex.Message
+            Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_RoutePlanner_001") & "&next=Welcome.aspx&Title=Messages", False)
+        Finally
+            ObjCustomer = Nothing
+        End Try
+    End Sub
+
+    Private Sub InitReportViewer(ByVal fromdate As Date, ByVal Todate As Date, ByVal UID As Integer)
+        Try
+
+            Dim objUserAccess As UserAccess
+            objUserAccess = CType(Session.Item("USER_ACCESS"), UserAccess)
+
+            Dim OrgID As New ReportParameter
+            OrgID = New ReportParameter("OrgID", Me.ddlOrganization.SelectedValue)
+
+            Dim RowID As New ReportParameter
+            RowID = New ReportParameter("RowID", "0")
+
+            Dim AppCode As New ReportParameter
+            AppCode = New ReportParameter("ApprovalCode", "0")
+
+            Dim OrgName As New ReportParameter
+            OrgName = New ReportParameter("OrgName", CStr(ddlOrganization.SelectedItem.ToString()))
+
+
+            Dim SalesRep As New ReportParameter
+            SalesRep = New ReportParameter("SalesRep", ddlVan.SelectedItem.Text)
+
+            Dim UsedFor As New ReportParameter
+            UsedFor = New ReportParameter("UsedFor", "")
+
+            Dim UsedCode As New ReportParameter
+            UsedCode = New ReportParameter("UsedCode", "")
+
+            Dim FDate As New ReportParameter
+            FDate = New ReportParameter("FromDate", fromdate.ToString())
+
+            Dim TDate As New ReportParameter
+            TDate = New ReportParameter("ToDate", Todate.ToString())
+
+            Dim SID As New ReportParameter
+            SID = New ReportParameter("SID", ddlVan.SelectedValue)
+         
+
+          
+            With RVMain
+                .Reset()
+                .ShowParameterPrompts = False
+                .ServerReport.ReportServerCredentials = New CustomReportServerCredentials()
+                .ServerReport.ReportServerUrl = New System.Uri(AppSettings("ReportServer"))
+                .ServerReport.ReportPath = String.Format("{0}{1}", AppSettings("ReportPath"), Me.ReportPath)
+                .ServerReport.SetParameters(New ReportParameter() {OrgID, RowID, AppCode, OrgName, SalesRep, UsedFor, UsedCode, FDate, TDate, SID})
+                .ServerReport.Refresh()
+
+            End With
+
+
+        Catch Ex As Exception
+            '  log.Error(GetExceptionInfo(Ex))
+        End Try
+    End Sub
+
+    Private Sub SearchBtn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles SearchBtn.Click
+        RVMain.Reset()
+        If Not (ddlOrganization.SelectedItem.Value = "-- Select a value --") Then
+
+            If ddlVan.SelectedItem.Value = "-- Select a value --" Then
+                MessageBoxValidation("Select a van")
+                SetFocus(txtFromDate)
+                Exit Sub
+            End If
+
+
+            If Not IsDate(txtFromDate.Text) Then
+                MessageBoxValidation("Enter valid ""From date"".")
+                SetFocus(txtFromDate)
+                Exit Sub
+            End If
+
+            If Not IsDate(txtToDate.Text) Then
+                MessageBoxValidation("Enter valid ""To date"".")
+                SetFocus(txtToDate)
+                Exit Sub
+            End If
+
+            If CDate(txtFromDate.Text) > CDate(txtToDate.Text) Then
+                MessageBoxValidation("Start Date should not be greater than End Date.")
+                Exit Sub
+            End If
+            BindData()
+
+
+        Else
+            MessageBoxValidation("Select an organization.")
+        End If
+    End Sub
+    Sub MessageBoxValidation(ByVal str As String)
+        lblMessage.ForeColor = Drawing.Color.Red
+        lblinfo.Text = "Validation"
+        lblMessage.Text = str
+        MpInfoError.Show()
+        MpInfoError.Show()
+        Exit Sub
+    End Sub
+    Protected Sub ddlOrganization_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlOrganization.SelectedIndexChanged
+
+
+        If Not (ddlOrganization.SelectedItem.Value = "-- Select a value --") Then
+
+            Dim objUserAccess As UserAccess
+            objUserAccess = CType(Session.Item("USER_ACCESS"), UserAccess)
+            ObjCommon = New Common()
+            ddlVan.DataSource = ObjCommon.GetVanByOrg(Err_No, Err_Desc, ddlOrganization.SelectedValue, objUserAccess.UserID)
+            ddlVan.DataBind()
+            ddlVan.Items.Insert(0, New ListItem("-- Select a value --"))
+
+            RVMain.Reset()
+        Else
+            ddlVan.Items.Clear()
+            ddlVan.Items.Insert(0, New ListItem("-- Select a value --"))
+            RVMain.Reset()
+        End If
+
+    End Sub
+    Public Overrides Sub VerifyRenderingInServerForm(ByVal control As Control)
+        Return
+    End Sub
+
+End Class

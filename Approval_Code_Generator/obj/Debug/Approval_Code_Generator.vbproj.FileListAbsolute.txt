@@ -1,0 +1,37 @@
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll.config
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll.config
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.xml
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.Resources.resources
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
+C:\inetpub\wwwroot\BO Application\Sellit\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll.config
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll.config
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.pdb
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.xml
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.Resources.resources
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbproj.GenerateResource.Cache
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
+F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb

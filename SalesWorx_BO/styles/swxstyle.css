@@ -1,0 +1,1324 @@
+/* CSS Document */
+*
+/*
+{
+	box-sizing: border-box;
+} */
+html, body {
+height: 100%;
+} 
+
+body {
+/*-x-system-font:none; */
+font-family: calibri;
+font-size:11px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0;
+width:100%;
+background-color:#fff;
+}
+
+.tdclear
+{
+    padding:0px; margin:0px;
+}
+
+.error{
+color:#FF0000;
+padding:2px 6px;
+font-size:12px;
+width:auto;
+background-color:White;
+}
+
+.message{
+color:#00993f;
+padding:2px 6px;
+font-size:12px;
+width:auto;
+background-color:White;
+}
+
+.errormsg{
+color:#FF0000;
+background:#FFFFFF;
+padding:2px 4px;
+width:auto;
+}
+
+.clear{
+clear:both;
+padding:0;
+margin:0;
+border:0;
+}
+
+.dashsectitle
+{
+	color:#333;
+	background-color:#EFEFEF;
+	text-align:center;
+	font-size:18px;
+	font-weight:normal;
+	margin:0;
+	padding:10px 0;
+}
+
+form {
+margin:0;
+padding:0;
+}
+
+.filter-table
+{
+	background:#F7F6E8 !important;
+}
+
+.filter-table td
+{
+padding:10px;
+
+}
+
+.visit-statistics td
+{
+	padding:15px 0;
+	text-align:center;
+	font-size:18px;
+	color:#999;
+}
+
+.visit-statistics td span
+{
+	display:block;
+	font-weight:bold;
+	font-size:36px;
+}
+
+.visit-statistics td.td-col-1
+{
+	border-bottom:#ccc solid 1px !important;
+	border-right:#ccc solid 1px !important;
+}
+
+.visit-statistics td.td-col-2
+{
+	border-bottom:#ccc solid 1px !important;
+}
+
+.visit-statistics td.td-col-3
+{
+	border-right:#ccc solid 1px !important;
+}
+
+.visit-statistics td.td-col-4
+{
+	
+}
+
+/*Calendar Pops */
+
+.calendar A:link
+{
+     text-decoration: none; margin:0px; padding:0px; border:0px;
+}
+
+.calendar A:visited
+{
+    text-decoration: none; margin:0px; padding:0px; border:0px;
+}
+
+.calendar A:hover
+{
+    color: #ff00ff;
+    text-decoration: none; margin:0px; padding:0px; border:0px;
+}
+
+.CalInput
+{
+    font-family:Calibri,Arial,Helvetica;
+	font-size: 12px;
+	width:180px;
+}
+
+
+/*.header {
+background:#484747 url(../images/swxheader.jpg) no-repeat scroll bottom left;
+height:89px;
+}*/
+
+.header {
+	background:#fff;
+}
+.header-outer
+{
+	width:85%;
+	margin:0 auto;
+	overflow:hidden;
+}
+.header-logo img
+{
+	width:110px;
+	height:auto;
+	margin:10px 0;
+}
+
+#content
+{
+	clear:both;
+	padding:0;
+	width:85%;
+	margin:30px auto;
+	min-height: 429px;
+	overflow-x: auto;
+}
+.profile-user
+{
+	float:right;
+	padding:25px 0 0 0;
+	color:#4d6684;
+	font-size:16px;
+}
+
+.profile-user img
+{
+	width:32px;
+	height:auto;
+	vertical-align: middle;
+	margin:0 5px 0 0;
+}
+
+.menu-outer
+{
+	background:#14324a;
+}
+#ctl00_TopMenu1_MenuLbl
+{
+	width:85%;
+	margin:0 auto;
+	display: block;
+}
+
+#ctl00_ContentPlaceHolder1_TblDashboard td
+{
+	padding:10px;
+	background:#fff;
+}
+
+.checkboxvalign
+{
+	vertical-align:middle;
+}
+
+.checkboximgvalign
+{
+	vertical-align:sub;
+	margin:0 3px;
+}
+
+.topshadow{
+text-align:left;
+vertical-align:top;
+top:0px;
+background:#fff;
+/*border-bottom:#fff solid 1px;
+border-left: #fff solid 1px;
+border-right:#fff solid 1px;*/
+}
+
+.footertd{
+border:none; 
+background-color:#C9D3DB; 
+padding:10px; 
+color:#555; 
+font-size:11px;
+}
+
+.footer{
+	line-height:1.2em;
+	overflow:hidden;
+}
+
+.footer-left
+{
+	float:left;
+	width:50%;
+}
+
+.footer-right
+{
+	float:right;
+	width:50%;
+	text-align:right;
+}
+
+.outerform{
+width:100%;
+height:100%;
+padding:0px;
+border:0px;
+}
+
+.popouterform{
+width:auto;
+height:100%;
+padding:0px;
+border:0px;
+}
+/* tableform */
+.outerform #tableform
+{
+background-color:#EEEEEE;
+border:#DDDDDD 1px solid;
+margin:10px 5px 10px 0px; 
+}
+.outerform #tableform table
+{
+    background:none;
+}
+
+.outerform #tableform td{
+border:none;
+padding:6px 10px 4px 20px;
+}
+
+.outerform #tableform th{
+padding:12px 10px 4px 20px;
+border:none;
+}
+
+.outerform #tableform label{
+font-weight:700;
+font-size:12px;
+/*padding:6px 10px 4px 20px;*/
+}
+
+.outerform #tableform textfield{
+font: 12px Calibri;
+/*margin:6px 10px 4px 20px;*/
+}
+
+.outerform #tableform select{
+font: 12px Calibri;
+/*margin:6px 10px 4px 20px;*/
+}
+
+.outerform #tableform .inputfld{
+font-size:12px;
+margin:6px 10px 4px 20px;
+}
+
+
+.outerform #tableform .calinput {    
+font-size:12px;
+margin:6px 10px 4px 20px;
+width:180px;
+}
+
+/* tableform ends */
+
+/* for old pages */
+
+
+.outerform #oldpagetable{
+background-color:#dedede;
+border:#FFFFFF 5px solid;
+margin:10px 5px 10px 0px;
+font-size:12px; 
+}
+.outerform #oldpagetable table
+{
+    padding:0px;
+    margin:0px;
+   }
+
+.outerform #oldpagetable td{
+border:none;
+padding:10px 10px 4px 10px;
+font-size:12px;
+}
+
+.outerform #oldpagetable th{
+padding:12px 10px 4px 10px;
+border:none;
+font-size:12px;
+}
+
+.outerform #oldpagetable label{
+font-weight:700;
+font-size:12px;
+padding:6px 10px 4px 20px;
+}
+
+.outerform #oldpagetable textfield{
+font-size:12px;
+margin:6px 10px 4px 20px;
+}
+
+.outerform #oldpagetable select{
+font-size:12px;
+margin:6px 10px 4px 20px;
+}
+
+
+.outerform #oldpagetable .inputfld{
+font-size:12px;
+margin:6px 10px 4px 20px;
+}
+
+.outerform #oldpagetable .input{
+font-size:12px;
+margin:6px 10px 4px 20px;
+}
+
+
+.outerform #oldpagetable .calinput {    
+font-size:12px;
+margin:6px 10px 4px 20px;
+}
+
+/* old pages ends here */ 
+
+/* clear old table structure */
+.outerform #cleartable
+{
+    padding:0px;
+    margin:0px;
+}
+
+.outerform #cleartable table
+{
+   padding:0px;
+    margin:0px;
+   
+}
+
+.outerform #cleartable td
+{
+   padding:0px;
+    margin:0px; 
+}
+
+
+
+/* clear old table structure ends here */
+
+
+
+
+/* tableform option 2 starts for normal properties of Input elements */ 
+
+.outerform #tableformNrml,
+#contentofpage table.tableformNrml,
+#contentofpage table.tableformNrml table
+{
+ background: #efefef; 
+ width:100%;
+}
+
+.outerform #tableformNrml table
+{
+    background:none;
+   }
+
+.outerform #tableformNrml td{
+border:none;
+}
+
+.outerform #tableformNrml th
+{
+	border: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+
+.outerform #tableformNrml label{
+font-weight:700;
+font-size:12px;
+/*margin:6px 2px 4px 2px;*/
+}
+
+.outerform #tableformNrml #labelstyle{
+font-weight:700;
+font-size:12px;
+margin:6px 2px 4px 2px;
+
+}
+
+.tablecellalign th
+{
+	border-top: 1px solid #fff !important;
+	border-left: 1px solid #fff !important;
+	border-right: 1px solid #fff !important;
+	border-bottom: 2px solid #ccc !important;
+	background:#fff;
+	color:#333;
+	padding: 6px;
+	font: 14px Calibri;
+	font-weight:bold;
+}
+
+.tablecellalign th a
+{
+	color:#333 !important;
+	font: 14px Calibri;
+	text-decoration:underline;
+}
+
+.tablecellalign td
+{
+	font: 14px Calibri;
+	color:#333;
+	padding: 6px;
+}
+
+.tablecellalign .tdstyle{
+	background:#fff;
+	border:#fff solid 1px;
+}
+.tablecellalign .alttdstyle{
+	background:#f7f7f7;
+	border:#f7f7f7 solid 1px;
+}
+
+.tablecellalign tr:hover td
+{
+	background:#F7F6E8;
+}
+
+.modalPopup .modalPopupTitle
+{
+	background-color: #337ab7;
+    border: 1px solid #337ab7;
+    color: White;
+ font: 14px Calibri;
+    font-weight: bold;
+    padding: 3px;
+    text-align: center;
+}
+
+.popuptable
+{
+	width:100%;
+}
+
+.popuptable td
+{
+	padding:6px;
+}
+
+.popuptable td input,
+.popuptable td select
+{
+	width:100%;
+}
+
+.popuptable td input[type=submit],
+.popuptable td input[type=button]
+{
+	width:30%;
+}
+
+
+
+
+
+.outerform #tableformNrml .pagerstyle{
+font-size:12px;
+background-color :#F1F5FB;
+font-weight:700;
+ Color :#4c607a;
+ border-color :#F1F5FB;
+  border-style :Solid;
+   border-width :1px
+}
+.outerform #tableformNrml textfield{
+font-size:12px;
+margin:6px 2px 4px 2px;
+}
+
+.outerform #tableformNrml select{
+font-size:12px;
+padding: 5px 10px;
+/*margin:6px 2px 4px 2px;*/
+}
+
+.outerform #tableformNrml .inputfld{
+font-size:12px;
+margin:6px 2px 4px 2px;
+}
+
+
+.outerform #tableformNrml .calinput {    
+font-size:12px;
+margin:6px 2px 4px 2px;
+}
+/* tableform option 2 ends  */
+
+
+/*start normal table inside tableform */
+.outerform #tableform #tablenormal
+{
+    padding:0px;
+    border:none;    
+}
+
+.outerform #tableform #tablenormal #tdnormal td{
+padding:0px;
+border:none;
+}
+/*end normal table inside tableform */
+
+
+/* for Report pages Grid Table starts here */
+
+#ReportGridtable #ReportGridContainertd      
+{
+padding:0px; margin:0px; background-color:#dedede;
+border:#FFFFFF 5px solid;
+margin:10px 5px 10px 0px; 
+}
+
+
+#ReportGridtable{
+background-color:#dedede;
+margin:10px 5px 10px 0px; 
+}
+#ReportGridtable table
+{
+background-color:#dedede;
+font-size:12px;
+}
+
+#ReportGridtable td{
+padding:10px 10px 4px 20px;
+border:none;
+}
+
+#ReportGridtable th{
+padding:6px 10px 4px 20px;
+background-color:#c0c0c0;
+}
+
+#ReportGridtable .link
+{
+	border:0px;
+	font-style:italic;
+}
+
+/* for Report pages Grid Table ends here */
+
+
+
+/* Grid Table structure starts here 
+
+Note***For grids in reports use *ReportGridTable*** */
+
+#swxGridstyle{
+background-color:#dedede;
+border:#FFFFFF 5px solid;
+margin:10px 5px 10px 0px; 
+}
+
+
+#swxGridstyle td{
+padding:5px 10px 4px 10px;
+border:0px;
+
+}
+
+#swxGridstyle th{
+padding:6px 10px 4px 10px;
+border:0px;
+border-bottom: 1px solid #efefef;
+background-color:#C0C0C0;
+}
+
+#swxGridstyle .link
+{
+	border:0px;
+	font-style:normal;
+	font-weight:700;
+}
+
+/*  Grid Table structure ends here */
+
+
+#contentofpage{
+padding:10px;
+height: auto !important;
+-moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pgtitileposition
+{
+    margin:0px 0px 10px;
+}
+
+.pgtitile3 {
+font-size:21px;
+color:#525357;
+margin:0px 0 15px;
+padding:0px 0px 10px 0;
+border-bottom:#e8e9eb solid 1px;
+text-align:left;
+display:block;
+}
+
+#pagenote{
+background-color:#FFFFFF;
+margin:12px 0px;
+border-bottom:1px solid #afafaf;
+border-top:3px solid #afafaf;
+padding:8px 4px 4px 20px;
+font-size:13px;
+color:#414141;
+	height: 32px;
+}
+
+
+#contentofpage table{
+background-color:#dedede;
+border:#FFFFFF 2px thin;
+}
+
+#contentofpage td{
+border:1px #fff #fff ;
+}
+
+#contentofpage th{
+border-bottom:1px #fff solid;
+border-right:1px #fff solid;
+}
+
+#formstyle 
+{
+
+}
+
+#contentofpage #formstyle table{
+background-color:#dedede;
+border:#FFFFFF 5px solid;
+}
+
+#contentofpage #formstyle td{
+padding:4px 10px 2px 20px;
+border:none;
+}
+
+#contentofpage #formstyle th{
+padding:4px 10px 2px 20px;
+border:none;
+}
+
+#contentofpage #formstyle label{
+font-weight:700;
+font-size:12px;
+}
+
+/*general links */
+#contentofpage a:link 	{ color: #337AB7  ; text-decoration:underline; }
+#contentofpage a:visited { color:#95774c; text-decoration:underline; } 
+#contentofpage a:hover 	{ color:#414141; text-decoration:underline; } 
+/*general links */
+
+
+/*general links */
+.footer a			{ color: #4791D2  ; text-decoration:none; }
+.footer a:visited 	{ color:#ffffff; text-decoration:none; } 
+.footer a:hover		{ color:#ffffff; text-decoration:none; } 
+/*general links */
+
+
+/* button style starts */
+#contentofpage a.btn:link 	{ background-color:#2c2c2c; padding:3px 9px; color:#ffffff; text-decoration:none; font-size:12px; margin-right:14px; }
+#contentofpage a.btn:visited 	{ background-color:#2c2c2c; padding:3px 9px; color:#ffffff; text-decoration:none; font-size:12px; } 
+#contentofpage a.btn:hover 	{ background-color: #337AB7  ; padding:3px 9px; color:#ffffff; text-decoration:none; font-size:12px; } 
+/* button style ends */
+
+.button{
+background-color:#2c2c2c;
+padding:3px 9px;
+margin-right:14px;
+color:#FFFFFF;
+}
+
+/* Button for old pages starts here */
+
+ .btnInputold
+{
+background-color:#2c2c2c;
+padding:1px 4px;
+color:#FFFFFF; 
+border:1px;
+}
+
+.btnInputoldovr
+{
+	background-color: #337AB7  ;
+	color:#FFFFFF;
+	border: 1px;
+	border-color: #66ccff #0066cc #0066cc #66ccff;
+}
+
+/* button for old pages ends here */
+
+
+
+/* button for New pages ends here */
+
+input[type=submit]
+{
+	border-radius:3px;
+	cursor:pointer;
+}
+
+.btnInput
+{
+border-style: none;
+	border-color: inherit;
+	border-width: 1px;
+	background-color:#2c2c2c;
+	padding:3px 8px;
+	margin-right:14px;
+	color:#FFFFFF; 
+	height: 28px;
+	margin-left: 27px;
+	font: 12px Calibri 
+}
+
+.btnInputRed
+{
+	border:#fff solid 0px;
+	background-color:#D9534F;
+	padding:5px 15px;
+	margin: 0 5px;
+	color:#FFFFFF;
+	font: 12px Calibri 
+}
+.btnInputGrey
+{
+	border:#fff solid 0px;
+	background-color:#708090;
+	padding:5px 15px;
+	margin: 0 5px;
+	color:#FFFFFF; 
+	font: 12px Calibri 
+}
+.btnInputBlue
+{
+	border:#fff solid 0px;
+	background-color:#0090d9;
+	padding:5px 15px;
+	margin: 0 5px;
+	color:#FFFFFF; 
+	font: 12px Calibri 
+}
+.btnInputGreen
+{
+	border:#fff solid 0px;
+	background-color:#5CB85C;
+	padding:5px 15px;
+	margin: 0 5px;
+	color:#FFFFFF;
+	font: 12px Calibri 
+}
+
+.btnInputOrange
+{
+	border:#fff solid 0px;
+	background-color:#5BC0DE;
+	padding:5px 15px;
+	margin: 0 5px;
+	color:#FFFFFF;
+	font: 12px Calibri 
+}
+
+.btnInput[disabled]{
+background-color:#2c2c2c;
+padding:3px 8px;
+margin-right:14px;
+color:#999999; 
+border:1px;
+}
+
+.btnInputOrange:hover,
+.btnInputOrange:focus
+{
+	background-color:#31B0D5 ;
+	color:#FFFFFF;
+	border: 1px;
+	border-color: #EC971F #EC971F #EC971F #EC971F;
+}
+
+
+
+.btnInputBlue:hover,
+.btnInputBlue:focus
+{
+	background-color:#286090  ;
+	color:#FFFFFF;
+	border: 1px;
+	border-color: #286090 #286090 #286090 #286090;
+}
+
+
+.btnInputGreen:hover,
+.btnInputGreen:focus
+{
+	background-color: #449D44  ;
+	color:#FFFFFF;
+	border: 1px;
+	border-color: #449D44 #449D44 #449D44 #449D44;
+}
+
+.btnInputRed:hover,
+.btnInputRed:focus
+{
+	background-color: #C9302C  ;
+	color:#FFFFFF;
+	border: 1px;
+	border-color: #C9302C #C9302C #C9302C #C9302C;
+}
+
+html>body input.btnInput[disabled], 
+html>body input.btnInput[disabled]:hover, 
+html>body input.btnInput[disabled]:focus 
+{
+	background-color: #2c2c2c;
+	color:#999999; 
+	border: 1px;
+	border-color: #000000 #000000 #000000 #000000;
+}
+
+
+html>body input.btnInput:disabled,
+html>body input.btnInput:disabled:hover, 
+html>body input.btnInput:disabled:focus  
+{ 
+	background-color: #2c2c2c;
+	color:#999999; 
+	border: 1px;
+	border-color: #000000 #000000 #000000 #000000;
+}
+
+
+.btnInput:visited 
+{
+	color:#ffffff;
+}
+
+/* button for New pages ends here */
+
+#note{
+color:#333333;
+font-size:11px;
+padding:4px 5px 2px 0px;
+background-color:#ddb500;
+}
+
+#note strong{
+font-weight:700;
+color:#fff;
+/*background-color:white;*/
+padding:1px 5px;
+}
+/* Style for Calendar Control starts here */
+
+
+#contentofpage .TblCalendarCntrl{
+background-color:#FFFFFF;
+border:2px solid #ededed;
+font-size:12px;
+}
+
+#contentofpage .TblCalendarCntrl td{
+border:1px solid #ffffff;
+}
+
+
+#contentofpage .TblCalendarCntrl .txtCalDate {
+
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	padding:1px 1px;
+}
+
+#contentofpage .TblCalendarCntrl th{
+border:1px solid #ededed;
+font-size:13px;
+padding:4px 4px 5px;
+width:100px;
+}
+
+
+#contentofpage .hdrCalendarCntrl{
+background-color:#ddb500;
+color:#FFFFFF; 
+padding:1px; 
+margin:0px;
+text-align:center; 
+font-size:13px; 
+width:100px;
+}
+
+#contentofpage .dateCalendarCntrl{
+background-color:#333333;
+padding:3px 5px;
+color:#FFFFFF;
+float:left;
+font-weight:700;
+}
+
+#contentofpage .visitCalendarCntrl{
+background-color: #337AB7  ; 
+padding:3px 5px; 
+color:#FFFFFF; 
+float:right;
+}
+
+#contentofpage .visitDtlsCalendarCntrl{
+padding:1px 3px; 
+color:#414141; 
+float:left; 
+margin-top:2px;
+font-size:11px;
+background-color:#cae5ff;
+border:solid 1px  #337AB7  ;
+width:94%;
+}
+
+#contentofpage .visitTimeDtlsCalendarCntrl{
+background-color:#efefef;
+padding:1px 3px; 
+color:#414141; 
+float:right; 
+margin-top:2px;
+}
+
+#contentofpage .visitTime_atCalendarCntrl{
+background-color:#efefef;
+padding:1px 0px; 
+color:#414141; 
+float:left; 
+margin-top:2px;
+}
+
+
+/* Style for Calendar Control ends here */
+
+
+/* Style for show/hide comments table starts here */
+#contentofpage #commenttbl{
+padding:0px;
+}
+
+#contentofpage #commenttbl table{
+padding:0px;
+margin:0px;
+border:0px;
+}
+
+#contentofpage #commenttbl table tr td
+{   
+    margin-bottom:2px;
+    border-bottom:solid 1px white;
+}
+
+#contentofpage #commenttbl th{
+color:#0066FF;
+text-align:left;
+background-color:#dedede;
+font-size:13px;
+border:0px;
+border-top:#FFFFFF 2px solid;
+border-bottom:#FFFFFF 2px solid;
+padding:2px 5px 2px 2px;
+}
+
+#contentofpage #commenttbl td{
+font-size:12px;
+border: 0px;
+padding:2px 5px 2px 2px;
+background-color:#efefef;
+}
+
+#contentofpage .showcomment{
+background:url(../images/showCmnt_icon.jpg) no-repeat 0 center; padding:2px 4px 2px 20px;}
+
+#contentofpage .hidecomment{
+background:url(../images/hideCmnt_icon.jpg) no-repeat 0 center; padding:2px 4px 2px 20px;}
+
+/* Style for show/hide comments table ends here */
+
+
+/*small calendar starts */
+.outerform #tableform .cal_Theme1 .ajax__calendar_container 
+     {background-color: #e2e2e2;	 
+	  border:1px solid #2c2c2c;
+	  padding:0px;
+	  margin:0px;
+	  }
+	  
+.outerform #tableform  .cal_Theme1 .ajax__calendar_container table{
+	  padding:1px;
+	  margin:0px;
+	  border:0px;
+	  background-color: #e2e2e2;
+	  }
+	  
+.outerform #tableform	  .cal_Theme1 .ajax__calendar_container td{
+	  padding:1px;
+	  background-color:#FFFFFF;
+	  margin:0px;
+	  border:0px;  
+	  }
+	  
+.outerform #tableform	  .cal_Theme1 .ajax__calendar_container th{
+	  padding:1px;}
+	  
+.outerform #tableform .cal_Theme1 .ajax__calendar_header  {    
+	background-color:  #337AB7  ; margin-bottom: 1px; }
+
+.cal_Theme1 .ajax__calendar_title,.cal_Theme1 .ajax__calendar_next,.cal_Theme1 .ajax__calendar_prev    {    color: #004080;     padding-top: 3px;}
+.cal_Theme1 .ajax__calendar_body    {    background-color: #e9e9e9; }
+.cal_Theme1 .ajax__calendar_dayname {    text-align:center; font-weight:bold; margin-bottom: 4px; margin-top: 2px;}
+.cal_Theme1 .ajax__calendar_day {    text-align:center;}
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,.cal_Theme1 .ajax__calendar_active  {    color: #004080;     font-weight: bold;     background-color: #dedede;}
+.cal_Theme1 .ajax__calendar_today   {    font-weight:bold;}
+.cal_Theme1 .ajax__calendar_other {color: #bbbbbb;}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {color: #ffffff;}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today {color: #004080;}
+
+/* For Small Calendar using in #tableformNrml */
+
+.outerform #tableformNrml .cal_Theme1 .ajax__calendar_container 
+     {background-color: #e2e2e2;	 
+	  border:1px solid #2c2c2c;
+	  padding:0px;
+	  margin:0px;
+	  }
+	  
+.outerform #tableformNrml  .cal_Theme1 .ajax__calendar_container table{
+	  padding:1px;
+	  margin:0px;
+	  border:0px;
+	  background-color: #e2e2e2;
+	  }
+	  
+.outerform #tableformNrml	  .cal_Theme1 .ajax__calendar_container td{
+	  padding:1px;
+	  background-color:#FFFFFF;
+	  margin:0px;
+	  border:0px;  
+	  }
+	  
+.outerform #tableformNrml	  .cal_Theme1 .ajax__calendar_container th{
+	  padding:1px;}
+	  
+.outerform #tableformNrml .cal_Theme1 .ajax__calendar_header  {    
+	background-color:  #337AB7  ; margin-bottom: 1px; }
+	 
+	 /* For Small Calendar using in #tableformNrml  Ends here ----** */
+	 
+	 
+	 /* For Small Calendar using in #dashboard */
+
+.outerform #dashboard .cal_Theme1 .ajax__calendar_container 
+     {background-color: #e2e2e2;	 
+	  border:1px solid #2c2c2c;
+	  padding:0px;
+	  margin:0px;
+	  }
+	  
+.outerform #dashboard  .cal_Theme1 .ajax__calendar_container table{
+	  padding:1px;
+	  margin:0px;
+	  border:0px;
+	  background-color: #e2e2e2;
+	  }
+	  
+.outerform #dashboard	  .cal_Theme1 .ajax__calendar_container td{
+	  padding:1px;
+	  background-color:#FFFFFF;
+	  margin:0px;
+	  border:0px;  
+	  }
+	  
+.outerform #dashboard	  .cal_Theme1 .ajax__calendar_container th{
+	  padding:1px;}
+	  
+.outerform #dashboard .cal_Theme1 .ajax__calendar_header  {    
+	background-color:  #337AB7  ; margin-bottom: 1px; }
+	 
+	 /* For Small Calendar using in #dashboard  Ends here ----** */
+	 
+	 /*small calendar ends */
+
+
+
+/* Style for Pager Number links starts here */
+
+.outerform #tableformNrml .pagernumberlink a:link,.outerform #tableform .pagernumberlink a:link,html>body .pagernumberlink a:link {
+margin-right:1px;
+margin-top:1px;
+float:left; 
+background-color:Gray ; 
+color:#4c607a;
+border:1px solid #414141; 
+border-color :Gray;
+font-size:11px; 
+padding:4px; 
+line-height:11px;
+text-decoration:none;
+}
+
+.outerform #tableformNrml .pagernumberlink a:visited,.outerform #tableform .pagernumberlink a:visited,html>body .pagernumberlink a:visited {
+margin-right:1px;
+margin-top:1px;
+float:left; 
+background-color:#ffffff; 
+color:#414141;
+border:1px solid #414141; 
+font-size:11px; 
+padding:4px; 
+line-height:11px;
+text-decoration:none;
+}
+
+.outerform #tableformNrml .pagernumberlink a:hover, .outerform #tableform .pagernumberlink a:hover,html>body .pagernumberlink a:hover {
+margin-right:1px;
+margin-top:1px;
+float:left; 
+background-color: #337AB7  ; 
+color:#ffffff;
+border:1px solid #414141; 
+font-size:11px; 
+padding:4px; 
+line-height:11px;
+text-decoration:none;
+}
+
+.outerform #tableformNrml .pagernumberlink span,.outerform #tableform .pagernumberlink span,html>body .pagernumberlink span {
+margin-right:1px;
+margin-top:1px;
+float:left; 
+background-color: #337AB7  ; 
+color:#ffffff;
+border:1px solid  #337AB7  ; 
+font-size:11px; 
+padding:4px; 
+line-height:11px;
+text-decoration:none;
+}
+
+/*pager control Number links ends */
+
+
+/* Clearing table style  */
+
+html>body #borderlesstable
+{
+    margin:0px;
+    padding:opx;
+}
+
+html>body #borderlesstable td
+{
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+
+
+/* clearing table style ends */
+
+/* Style for Dashborad starts here */
+
+#contentofdashboard{
+padding:4px 0px;
+}
+
+/*normal links starts */
+#contentofdashboard a:link 	{ color: #337AB7  ; text-decoration:underline; font-size:11px; }
+#contentofdashboard a:visited { color:#95774c; text-decoration:underline; } 
+#contentofdashboard a:hover 	{ color:#414141; text-decoration:underline; } 
+/*normal links ends */
+
+/* styled links for dashboard starts */
+#contentofdashboard a.btn:link 	{ background-color:#2c2c2c; padding:3px 9px; color:#ffffff; text-decoration:none; font-size:13px; margin-right:14px; }
+#contentofdashboard a.btn:visited 	{ background-color:#2c2c2c; padding:3px 9px; color:#ffffff; text-decoration:none; font-size:13px; } 
+#contentofdashboard a.btn:hover 	{ background-color: #337AB7  ; padding:3px 9px; color:#ffffff; text-decoration:none; font-size:13px; } 
+/* styled links for dashboard ends */
+
+
+.pgtitile1 {
+font:"Calibri" ;
+font-family:Calibri,Arial,Helvetica;
+font-size:16px;
+color:#fff;
+background-color:#ddb500; 
+/*background: #414141 url(../images/titlebg.jpg) no-repeat 0 0;*/
+padding:4px 18px 4px 6px;
+text-align:left;
+}
+
+.outerform #dashboard
+{
+background-color:#f6f6f6;
+border:#336699 5px solid;
+margin:10px 0px 10px 0px; 
+}
+
+#dashboard table
+{
+	border:none;
+	padding:0px;
+	margin:0px;
+	background-color:#ebebeb;
+	
+	}
+
+#dashboard table td
+{
+padding:3px 3px;
+border:none;
+border-bottom: 1px solid #ffffff;
+}
+
+#dashboard th
+{
+padding:5px 3px;
+background-color:#ddb500;
+border:none;
+border-bottom: 2px solid #ffffff;
+border-top: 1px dotted #ddb500;
+}
+
+.reportff, .reportff div, .reportff td {
+	  font-family: Calibri !important;
+}
+.RadComboBox_Default .rcbInput, .RadComboBoxDropDown_Default {
+  font: 12px Calibri !important;
+  color: #272722;
+}
+.riTextBox, html body .RadInputMgr_Default {
+  border-color: #938879;
+  background: #fff;
+  color: #272522;
+  font: 12px Calibri !important;
+}
+
+/* Style for Dashborad ends here */

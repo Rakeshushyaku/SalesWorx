@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SalesWorx_BO_DAL", "SalesWorx_BO_DAL\SalesWorx_BO_DAL.vbproj", "{64A748EC-D6C0-4251-962E-6CE798AC5FE8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SalesWorx_BO", "SalesWorx_BO\SalesWorx_BO.vbproj", "{866D7019-B817-4420-9A9D-22813DBB93F3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SalesWorx_BO_Common", "SalesWorx_BO_Common\SalesWorx_BO_Common.vbproj", "{5CC8B0D4-35B6-41DE-BFA6-41BCDAF398EC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SalesWorx_BO_Setup", "SalesWorx_BO_Setup\SalesWorx_BO_Setup.vdproj", "{2A5104E7-C1CD-480B-908F-57B772ADB8AE}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SalesWorx_CryptoUtil", "SalesWorx_CryptoUtil\SalesWorx_CryptoUtil.vbproj", "{563B6BEB-6023-4E1D-8AB9-FDCCB540FC61}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Approval_Code_Generator", "Approval_Code_Generator\Approval_Code_Generator.vbproj", "{9CDE42D4-5D4C-4D97-8443-1013D981200F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64A748EC-D6C0-4251-962E-6CE798AC5FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A748EC-D6C0-4251-962E-6CE798AC5FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A748EC-D6C0-4251-962E-6CE798AC5FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A748EC-D6C0-4251-962E-6CE798AC5FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866D7019-B817-4420-9A9D-22813DBB93F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866D7019-B817-4420-9A9D-22813DBB93F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866D7019-B817-4420-9A9D-22813DBB93F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866D7019-B817-4420-9A9D-22813DBB93F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC8B0D4-35B6-41DE-BFA6-41BCDAF398EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC8B0D4-35B6-41DE-BFA6-41BCDAF398EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC8B0D4-35B6-41DE-BFA6-41BCDAF398EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC8B0D4-35B6-41DE-BFA6-41BCDAF398EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5104E7-C1CD-480B-908F-57B772ADB8AE}.Debug|Any CPU.ActiveCfg = Debug
+		{2A5104E7-C1CD-480B-908F-57B772ADB8AE}.Release|Any CPU.ActiveCfg = Release
+		{563B6BEB-6023-4E1D-8AB9-FDCCB540FC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563B6BEB-6023-4E1D-8AB9-FDCCB540FC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563B6BEB-6023-4E1D-8AB9-FDCCB540FC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563B6BEB-6023-4E1D-8AB9-FDCCB540FC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDE42D4-5D4C-4D97-8443-1013D981200F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDE42D4-5D4C-4D97-8443-1013D981200F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDE42D4-5D4C-4D97-8443-1013D981200F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDE42D4-5D4C-4D97-8443-1013D981200F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

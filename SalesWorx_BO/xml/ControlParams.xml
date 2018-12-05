@@ -1,0 +1,134 @@
+<ControlParams LastControlID="CP28" LastSectionID="CS4">
+	<Section id="CS1">
+		<Title>Optional Modules</Title>
+		<Points>
+			<!--<Point id="CP1">
+				<Title>Order History</Title>
+			</Point>-->
+			<!--<Point id="CP2">
+				<Title>Voice/Memo</Title>
+			</Point>-->
+			<Point id="CP3">
+				<Title>Collections</Title>
+			</Point>
+			<Point id="CP4">
+				<Title>Market Survey</Title>
+			</Point>
+		</Points>
+	</Section>
+	<Section id="CS2">
+		<Title>Order Taking</Title>
+		<Points>
+			<!--<Point id="CP5">
+				<Title>Use order templates</Title>
+			</Point>
+			<Point id="CP6">
+				<Title>Allow lot selection</Title>
+			</Point>
+			<Point id="CP7" sub-link="false">
+				<Title>Wholesale order</Title>
+				<SubPoints>
+					<SubPoint id="CP8">
+						<Title>Default</Title>
+						<State1>Yes</State1>
+						<State0>No</State0>
+					</SubPoint>
+				</SubPoints>				
+			</Point>
+			<Point id="CP9" sub-link="false">
+				<Title>Skip consolidation</Title>
+				<SubPoints>
+					<SubPoint id="CP10">
+						<Title>Default</Title>
+						<State1>Yes</State1>
+						<State0>No</State0>
+					</SubPoint>
+				</SubPoints>					
+			</Point>
+			<Point id="CP11">
+				<Title>Allow order date modification</Title>
+			</Point>
+			<Point id="CP12">
+				<Title>Allow request date modification</Title>
+			</Point>
+			<Point id="CP13">
+				<Title>Allow ship date modification</Title>
+			</Point>
+			<Point id="CP14">
+				<Title>Allow for compensatory bonus</Title>
+			</Point>-->
+			<Point id="CP15">
+				<Title>Signature capture</Title>
+			</Point>						
+		</Points>
+	</Section>
+	<!--<Section id="CS3">
+		<Title>Order Holds</Title>
+		<Points>
+			<Point id="CP16" sub-link="true">
+				<Title>Credit limit</Title>
+				<SubPoints>
+					<SubPoint id="CP17">
+						<Title>Hold at</Title>
+						<State1>BO</State1>
+						<State0>Oracle</State0>
+					</SubPoint>
+				</SubPoints>
+			</Point>
+			<Point id="CP18" sub-link="true">
+				<Title>Lot selection</Title>
+				<SubPoints>
+					<SubPoint id="CP19">
+						<Title>Hold at</Title>
+						<State1>BO</State1>
+						<State0>Oracle</State0>
+					</SubPoint>
+				</SubPoints>
+			</Point>
+			<Point id="CP20" sub-link="true">
+				<Title>Extra bonus</Title>
+				<SubPoints>
+					<SubPoint id="CP21">
+						<Title>Hold at</Title>
+						<State1>BO</State1>
+						<State0>Oracle</State0>
+					</SubPoint>
+				</SubPoints>
+			</Point>
+			<Point id="CP22" sub-link="true">
+				<Title>Compensatory bonus</Title>
+				<SubPoints>
+					<SubPoint id="CP23">
+						<Title>Hold at</Title>
+						<State1>BO</State1>
+						<State0>Oracle</State0>
+					</SubPoint>
+				</SubPoints>
+			</Point>
+			<Point id="CP26" sub-link="true">
+				<Title>Proforma Orders</Title>
+				<SubPoints>
+					<SubPoint id="CP27">
+						<Title>Hold at</Title>
+						<State1>BO</State1>
+						<State0>Oracle</State0>
+					</SubPoint>
+				</SubPoints>
+			</Point>								
+		</Points>
+	</Section>
+	<Section id="CS4">
+		<Title>Order Processing</Title>
+		<Points>
+			<Point id="CP24">
+				<Title>Allow Transfer Orders</Title>
+			</Point>
+			<Point id="CP25">
+				<Title>Group orders for same SHIP-TO location</Title>
+			</Point>
+			<Point id="CP28">
+				<Title>Enable chain based consolidation</Title>
+			</Point>			
+		</Points>		
+	</Section>-->		
+</ControlParams>

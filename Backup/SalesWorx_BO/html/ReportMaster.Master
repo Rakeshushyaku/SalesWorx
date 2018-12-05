@@ -1,0 +1,112 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ReportMaster.master.vb" Inherits="SalesWorx_BO.ReportMaster" %>
+<%@ Register src="../Menu/TopMenu.ascx" tagname="TopMenu" tagprefix="uc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml"  >
+<head id="Head1" runat="server">
+    <title></title>
+    
+    
+<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+
+<link href="../styles/UpdateProgress.css" rel="stylesheet" type="text/css">
+<link href="../styles/swxstyle.css" rel="stylesheet" type="text/css">
+<link href="../styles/salesworx.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../styles/superfish.css" media="screen">
+ 
+
+		<script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script> 
+		 <script src="../facebox/facebox.js" type="text/javascript"></script> 
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript" src="../js/supersubs.js"></script>
+		
+		<script type="text/javascript" src="../js/jquery.bgiframe.min.js"></script> 
+		
+		<script type="text/javascript">
+
+		    // initialise plugins
+		    $(document).ready(function() {
+		        $("ul.sf-menu").supersubs({
+		            minWidth: 12,   // minimum width of sub-menus in em units 
+		            maxWidth: 27,   // maximum width of sub-menus in em units 
+		            extraWidth: 1     // extra width can ensure lines don't sometimes turn over 
+		            // due to slight rounding differences and font-family 
+		        }).superfish().find('ul').bgIframe({ opacity: false });  // call supersubs first, then superfish, so that subs are 
+		        // not display:none when measuring. Call before initialising 
+		        // containing tabs for same reason. 
+		    }); 
+
+		</script>
+		
+		
+		   <script language="JavaScript" type="text/JavaScript">
+
+		       window.onload =
+
+function setstart() {
+
+    var els = document.getElementsByTagName('div');
+
+
+    var i = els.length;
+
+
+    while (i--)
+
+        if (els[i].id.indexOf('ReportDiv') > 0)
+
+        els[i].style.overflow = 'hidden';
+
+}
+
+        </script>
+ <style type="text/css" media="print">
+        .no-print { display:none; }
+</style> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style='height:100%;background:#f6f6f6' >
+    <form id="form1" runat="server" class="outerform" style='height:90%;border:0'>
+   <asp:ScriptManager ID="ScriptManager1" runat="server"    >
+            </asp:ScriptManager>
+         
+       <div class="header no-print" runat="server" id="MenuDiv">
+           <div class="header-outer">
+                <div class="header-logo">
+                   
+                  <asp:ImageButton runat ="server" ID="logo" Width ="75px" Height ="43px"  style="padding-top:14px;"  
+                     ToolTip ="Click here to redirect for dashboard" OnClick ="logo_Click"
+                            ImageUrl="~/images/sales-worx.png"  />
+                    <div class="profile-user"> 
+                        <span runat="server" id="lblUserLogin"><%--User Logged in:--%><img src="../images/profile.png" /></span>
+                        <asp:Label ID="lbl_User" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>     
+           </div>
+           <div class="menu-outer">
+                <uc1:TopMenu ID="TopMenu1" runat="server" />  <%--<asp:Label ID="MenuLbl" runat="server"></asp:Label>--%>
+           </div>
+       </div>
+    <div id="content" style="vertical-align:top"  >
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"  >
+         
+        </asp:ContentPlaceHolder>
+    </div>
+    
+     <div class="footertd no-print"><div class="footer">
+    <div class="footer-left"> 
+    © Copyright 2003-2015 Unique Computer Systems. All rights reserved.<br />
+    SalesWorx™ is a product of Unique Computer Systems.
+    </div>
+    <div class="footer-right">
+	The SalesWorx Logo is a trademark of Unique Computer Systems and may not be reproduced without prior permission of the owner. <br/>
+	Unique Computer Systems, Sharjah, UAE | Email: <a href="mailto:info@ucssolutions.com">info@ucssolutions.com</a>
+	</div>	
+	</div></div>
+	
+	
+    </form>
+ 
+</body>
+
+

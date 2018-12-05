@@ -1,0 +1,238 @@
+/*BODY {
+	margin: 0px;
+	padding: 0px;
+	leftmargin:0px;
+	topmargin:0px;
+	marginwidth:0px;
+	marginheight:0px;
+	text-align: center;
+	
+	font-size: 12px;
+}
+.bgHeader {
+	background-image: url(../images/bgHeader.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 98px;
+
+}
+.boxCornerLT {
+	background-image: url(../images/boxCrnrLT.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 42px;
+	width: 24px;
+}
+.boxCornerRT {
+	background-image: url(../images/boxCrnrRT.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 42px;
+	width: 24px;
+}
+.boxCornerLB {
+	background-image: url(../images/boxCrnrLB.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 24px;
+	width: 24px;
+}
+.boxCornerRB {
+	background-image: url(../images/boxCrnrRB.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 24px;
+	width: 24px;
+}
+.shadowT {
+	background-image: url(../images/boxShadowT.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 42px;
+	padding-top: 13px;
+	padding-left: 6px;
+
+
+}
+.shadowB {
+	background-image: url(../images/boxShadowB.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.shadowL {
+	background-image: url(../images/boxShadowL.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+.shadowR {
+	background-image: url(../images/boxShadowR.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+*/
+
+.input 
+{
+  	
+	width:180px;
+	font:12px Calibri;
+} 
+
+.inputSM {
+	font:12px Calibri;
+	margin:0px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	width:180px;
+}
+
+.txt {
+	font:12px Calibri;
+	color: #000000;
+	text-decoration: none;
+	font-weight:normal;
+}
+.txtBold {
+	font:12px Calibri;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+.error{
+color:#FF0000;
+padding:2px 6px;
+font-size:12px;
+width:auto;
+background-color:White;
+}
+.bgMenu {
+	background-image: url(../images/bgMenu.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.borderLGrey {
+	border: 1px solid #CCCCCC;
+}
+.txtSM 
+{
+font:12px Calibri;
+}
+.txtSMRed {
+
+	
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	color:Red;
+}
+.txtSMBold {
+	font:12px Calibri;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.txtCalDate {
+font:12px Calibri;
+	color: #000000;
+	text-decoration: none;
+}
+.txtCalItem {
+	font:12px Calibri;
+	color: #000000;
+	text-decoration: none;
+}
+.btnSyncOC2BO {
+	background-image: url(../images/syncIconOC2BO.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 113px;
+	width: 200px;
+	vertical-align: top;
+}
+
+.txtLink {
+	font:12px Calibri;
+	color: #000000;
+	text-decoration: underline;
+	cursor:pointer;	
+}
+
+.txtLinkSM {
+	font:12px Calibri;
+	color: #000000;
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+.txtTotals
+{
+	
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom:dashed 1;
+	border-top:dashed 1;
+	border-color:#CFCFCF;
+}
+
+.txtTotalsSM
+{
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom:dashed 1;
+	border-top:dashed 1;
+	border-color:#CFCFCF;
+}
+
+
+.bgFolderName {
+	
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(../images/bgFolderName.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 22px;
+	width: 293px; /*103 312*/
+	padding-top: 3px;
+	padding-left: 8px;
+}
+.bgFolderLine 
+{
+	font-size: 11px;	
+	background-image: url(../images/bgFolderLine.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+.bgFolderArrow 
+{
+	font-size: 11px;	
+	background-image: url(../images/bgFolderArrow.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	width: 64px;
+}
+
+
+ .modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	
+}
+ .modalPopup {
+	background-color:#f5f5f5; 
+	border-width:3px;
+	border-style:solid;
+	border-color: #337AB7  ;
+	padding:3px;
+	font:14px Calibri;
+	}
+	
+	
+	

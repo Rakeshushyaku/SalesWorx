@@ -1,0 +1,73 @@
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Form1.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.exe
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.xml
+C:\inetpub\wwwroot\SalesWorx_VS_GFC\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe.config
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Form1.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Resources.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.exe
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_CryptoUtil\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe.config
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\log4net.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\bin\Debug\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Form1.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.exe
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe.config
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.exe
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_CryptoUtil.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\log4net.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_Common.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\SalesWorx_BO_DAL.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\bin\Debug\log4net.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbprojResolveAssemblyReference.cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Form1.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.Resources.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.vbproj.GenerateResource.Cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.exe
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_CryptoUtil\obj\Debug\SalesWorx_CryptoUtil.pdb

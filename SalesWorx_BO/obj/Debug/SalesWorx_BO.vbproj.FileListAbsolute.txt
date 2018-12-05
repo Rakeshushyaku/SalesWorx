@@ -1,0 +1,180 @@
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.Resources.resources
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\AjaxControlToolkit.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\DropCheck.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\EPPlus.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\ExcelLibrary.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\log4net.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Telerik.Web.UI.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\log4net.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Telerik.Web.UI.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll.licenses
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Telerik.Web.Device.Detection.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Telerik.Web.UI.Skins.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Telerik.Web.Device.Detection.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Ionic.BZip2.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Ionic.Zip.Reduced.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.xml
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_PushNotification.dll
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_PushNotification.pdb
+C:\inetpub\wwwroot\BO Application\Sellit\SalesWorx_BO\bin\SalesWorx_PushNotification.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.pdb
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\AjaxControlToolkit.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DropCheck.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\EPPlus.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\ExcelLibrary.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Ionic.BZip2.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Ionic.Zip.Reduced.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\log4net.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.Device.Detection.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.UI.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.UI.Skins.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.pdb
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\log4net.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.Device.Detection.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.UI.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.Resources.resources
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll.licenses
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.pdb
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DotNetOpenAuth.AspNet.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DotNetOpenAuth.Core.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DotNetOpenAuth.OAuth.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DotNetOpenAuth.OpenId.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\EntityFramework.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\inetpub\wwwroot\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\AjaxControlToolkit.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\DropCheck.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\EPPlus.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\ExcelLibrary.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Ionic.BZip2.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Ionic.Zip.Reduced.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\log4net.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Telerik.Web.Design.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Telerik.Web.Device.Detection.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Telerik.Web.UI.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Telerik.Web.UI.Skins.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\log4net.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Telerik.Web.Device.Detection.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Telerik.Web.UI.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.Resources.resources
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll.licenses
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.pdb
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\RestSharp.dll
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\RestSharp.xml
+C:\inetpub\wwwroot\SalesWorx_VS_BO_V2\SalesWorx_BO\bin\Newtonsoft.Json.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Antlr3.Runtime.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\AspNet.ScriptManager.jQuery.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\DotNetOpenAuth.AspNet.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\DotNetOpenAuth.Core.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\DotNetOpenAuth.OAuth.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\DotNetOpenAuth.OpenId.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\EntityFramework.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Microsoft.ScriptManager.WebForms.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\Newtonsoft.Json.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\System.Web.Optimization.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\System.Web.Providers.dll
+C:\inetpub\wwwroot\swx_vs_v2\SalesWorx_BO\bin\ASPTokenInputLib.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.dll.config
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\AjaxControlToolkit.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\DropCheck.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\EPPlus.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\ExcelLibrary.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Ionic.BZip2.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Ionic.Zip.Reduced.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\log4net.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.ReportViewer.Common.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.ReportViewer.DataVisualization.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.ReportViewer.WebForms.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Newtonsoft.Json.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\System.Net.Http.Formatting.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\System.Web.Http.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\System.Web.Http.WebHost.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.Design.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.Device.Detection.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.UI.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.UI.Skins.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_Common.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_BO_DAL.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.pdb
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\SalesWorx_PushNotification.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\log4net.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Microsoft.Web.Infrastructure.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\System.Net.Http.Formatting.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\System.Web.Http.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\System.Web.Http.WebHost.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.Device.Detection.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\bin\Telerik.Web.UI.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbprojResolveAssemblyReference.cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.Resources.resources
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbproj.GenerateResource.Cache
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll.licenses
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.xml
+F:\Rakesh\SWX_VS_V2\SalesWorx_BO\obj\Debug\SalesWorx_BO.pdb
