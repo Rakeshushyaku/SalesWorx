@@ -1640,4 +1640,13 @@ Public Class Reports
             Throw ex
         End Try
     End Function
+
+    Public Function RemoveCollection(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal SurvId As String, ByVal deletedby As String) As Boolean
+        Try
+            Return ObjDALReport.DeleteCollection(Err_No, Err_Desc, SurvId, deletedby)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
 End Class

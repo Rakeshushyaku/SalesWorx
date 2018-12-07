@@ -6,91 +6,109 @@ SalesWorx_BO_Common
 </name>
 </assembly>
 <members>
-<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.ResourceManager">
-	<summary>
+<member name="T:SalesWorx.BO.Common.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.Resources.ResourceManager">
+<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.Culture">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.Resources.Culture">
+<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_001">
-	<summary>
+</member>
+<member name="T:SalesWorx.BO.Common.My.Resources.ErrorMessages">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_001">
+<summary>
   Looks up a localized string similar to Unexpected error occurred while loading Page..
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_002">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_002">
+<summary>
   Looks up a localized string similar to Unexpected error occurred while deleting..
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_003">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_003">
+<summary>
   Looks up a localized string similar to Unexpected error occurred while saving..
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_004">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_004">
+<summary>
   Looks up a localized string similar to Unexpected error occurred while updating..
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_005">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_RoutePlanner_005">
+<summary>
   Looks up a localized string similar to Unexpected error occurred..
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_Unauthorized">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.ErrorMessages.E_BO_Unauthorized">
+<summary>
   Looks up a localized string similar to You are not authorized to view this page.
 </summary>
-</member><member name="T:SalesWorx.BO.Common.My.Resources.ErrorMessages">
-	<summary>
+</member>
+<member name="T:SalesWorx.BO.Common.My.Resources.InfoMessages">
+<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.InfoMessages.ResourceManager">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.InfoMessages.ResourceManager">
+<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.InfoMessages.Culture">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.InfoMessages.Culture">
+<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.InfoMessages.I_BO_RoutePlanner_001">
-	<summary>
+</member>
+<member name="P:SalesWorx.BO.Common.My.Resources.InfoMessages.I_BO_RoutePlanner_001">
+<summary>
   Looks up a localized string similar to No realtime messaging information available for today..
 </summary>
-</member><member name="T:SalesWorx.BO.Common.My.Resources.InfoMessages">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:SalesWorx.BO.Common.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:SalesWorx.BO.Common.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:SalesWorx.BO.Common.AppMsgHandler.GetErrorMessage(System.String)">
-	<summary>
+</member>
+<member name="M:SalesWorx.BO.Common.AppMsgHandler.GetErrorMessage(System.String)">
+ <summary>
  method for retrieving an error description from a resource file
  </summary>
-	<param name="errorCode">errorCode to get the description for</param>
-	<returns>a string value</returns>
-</member><member name="M:SalesWorx.BO.Common.AppMsgHandler.GetInfoMessage(System.String)">
-	<summary>
+ <param name="errorCode">errorCode to get the description for</param>
+ <returns>a string value</returns>
+</member>
+<member name="M:SalesWorx.BO.Common.AppMsgHandler.GetInfoMessage(System.String)">
+ <summary>
  method for retrieving an error description from a resource file
  </summary>
-	<param name="infoCode">infoCode to get the description for</param>
-	<returns>a string value</returns>
-</member><member name="M:SalesWorx.BO.Common.AppMsgHandler.GetExceptionInfo(System.Exception@)">
-	<summary>
+ <param name="infoCode">infoCode to get the description for</param>
+ <returns>a string value</returns>
+</member>
+<member name="M:SalesWorx.BO.Common.AppMsgHandler.GetExceptionInfo(System.Exception@)">
+ <summary>
  method for retrieving exception information in a specific formatted manner
  </summary>
-	<param name="oEx">exception object to get information for</param>
-	<returns>a string value</returns>
+ <param name="oEx">exception object to get information for</param>
+ <returns>a string value</returns>
 </member>
 </members>
 </doc>

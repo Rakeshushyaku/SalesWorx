@@ -30,6 +30,7 @@
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -287,6 +288,7 @@
     <Content Include="html\Admin_DistributionCheck_ctl.aspx" />
     <Content Include="html\EOT_RepEOTDetailed.aspx" />
     <Content Include="html\EOT_RepSummary.aspx" />
+    <Content Include="html\RepDeleteCollectionListing.aspx" />
     <Content Include="html\Rep_CollectionDetails.aspx" />
     <Content Include="html\Rep_SRDetails.aspx" />
     <Content Include="html\Rep_ReturnDetails.aspx" />
@@ -745,6 +747,13 @@
     </Compile>
     <Compile Include="html\EOT_RepSummary.aspx.vb">
       <DependentUpon>EOT_RepSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\RepDeleteCollectionListing.aspx.designer.vb">
+      <DependentUpon>RepDeleteCollectionListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\RepDeleteCollectionListing.aspx.vb">
+      <DependentUpon>RepDeleteCollectionListing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="html\Rep_CollectionDetails.aspx.designer.vb">

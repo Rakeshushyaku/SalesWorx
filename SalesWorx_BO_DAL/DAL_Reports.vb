@@ -6979,5 +6979,66 @@ Public Class DAL_Reports
         Return dt
     End Function
 
+    Public Function DeleteCollection(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal SurvId As String, ByVal DeletedBy As String) As Boolean
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+        Dim sQry As String
+        Dim retVal As Boolean = False
+
+        Try
+            'getting MSSQL DB connection.....
+            objSQLConn = _objDB.GetSQLConnection
+            sQry = "DELETE FROM TBL_Collection WHERE collection_ref_no=@Doc_id;"
+            sQry = sQry & "insert into TBL_Doc_Deletion_Requests ([Doc_ID],[Doc_Type],[Status],[Logged_At],[Logged_By],[Last_Updated_At],[Last_Updated_By]) values (@Doc_id,'C','N',getdate(),@LogedBY,getdate(),@updatedBy)"
+            objSQLCmd = New SqlCommand(sQry, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+            objSQLCmd.Parameters.Add("@Doc_id", SqlDbType.VarChar, 100).Value = SurvId
+            objSQLCmd.Parameters.Add("@LogedBY", SqlDbType.BigInt).Value = DeletedBy
+            objSQLCmd.Parameters.Add("@updatedBy", SqlDbType.BigInt).Value = DeletedBy
+
+
+            objSQLCmd.ExecuteNonQuery()
+            objSQLCmd.Dispose()
+            retVal = True
+
+        Catch ex As Exception
+            Error_No = 79001
+            Error_Desc = String.Format("Error while Delete survey: {0}", ex.Message)
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return retVal
+    End Function
+
+    'Function DeleteCollection1(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal SurvId As String) As DataTable
+    '    Dim objSQLConn As SqlConnection
+    '    Dim dt As New DataTable
+    '    Dim dr As DataRow = Nothing
+    '    Dim ProductPath As String = Nothing
+    '    Dim objSQLDA As SqlDataAdapter
+    '    Try
+    '        objSQLConn = _objDB.GetSQLConnection
+    '        objSQLDA = New SqlDataAdapter("Rep_EOTDetailed_PreSale", objSQLConn)
+    '        objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+    '        objSQLDA.SelectCommand.CommandTimeout = 600
+    '        objSQLDA.SelectCommand.Parameters.AddWithValue("@OID", OrgId)
+    '        objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", SID)
+    '        objSQLDA.SelectCommand.Parameters.AddWithValue("@FromDate", Fromdate)
+
+    '        objSQLDA.Fill(dt)
+    '        Dim i As String
+    '    Catch ex As Exception
+    '        Err_No = "24069"
+    '        Err_Desc = ex.Message
+
+    '        Throw ex
+    '    Finally
+
+    '        _objDB.CloseSQLConnection(objSQLConn)
+    '    End Try
+    '    Return dt
+    'End Function
+
 
 End Class

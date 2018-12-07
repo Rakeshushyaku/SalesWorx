@@ -233,6 +233,9 @@ Partial Public Class VanUserSyncSetting
 
     Private Sub btnReset_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnReset.Click
         Me.ddlSalesRep.ClearCheckedItems()
+        Me.ddOraganisation.ClearCheckedItems()
+        Me.ddOraganisation.SelectedValue = "0"
+
         a = 0
         b = 0
         a1 = 0

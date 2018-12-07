@@ -143,6 +143,8 @@ Partial Public Class VanDeviceConfig
 
     Private Sub btnReset_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnReset.Click
         Me.ddlSalesRep.ClearCheckedItems()
+        Me.ddOraganisation.SelectedValue = "0"
+
         BindData()
     End Sub
 
