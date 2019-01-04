@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     <style>
-     .rcTimePopup
+     .rcTimePopup    
  {
    display:none ! important;
  }

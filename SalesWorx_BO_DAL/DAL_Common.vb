@@ -2621,7 +2621,7 @@ Public Class DAL_Common
         Try
             objSQLConn = _objDB.GetSQLConnection
             Dim QueryString As String
-            QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code  from TBL_Product Where Organization_ID='{0}' ", OrgID)
+            QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' ", OrgID)
 
             QueryString = QueryString & " ORDER BY item_no ASC"
             objSQLCmd = New SqlCommand(QueryString, objSQLConn)
@@ -3682,4 +3682,203 @@ Public Class DAL_Common
         End Try
         Return dt
     End Function
+
+    ' task 1
+    Public Function GetProductsByOrgById(ByRef Err_No As Long, ByRef Err_Desc As String, ByRef OrgID As Integer, ByRef ProductId As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            Dim QueryString As String
+            If ProductId = "0" Then
+                ' QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' ", OrgID)
+                QueryString = String.Format("Select b.Inventory_Item_ID,item_code +'-'+ Description as Description,cast(b.Inventory_Item_ID as varchar)+'$'+item_code as item_code , b.[Attrib_Value] as Qty, b.Organization_ID as MAS_Org_ID  from [TBL_Product_Addl_Info]  b  join  [dbo].TBL_Product a on a.Inventory_Item_ID=b.Inventory_Item_ID  where  b.[Attrib_Name]='MS' and b.Organization_ID='{0}' ", OrgID)
+
+            Else
+                'QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' and item_code='{1}' ", OrgID, ProductId)
+                QueryString = String.Format("Select b.Inventory_Item_ID,item_code +'-'+ Description as Description,cast(b.Inventory_Item_ID as varchar)+'$'+item_code as item_code , b.[Attrib_Value] as Qty, b.Organization_ID as MAS_Org_ID  from [TBL_Product_Addl_Info]  b  join  [dbo].TBL_Product a on a.Inventory_Item_ID=b.Inventory_Item_ID  where  b.[Attrib_Name]='MS' and b.Organization_ID='{0}'and a.item_code='{1}' ", OrgID, ProductId)
+
+            End If
+
+
+            QueryString = QueryString & " ORDER BY item_no ASC"
+            objSQLCmd = New SqlCommand(QueryString, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+
+            Dim MsgDs As New DataSet
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(MsgDs, "Product")
+
+            GetProductsByOrgById = MsgDs.Tables("Product")
+            objSQLCmd.Dispose()
+
+        Catch ex As Exception
+            Err_No = "74058"
+            Err_Desc = ex.Message
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+    End Function
+
+    Public Function GetProductsDetailsByOrgById(ByRef Err_No As Long, ByRef Err_Desc As String, ByRef OrgID As Integer, ByRef ProductId As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            Dim QueryString As String
+            If ProductId = "0" Then
+                QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' ", OrgID)
+
+            Else
+                QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' and item_code='{1}' ", OrgID, ProductId)
+
+            End If
+
+
+            QueryString = QueryString & " ORDER BY item_no ASC"
+            objSQLCmd = New SqlCommand(QueryString, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+
+            Dim MsgDs As New DataSet
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(MsgDs, "Product")
+
+            GetProductsDetailsByOrgById = MsgDs.Tables("Product")
+            objSQLCmd.Dispose()
+
+        Catch ex As Exception
+            Err_No = "74058"
+            Err_Desc = ex.Message
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+    End Function
+
+    Public Function SaveDistribution_CTL(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, ByVal SID As String, ByVal Qty As String, ByVal CreatedBy As Integer) As Boolean
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As New SqlCommand
+        Dim sQry As String
+        Dim sucess As Boolean = False
+
+
+        Try
+
+            objSQLConn = _objDB.GetSQLConnection
+            sQry = "app_SaveProductMinimumQty"
+            objSQLCmd = New SqlCommand(sQry, objSQLConn)
+            objSQLCmd.CommandType = CommandType.StoredProcedure
+            objSQLCmd.Parameters.AddWithValue("@OrgID", OrgId)
+            objSQLCmd.Parameters.AddWithValue("@InvId", SID)
+            objSQLCmd.Parameters.AddWithValue("@Qty", Qty)
+
+
+
+            'Dim MsgDs As New DataSet
+            'Dim SqlAd As SqlDataAdapter
+            'SqlAd = New SqlDataAdapter(objSQLCmd)
+            'SqlAd.Fill(MsgDs, "DisCtlTbl")
+            'SaveDistribution_CTL = MsgDs.Tables(0)
+            'objSQLCmd.Dispose()
+
+            objSQLCmd.ExecuteNonQuery()
+            objSQLCmd.Dispose()
+
+            sucess = True
+        Catch ex As Exception
+            Error_No = 75014
+            ' Error_Desc = String.Format("Error while saving Order", ex.Message)
+
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+        Return sucess
+
+    End Function
+
+    Public Function DeleteDistribution_CTL(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, InventoryItemId As String) As Boolean
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As New SqlCommand
+        Dim sQry As String
+        Dim sucess As Boolean = False
+
+
+        Try
+
+            objSQLConn = _objDB.GetSQLConnection
+
+
+            sQry = "delete from TBL_Product_Addl_Info where Attrib_Name='MS' and Inventory_Item_ID=@InventoryItemId "
+
+            objSQLCmd = New SqlCommand(sQry, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+            objSQLCmd.Parameters.AddWithValue("@InventoryItemId", InventoryItemId)
+            objSQLCmd.ExecuteNonQuery()
+            objSQLCmd.Dispose()
+
+            sucess = True
+        Catch ex As Exception
+            Error_No = 75014
+            ' Error_Desc = String.Format("Error while saving Order", ex.Message)
+
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+        Return sucess
+
+    End Function
+
+    Public Function GetCustfromOrgtext_Distribution_ctl(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, ByVal SID As String, Optional text As String = "") As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+
+        Try
+            Dim QueryString As String
+            objSQLConn = _objDB.GetSQLConnection
+
+            QueryString = "SELECT DISTINCT (LTRIM(STR(Customer_ID)) + '$' + LTRIM(STR(Site_Use_ID))) as CustomerID,'['+IsNULL(Customer_No,'N/A')+']-'+IsNULL(Customer_Name,'N/A') as Customer from V_FSR_CustomerShipAddress V  " &
+                          " INNER JOIN  TBL_Org_CTL_DTL C ON C.SalesRep_ID=V.SalesRep_ID WHERE MAS_Org_ID ='" & OrgID & "' "
+
+            If SID.Trim() <> "0" And SID.Trim() <> "" Then
+                QueryString = QueryString & " AND  V.SalesRep_ID ='" & SID & "' "
+            End If
+
+            If text <> "" Then
+                QueryString = QueryString & " AND  (Customer_no LIKE '%' + @txt + '%' OR Customer_no +'-'+ Customer_name LIKE '%' + @txt + '%')"
+            End If
+            objSQLCmd = New SqlCommand(QueryString, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+            If text <> "" Then
+                objSQLCmd.Parameters.Add("@txt", SqlDbType.VarChar, 100).Value = text
+            End If
+            Dim MsgDs As New DataSet
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(MsgDs, "VanTbl")
+
+            GetCustfromOrgtext_Distribution_ctl = MsgDs.Tables("VanTbl")
+            objSQLCmd.Dispose()
+
+        Catch ex As Exception
+            Err_No = "74058"
+            Err_Desc = ex.Message
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+    End Function
+
+
+
 End Class

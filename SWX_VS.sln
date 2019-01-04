@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0BB4B0
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExcelFolder", "ExcelFolder", "{A2BEBC3E-5999-4523-9B80-7D110F67178E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UploadLog", "UploadLog", "{44F75798-21A4-4D52-ABA8-0C7C46BA021E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,5 +59,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44F75798-21A4-4D52-ABA8-0C7C46BA021E} = {A2BEBC3E-5999-4523-9B80-7D110F67178E}
 	EndGlobalSection
 EndGlobal

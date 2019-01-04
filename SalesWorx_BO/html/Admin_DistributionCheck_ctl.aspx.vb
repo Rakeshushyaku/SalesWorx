@@ -27,11 +27,11 @@ Public Class Admin_DistributionCheck_ctl
         Try
             If Not IsPostBack Then
                 Dim HasPermission As Boolean = False
-                ManageAuthentication.HasPermission(CType(Session.Item("USER_ACCESS"), UserAccess), PageID, HasPermission)
-                If Not HasPermission Then
-                    Err_No = 500
-                    Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_Unauthorized") & "&next=Welcome.aspx&Title=Message", False)
-                End If
+                'ManageAuthentication.HasPermission(CType(Session.Item("USER_ACCESS"), UserAccess), PageID, HasPermission)
+                'If Not HasPermission Then
+                '    Err_No = 500
+                '    Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_Unauthorized") & "&next=Welcome.aspx&Title=Message", False)
+                'End If
 
 
 

@@ -413,6 +413,51 @@ Public Class Common
     Function GetProductsByOrg(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal Org_ID As String) As DataTable
         Return ObjDALCommon.GetProductsByOrg(Err_No, Err_Desc, Org_ID)
     End Function
+
+
+
+    'task 1
+    Function GetAllProductsStock(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Product_ID As String) As DataTable
+        Try
+            Return ObjDALCommon.GetProductsByOrgById(Err_No, Err_Desc, OrgID, Product_ID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function GetProductsDescription(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Product_ID As String) As DataTable
+        Try
+            Return ObjDALCommon.GetProductsDetailsByOrgById(Err_No, Err_Desc, OrgID, Product_ID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function SaveDistribution_CTL(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, ByVal SID As String, ByVal Qty As String, ByVal CreatedBy As Integer) As Boolean
+        Try
+            Return ObjDALCommon.SaveDistribution_CTL(Error_No, Error_Desc, OrgId, SID, Qty, CreatedBy)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function DeleteDistribution_CTL(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, InventoryItemId As String) As Boolean
+        Try
+            Return ObjDALCommon.DeleteDistribution_CTL(Err_No, Err_Desc, OrgID, InventoryItemId)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Function GetCustfromOrgtext_Distribution_ctl(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Text As String) As DataTable
+        Try
+            Return ObjDALCommon.GetProductsByOrgById(Err_No, Err_Desc, OrgId, Text)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+
+
     Function GetSalesOrgbyFsr(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal Salerep_ID As String) As DataTable
         Return ObjDALCommon.GetSalesOrgbyFsr(Err_No, Err_Desc, Salerep_ID)
     End Function
@@ -570,4 +615,9 @@ Public Class Common
     Function GetCustomerfromOrgForOrderLvlFOC(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String) As DataTable
         Return ObjDALCommon.GetCustomerfromOrgForOrderLvlFOC(Err_No, Err_Desc, OrgID)
     End Function
+
+
+
+
+
 End Class

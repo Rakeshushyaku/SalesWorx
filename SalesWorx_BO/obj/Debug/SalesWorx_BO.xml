@@ -6830,6 +6830,411 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._AjaxLoadingPanel1">
+<summary>
+AjaxLoadingPanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._Panel1">
+<summary>
+Panel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._TopPanle">
+<summary>
+TopPanle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._ddl_FilterOrg">
+<summary>
+ddl_FilterOrg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._ddl_FilterCustomer">
+<summary>
+ddl_FilterCustomer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btn_Search">
+<summary>
+btn_Search control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btn_clearFilter">
+<summary>
+btn_clearFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnAdd">
+<summary>
+btnAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnImportWindow">
+<summary>
+btnImportWindow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnExport">
+<summary>
+btnExport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btndownloadTemp">
+<summary>
+btndownloadTemp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._UpdatePanel1">
+<summary>
+UpdatePanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._Panel">
+<summary>
+Panel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._MPEImport">
+<summary>
+MPEImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._HFV">
+<summary>
+HFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._Label6">
+<summary>
+Label6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._lblUpMsg">
+<summary>
+lblUpMsg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._UpdatePanel3">
+<summary>
+UpdatePanel3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._ExcelFileUpload">
+<summary>
+ExcelFileUpload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnImport">
+<summary>
+btnImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnCancelImport">
+<summary>
+btnCancelImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._DummyImBtn">
+<summary>
+DummyImBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._BtnReimport">
+<summary>
+BtnReimport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._DummyReimBtn">
+<summary>
+DummyReimBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._lbLog">
+<summary>
+lbLog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._UpPanel">
+<summary>
+UpPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._dgvErros">
+<summary>
+dgvErros control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._MPEAdd">
+<summary>
+MPEAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._UpdatePanel2">
+<summary>
+UpdatePanel2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._HidVal">
+<summary>
+HidVal control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._lblmsgPopUp">
+<summary>
+lblmsgPopUp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._ddl_OrgAdd">
+<summary>
+ddl_OrgAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._ddl_Customer">
+<summary>
+ddl_Customer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._txtQty">
+<summary>
+txtQty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._rglExpression">
+<summary>
+rglExpression control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._rqd">
+<summary>
+rqd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnUpdate">
+<summary>
+btnUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._Panel12">
+<summary>
+Panel12 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._PnlGridData">
+<summary>
+PnlGridData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._dgvItems">
+<summary>
+dgvItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._UpdateProgress1">
+<summary>
+UpdateProgress1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ProductMinimumStock._UpdateProgress2">
+<summary>
+UpdateProgress2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:SalesWorx_BO.RepDeleteCollectionListing._RadScriptBlock19">
 <summary>
 RadScriptBlock19 control.
