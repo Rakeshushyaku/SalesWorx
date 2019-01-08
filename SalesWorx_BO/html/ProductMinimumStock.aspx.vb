@@ -604,7 +604,7 @@ Public Class ProductMinimumStock
                 Dim drAddItem As DataRow
                 For i As Integer = 0 To dtOriginal.Rows.Count - 1
                     drAddItem = dtTemp.NewRow()
-                    drAddItem(0) = IIf(dtOriginal.Rows(i)("item_code") Is DBNull.Value, "All", dtOriginal.Rows(i)("item_code").ToString())
+                    drAddItem(0) = IIf(dtOriginal.Rows(i)("ICode") Is DBNull.Value, "All", dtOriginal.Rows(i)("ICode").ToString())
                     drAddItem(1) = IIf(dtOriginal.Rows(i)("Description") Is DBNull.Value, "All", dtOriginal.Rows(i)("Description").ToString())
                     drAddItem(2) = IIf(dtOriginal.Rows(i)("Qty") Is DBNull.Value, "All", dtOriginal.Rows(i)("Qty").ToString())
                     dtTemp.Rows.Add(drAddItem)

@@ -468,7 +468,12 @@
                                                              <ItemStyle HorizontalAlign="Left" Width="100px" CssClass="display-block"  />
                                                             </asp:TemplateField>
 
-                                                              <asp:BoundField HeaderStyle-HorizontalAlign="Left"    HeaderStyle-Wrap="false" DataField="item_code" SortExpression ="Site_No"
+                                                              <asp:BoundField HeaderStyle-HorizontalAlign="Left" Visible="false"    HeaderStyle-Wrap="false" DataField="item_code" SortExpression ="Site_No"
+                                                                HeaderText="Item Code">
+                                                                <HeaderStyle HorizontalAlign="Left" Wrap="False" />
+                                                            </asp:BoundField>
+
+                                                            <asp:BoundField HeaderStyle-HorizontalAlign="Left"    HeaderStyle-Wrap="false" DataField="ICode" SortExpression ="Site_No"
                                                                 HeaderText="Item Code">
                                                                 <HeaderStyle HorizontalAlign="Left" Wrap="False" />
                                                             </asp:BoundField>

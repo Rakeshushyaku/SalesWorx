@@ -3693,11 +3693,11 @@ Public Class DAL_Common
             Dim QueryString As String
             If ProductId = "0" Then
                 ' QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' ", OrgID)
-                QueryString = String.Format("Select b.Inventory_Item_ID,item_code +'-'+ Description as Description,cast(b.Inventory_Item_ID as varchar)+'$'+item_code as item_code , b.[Attrib_Value] as Qty, b.Organization_ID as MAS_Org_ID  from [TBL_Product_Addl_Info]  b  join  [dbo].TBL_Product a on a.Inventory_Item_ID=b.Inventory_Item_ID  where  b.[Attrib_Name]='MS' and b.Organization_ID='{0}' ", OrgID)
+                QueryString = String.Format("Select b.Inventory_Item_ID,item_code +'-'+ Description as Description,cast(b.Inventory_Item_ID as varchar)+'$'+item_code as item_code , b.[Attrib_Value] as Qty, b.Organization_ID as MAS_Org_ID ,item_code ICode  from [TBL_Product_Addl_Info]  b  join  [dbo].TBL_Product a on a.Inventory_Item_ID=b.Inventory_Item_ID  where  b.[Attrib_Name]='MS' and b.Organization_ID='{0}' ", OrgID)
 
             Else
                 'QueryString = String.Format(" Select Inventory_Item_ID,item_code +'-'+ Description as Description,cast(Inventory_Item_ID as varchar)+'$'+item_code as item_code , 0 as Qty, 0 as MAS_Org_ID  from TBL_Product Where Organization_ID='{0}' and item_code='{1}' ", OrgID, ProductId)
-                QueryString = String.Format("Select b.Inventory_Item_ID,item_code +'-'+ Description as Description,cast(b.Inventory_Item_ID as varchar)+'$'+item_code as item_code , b.[Attrib_Value] as Qty, b.Organization_ID as MAS_Org_ID  from [TBL_Product_Addl_Info]  b  join  [dbo].TBL_Product a on a.Inventory_Item_ID=b.Inventory_Item_ID  where  b.[Attrib_Name]='MS' and b.Organization_ID='{0}'and a.item_code='{1}' ", OrgID, ProductId)
+                QueryString = String.Format("Select b.Inventory_Item_ID,item_code +'-'+ Description as Description,cast(b.Inventory_Item_ID as varchar)+'$'+item_code as item_code , b.[Attrib_Value] as Qty, b.Organization_ID as MAS_Org_ID ,item_code ICode from [TBL_Product_Addl_Info]  b  join  [dbo].TBL_Product a on a.Inventory_Item_ID=b.Inventory_Item_ID  where  b.[Attrib_Name]='MS' and b.Organization_ID='{0}'and a.item_code='{1}' ", OrgID, ProductId)
 
             End If
 
