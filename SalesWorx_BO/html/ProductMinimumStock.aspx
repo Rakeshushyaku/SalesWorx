@@ -174,7 +174,7 @@
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label>&nbsp;</label>
-                                                    <asp:Button ID="btn_Search" runat="server" Visible="false" CausesValidation="false"   CssClass="btn btn-default"
+                                                    <asp:Button ID="btn_Search" runat="server" Visible="true" CausesValidation="false"   CssClass="btn btn-default"
                                                     TabIndex="2" Text="Search" /> 
                                                 <asp:Button ID="btn_clearFilter" runat="server" CausesValidation="false"   CssClass="btn btn-default"
                                                     TabIndex="1" Text="Clear Filter" />
@@ -238,7 +238,7 @@
                                 
                                       
                                              
-                                                    <telerik:RadWindow ID="MPEImport" Title= "Import Distribution Check Control" runat="server" Skin="Windows7" Behaviors="Move,Close"
+                                                    <telerik:RadWindow ID="MPEImport" Title= "Import Product Minimum Stock" runat="server" Skin="Windows7" Behaviors="Move,Close"
                                                 AutoSize="true" MinHeight="160px" ReloadOnShow="false" VisibleStatusbar="false" Overlay="true" Modal="true">
                                               <ContentTemplate>
                                                         <asp:HiddenField ID="HFV" runat="server" Value="-1" />

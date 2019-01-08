@@ -3683,7 +3683,7 @@ Public Class DAL_Common
         Return dt
     End Function
 
-    ' task 1
+    'task 1 Product Stock
     Public Function GetProductsByOrgById(ByRef Err_No As Long, ByRef Err_Desc As String, ByRef OrgID As Integer, ByRef ProductId As String) As DataTable
         Dim objSQLConn As SqlConnection
         Dim objSQLCmd As SqlCommand
@@ -3762,7 +3762,7 @@ Public Class DAL_Common
 
     End Function
 
-    Public Function SaveDistribution_CTL(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, ByVal SID As String, ByVal Qty As String, ByVal CreatedBy As Integer) As Boolean
+    Public Function SaveProductMinimumStock(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, ByVal SID As String, ByVal Qty As String, ByVal CreatedBy As Integer) As Boolean
         Dim objSQLConn As SqlConnection
         Dim objSQLCmd As New SqlCommand
         Dim sQry As String
@@ -3805,7 +3805,7 @@ Public Class DAL_Common
 
     End Function
 
-    Public Function DeleteDistribution_CTL(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, InventoryItemId As String) As Boolean
+    Public Function DeleteProductMinimumStock(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, InventoryItemId As String) As Boolean
         Dim objSQLConn As SqlConnection
         Dim objSQLCmd As New SqlCommand
         Dim sQry As String
@@ -3879,6 +3879,56 @@ Public Class DAL_Common
         End Try
     End Function
 
+    Public Function ValidateExportProductMinimumStock(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal ItemCode As String) As DataTable
+        Dim success As Boolean = False
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCMD As SqlCommand
+        Dim MsgDs As New DataSet
+        Dim sql As String = ""
+        sql = "select * from [dbo].[TBL_Product]  where Inventory_Item_ID='" & (ItemCode.Trim()) & "'"
+
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            objSQLCMD = New SqlCommand(sql, objSQLConn)
+            objSQLCMD.CommandType = CommandType.Text
+
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCMD)
+            SqlAd.Fill(MsgDs, "TBL_FSR")
+
+        Catch ex As Exception
+
+            Throw ex
+        Finally
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return MsgDs.Tables(0)
+    End Function
+    Public Function ValidateExportOrganisationId(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String) As DataTable
+        Dim success As Boolean = False
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCMD As SqlCommand
+        Dim MsgDs As New DataSet
+        Dim sql As String = ""
+        sql = "select * from [dbo].[TBL_Product]  where Organization_ID='" & (OrgId.Trim()) & "'"
+
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            objSQLCMD = New SqlCommand(sql, objSQLConn)
+            objSQLCMD.CommandType = CommandType.Text
+
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCMD)
+            SqlAd.Fill(MsgDs, "TBL_FSR")
+
+        Catch ex As Exception
+
+            Throw ex
+        Finally
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return MsgDs.Tables(0)
+    End Function
 
 
 End Class

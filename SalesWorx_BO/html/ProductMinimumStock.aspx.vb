@@ -30,18 +30,14 @@ Public Class ProductMinimumStock
         Try
             If Not IsPostBack Then
                 Dim HasPermission As Boolean = False
-                'ManageAuthentication.HasPermission(CType(Session.Item("USER_ACCESS"), UserAccess), PageID, HasPermission)
-                'If Not HasPermission Then
-                '    Err_No = 500
-                '    Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_Unauthorized") & "&next=Welcome.aspx&Title=Message", False)
-                'End If
+
 
 
 
                 LoadOrgHeads()
 
 
-                BindDistribution_ctl()
+                BindProductStock()
 
                 ViewState("FileType") = Nothing
                 ViewState("FileName") = Nothing
@@ -61,24 +57,20 @@ Public Class ProductMinimumStock
     End Sub
 
 
+
     Protected Sub ddl_FilterOrg_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddl_FilterOrg.SelectedIndexChanged
         Try
 
 
-            'If ddl_FilterOrg.SelectedItem.Value = 0 Then
+
             ddl_FilterCustomer.ClearSelection()
             ddl_FilterCustomer.Items.Clear()
             ddl_FilterCustomer.Text = ""
 
-            'ddl_FilterVan.ClearSelection()
-            'ddl_FilterVan.Items.Clear()
-            'ddl_FilterVan.Text = ""
-            ' ddl_FilterVan.SelectedIndex = 0
-
-            ' End If
 
 
-            BindDistribution_ctl()
+
+            BindProductStock()
             Panel.Update()
 
         Catch ex As Exception
@@ -93,15 +85,15 @@ Public Class ProductMinimumStock
             Dim dt As New DataTable
 
 
-            ' dt = objCustomer.GetCustfromOrgtext_Distribution_ctl(Err_No, Err_Desc, ddl_OrgAdd.SelectedValue)
+
             dt = objcommon.GetProductsByOrg(Err_No, Err_Desc, ddl_OrgAdd.SelectedValue)
 
-            Dim ItemsPerRequest As Integer = 100 'Set the number of values to show
+            Dim ItemsPerRequest As Integer = 100
             Dim itemOffset As Integer = e.NumberOfItems
             Dim endOffset As Integer = Math.Min(itemOffset + ItemsPerRequest, dt.Rows.Count)
             e.EndOfItems = endOffset = dt.Rows.Count
 
-            'Loop through the values to populate the combo box
+
             For i As Integer = itemOffset To endOffset - 1
                 Dim item As New RadComboBoxItem()
                 item.Text = dt.Rows(i).Item("Description").ToString
@@ -120,7 +112,7 @@ Public Class ProductMinimumStock
         ViewState("SortField") = e.SortExpression
         SortDirection = "flip"
 
-        BindDistribution_ctl()
+        BindProductStock()
     End Sub
 
     Private Sub ddl_FilterCustomer_ItemsRequested(sender As Object, e As RadComboBoxItemsRequestedEventArgs) Handles ddl_FilterCustomer.ItemsRequested
@@ -128,11 +120,11 @@ Public Class ProductMinimumStock
 
             Dim dt As New DataTable
             dt = objcommon.GetProductsByOrg(Err_No, Err_Desc, ddl_FilterOrg.SelectedValue)
-            Dim ItemsPerRequest As Integer = 100 'Set the number of values to show
+            Dim ItemsPerRequest As Integer = 100
             Dim itemOffset As Integer = e.NumberOfItems
             Dim endOffset As Integer = Math.Min(itemOffset + ItemsPerRequest, dt.Rows.Count)
             e.EndOfItems = endOffset = dt.Rows.Count
-            'Loop through the values to populate the combo box
+
             For i As Integer = itemOffset To endOffset - 1
                 Dim item As New RadComboBoxItem()
                 item.Text = dt.Rows(i).Item("Description").ToString
@@ -141,7 +133,7 @@ Public Class ProductMinimumStock
                 ddl_FilterCustomer.Items.Add(item)
                 item.DataBind()
             Next
-            '  BindDistribution_ctl()
+            '  BindProductStock()
         Catch ex As Exception
             log.Error(ex.Message)
         End Try
@@ -152,10 +144,10 @@ Public Class ProductMinimumStock
     Private Sub btn_clearFilter_Click(sender As Object, e As EventArgs) Handles btn_clearFilter.Click
         ddl_FilterOrg.ClearSelection()
         ddl_FilterCustomer.ClearSelection()
-        'ddl_FilterVan.ClearSelection()
+
         ddl_FilterCustomer.Items.Clear()
         ddl_FilterCustomer.Text = ""
-        'ddl_FilterVan.Items.Clear()
+
 
         dgvItems.DataSource = Nothing
         dgvItems.DataBind()
@@ -166,18 +158,12 @@ Public Class ProductMinimumStock
     End Sub
 
     Private Sub btn_Search_Click(sender As Object, e As EventArgs) Handles btn_Search.Click
-        BindDistribution_ctl()
-
+        BindProductStock()
+        Panel.Update()
 
     End Sub
 
-    'Private Sub ddl_Customer_SelectedIndexChanged(sender As Object, e As RadComboBoxSelectedIndexChangedEventArgs) Handles ddl_Customer.SelectedIndexChanged
-    '    GetItemDescription()
 
-
-
-    '    Panel.Update()
-    'End Sub
 #End Region
 
 #Region "Add Pop UP events"
@@ -191,7 +177,7 @@ Public Class ProductMinimumStock
 
 
             End If
-            ' LoadVan_Add()
+
         Catch ex As Exception
             log.Error(GetExceptionInfo(ex))
             log.Error(ex.Message.ToString())
@@ -270,7 +256,7 @@ Public Class ProductMinimumStock
                 ProductId = IDs(1)
             Else
                 MessageBoxValidation("Please Select Product .", "Information")
-                BindDistribution_ctl()
+                BindProductStock()
                 MPEAdd.VisibleOnPageLoad = False
                 Panel.Update()
                 log.Error(Err_Desc)
@@ -287,16 +273,16 @@ Public Class ProductMinimumStock
 
 
 
-            If (objcommon.SaveDistribution_CTL(Err_No, Err_Desc, ddl_OrgAdd.SelectedItem.Value, InventoryId, txtQty.Text.Trim(), CType(Session("User_Access"), UserAccess).UserID)) = True Then
+            If (objcommon.SaveProductMinimumStock(Err_No, Err_Desc, ddl_OrgAdd.SelectedItem.Value, InventoryId, txtQty.Text.Trim(), CType(Session("User_Access"), UserAccess).UserID)) = True Then
                 success = True
                 MessageBoxValidation("Successfully Saved.", "Information")
 
-                BindDistribution_ctl()
+                BindProductStock()
                 MPEAdd.VisibleOnPageLoad = False
                 Panel.Update()
             Else
                 MessageBoxValidation("Could not be saved.", "Information")
-                BindDistribution_ctl()
+                BindProductStock()
                 MPEAdd.VisibleOnPageLoad = False
                 Panel.Update()
                 log.Error(Err_Desc)
@@ -306,7 +292,7 @@ Public Class ProductMinimumStock
 
             If success = True Then
 
-                objLogin.SaveUserLog(Err_No, Err_Desc, "U", "Product Minimum Stock ", "Organisation", Me.ddl_OrgAdd.SelectedValue.ToString(), "Product: " & Me.ddl_Customer.Text, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
+                objLogin.SaveUserLog(Err_No, Err_Desc, "S", "Product Minimum Stock ", "Organisation", Me.ddl_OrgAdd.SelectedValue.ToString(), "Product: " & Me.ddl_Customer.Text, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
 
             End If
 
@@ -353,8 +339,9 @@ Public Class ProductMinimumStock
                     Dim InventoryItemId As String
                     InventoryItemId = CType(row.FindControl("lblInventoryId"), Label).Text
 
-                    If objcommon.DeleteDistribution_CTL(Err_No, Err_Desc, ddl_FilterOrg.SelectedItem.Value, InventoryItemId) = True Then
-                        objLogin.SaveUserLog(Err_No, Err_Desc, "D", "Distribution Check CTL", "Distribution Check CTL", Me.ddl_OrgAdd.SelectedValue.ToString(), "Customer: " & Me.ddl_Customer.Text & " Van: " & "Me.ddl_VanAdd.Text" & "Distribution_CTL_ID :  " & InventoryItemId, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
+                    If objcommon.DeleteProductMinimumStock(Err_No, Err_Desc, ddl_FilterOrg.SelectedItem.Value, InventoryItemId) = True Then
+                        objLogin.SaveUserLog(Err_No, Err_Desc, "D", "Product Minimum Stock ", "Organisation", Me.ddl_OrgAdd.SelectedValue.ToString(), "Product: " & Me.ddl_Customer.Text, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
+
                         Success = True
                     End If
 
@@ -363,7 +350,7 @@ Public Class ProductMinimumStock
             Next
             If Success = True Then
                 MessageBoxValidation("Successfully deleted.", "Information")
-                BindDistribution_ctl()
+                BindProductStock()
             Else
                 MessageBoxValidation("Error occured while deleting VAT rule.", "Information")
                 log.Error(Err_Desc)
@@ -401,17 +388,17 @@ Public Class ProductMinimumStock
             Dim InventoryItemId As String
             InventoryItemId = CType(row.FindControl("lblInventoryId"), Label).Text
 
-            If objcommon.DeleteDistribution_CTL(Err_No, Err_Desc, ddl_FilterOrg.SelectedItem.Value, InventoryItemId) = True Then
-                objLogin.SaveUserLog(Err_No, Err_Desc, "D", "Distribution Check CTL", "Distribution Check CTL", Me.ddl_OrgAdd.SelectedValue.ToString(), "Customer: " & Me.ddl_Customer.Text & " Van: " & "Me.ddl_VanAdd.Text" & "Distribution_CTL_ID :  " & InventoryItemId, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
+            If objcommon.DeleteProductMinimumStock(Err_No, Err_Desc, ddl_FilterOrg.SelectedItem.Value, InventoryItemId) = True Then
+                objLogin.SaveUserLog(Err_No, Err_Desc, "D", "Product Minimum Stock", "Product Minimum Stock", Me.ddl_OrgAdd.SelectedValue.ToString(), "Product : " & Me.ddl_Customer.Text & " Van: " & "Me.ddl_VanAdd.Text" & "Distribution_CTL_ID :  " & InventoryItemId, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
 
                 success = True
             End If
 
             If success = True Then
                 MessageBoxValidation("Successfully deleted.", "Information")
-                BindDistribution_ctl()
+                BindProductStock()
             Else
-                MessageBoxValidation("Error occured while deleting Distribution Check Control.", "Information")
+                MessageBoxValidation("Error occured while deleting Product Minimum Stock.", "Information")
                 log.Error(Err_Desc)
             End If
 
@@ -537,8 +524,8 @@ Public Class ProductMinimumStock
                     ProductId = IDs(1)
                 Else
                     MessageBoxValidation("Please Select Product .", "Information")
-                    BindDistribution_ctl()
-                    MPEAdd.VisibleOnPageLoad = False
+                BindProductStock()
+                MPEAdd.VisibleOnPageLoad = False
                     Panel.Update()
                     log.Error(Err_Desc)
 
@@ -552,15 +539,15 @@ Public Class ProductMinimumStock
             Dim rslt As String = ""
 
 
-            If (objcommon.SaveDistribution_CTL(Err_No, Err_Desc, ddl_OrgAdd.SelectedItem.Value, InventoryId, txtQty.Text.Trim(), CType(Session("User_Access"), UserAccess).UserID)) = True Then
+            If (objcommon.SaveProductMinimumStock(Err_No, Err_Desc, ddl_OrgAdd.SelectedItem.Value, InventoryId, txtQty.Text.Trim(), CType(Session("User_Access"), UserAccess).UserID)) = True Then
                 success = True
                 MessageBoxValidation("Successfully Updated.", "Information")
-                BindDistribution_ctl()
+                BindProductStock()
                 MPEAdd.VisibleOnPageLoad = False
                 Panel.Update()
             Else
                 MessageBoxValidation("Could not be Updated.", "Information")
-                BindDistribution_ctl()
+                BindProductStock()
                 MPEAdd.VisibleOnPageLoad = False
                 Panel.Update()
                 log.Error(Err_Desc)
@@ -568,11 +555,12 @@ Public Class ProductMinimumStock
 
             If success = True Then
                     objLogin.SaveUserLog(Err_No, Err_Desc, "U", "Product Minimum Stock ", "Organisation", Me.ddl_OrgAdd.SelectedValue.ToString(), "Product: " & Me.ddl_Customer.Text, CType(Session("User_Access"), UserAccess).UserID.ToString(), "0", "0")
-                End If
+
+            End If
 
 
 
-            Catch ex As Exception
+        Catch ex As Exception
             Err_No = "74205"
             If Err_Desc Is Nothing Then
                 log.Error(GetExceptionInfo(ex))
@@ -669,7 +657,7 @@ Public Class ProductMinimumStock
 #Region "Internal Functions"
 #Region "Main Panel FXNS"
 
-    Private Sub BindDistribution_ctl()
+    Private Sub BindProductStock()
 
         Dim dtData As New DataTable
         Dim Customer As String
@@ -690,11 +678,7 @@ Public Class ProductMinimumStock
         End If
 
 
-        'If ddl_FilterVan.SelectedIndex > 0 Then
-        '    SID = ddl_FilterVan.SelectedValue
-        'Else
-        '    SID = "0"
-        'End If
+
 
         dtData = objcommon.GetAllProductsStock(Err_No, Err_Desc, ddl_FilterOrg.SelectedItem.Value, SiteID)
         Dim dv As New DataView(dtData)
@@ -744,7 +728,7 @@ Public Class ProductMinimumStock
 
     Private Sub dgv_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dgvItems.PageIndexChanging
         dgvItems.PageIndex = e.NewPageIndex
-        BindDistribution_ctl()
+        BindProductStock()
     End Sub
 
     Private Property SortDirection() As String
@@ -898,47 +882,7 @@ Public Class ProductMinimumStock
 
 
 
-    Private Sub btnImportWindow_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnImportWindow.Click
-
-        Me.lblUpMsg.Text = ""
-        Session("dtDisCtl") = Nothing
-        dgvErros.DataSource = Nothing
-        dgvErros.DataBind()
-        dgvErros.Visible = False
-        lbLog.Visible = False
-        Me.MPEImport.VisibleOnPageLoad = True
-
-    End Sub
-
-
-
-
-
-
-    Private Function SetErrorsTable() As DataTable
-        Dim col As DataColumn
-        Dim dtErrors As New DataTable
-
-        col = New DataColumn()
-        col.ColumnName = "RowNo"
-        col.DataType = System.Type.[GetType]("System.String")
-        col.[ReadOnly] = False
-        col.Unique = False
-        dtErrors.Columns.Add(col)
-
-        col = New DataColumn()
-        col.ColumnName = "LogInfo"
-        col.DataType = System.Type.[GetType]("System.String")
-        col.[ReadOnly] = False
-        col.Unique = False
-        dtErrors.Columns.Add(col)
-
-        Return dtErrors
-    End Function
-    Sub MessageBoxValidation(ByVal str As String, ByVal Title As String)
-        RadWindowManager1.RadAlert(str, 330, 180, Title, "alertCallBackFn")
-        Exit Sub
-    End Sub
+#Region "Import Functionlaity"
     Private Sub btnImport_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnImport.Click
         lbLog.Visible = False
         If Me.ExcelFileUpload.FileName = Nothing Then
@@ -950,7 +894,7 @@ Public Class ProductMinimumStock
         End If
 
 
-        Session("dtDisCtl") = Nothing
+        Session("dtProMinStock") = Nothing
         Dim dtErrors As New DataTable
         dtErrors = SetErrorsTable().Copy
         Dim Str As New StringBuilder
@@ -992,7 +936,7 @@ Public Class ProductMinimumStock
                         Dim col As DataColumn
 
                         col = New DataColumn
-                        col.ColumnName = "Site_No"
+                        col.ColumnName = "Organisation Id"
                         col.DataType = System.Type.GetType("System.String")
                         col.ReadOnly = False
                         col.Unique = False
@@ -1000,7 +944,7 @@ Public Class ProductMinimumStock
 
 
                         col = New DataColumn
-                        col.ColumnName = "Van_Code"
+                        col.ColumnName = "Item Code"
                         col.DataType = System.Type.GetType("System.String")
                         col.ReadOnly = False
                         col.Unique = False
@@ -1009,19 +953,14 @@ Public Class ProductMinimumStock
 
 
                         col = New DataColumn
-                        col.ColumnName = "Customer_No"
+                        col.ColumnName = "Minimum Stock Qty"
                         col.DataType = System.Type.GetType("System.String")
                         col.ReadOnly = False
                         col.Unique = False
                         TempTbl.Columns.Add(col)
 
 
-                        col = New DataColumn
-                        col.ColumnName = "Is_Optional"
-                        col.DataType = System.Type.GetType("System.String")
-                        col.ReadOnly = False
-                        col.Unique = False
-                        TempTbl.Columns.Add(col)
+
 
 
 
@@ -1034,8 +973,8 @@ Public Class ProductMinimumStock
                             TempTbl = DoXLSXUpload()
                         End If
 
-                        If TempTbl.Columns.Count = 4 Then
-                            If Not (TempTbl.Columns(0).ColumnName.ToLower = "site_no" And TempTbl.Columns(1).ColumnName.ToLower = "van_code" And TempTbl.Columns(2).ColumnName.ToLower = "customer_no" And TempTbl.Columns(3).ColumnName.ToLower = "is_optional") Then
+                        If TempTbl.Columns.Count = 3 Then
+                            If Not (TempTbl.Columns(0).ColumnName.ToLower = "organisation id" And TempTbl.Columns(1).ColumnName.ToLower = "item code" And TempTbl.Columns(2).ColumnName.ToLower = "minimum stock qty") Then
                                 Me.lblUpMsg.Text = "Please check the template columns are correct"
                                 Me.MPEImport.VisibleOnPageLoad = True
                                 Exit Sub
@@ -1062,134 +1001,66 @@ Public Class ProductMinimumStock
                             Dim idx As Integer
 
                             For idx = 0 To TempTbl.Rows.Count - 1
-                                Dim Site_No As String = Nothing
-                                Dim Van_Code As String = Nothing
-                                Dim Customer_No As String = ""
-                                Dim Is_Optional As String = ""
+                                Dim Item_code As String = Nothing
+                                Dim Org_id As String = Nothing
+                                Dim Qty As String = ""
+
 
                                 Dim isValidRow As Boolean = True
+                                Org_id = IIf(TempTbl.Rows(idx)(0) Is DBNull.Value, "", TempTbl.Rows(idx)(0).ToString().Trim())
+                                Item_code = IIf(TempTbl.Rows(idx)(1) Is DBNull.Value, "", TempTbl.Rows(idx)(1).ToString().Trim())
 
-                                Site_No = IIf(TempTbl.Rows(idx)(0) Is DBNull.Value, "", TempTbl.Rows(idx)(0).ToString().Trim())
-                                Van_Code = IIf(TempTbl.Rows(idx)(1) Is DBNull.Value, "", TempTbl.Rows(idx)(1).ToString().Trim())
-                                Customer_No = IIf(TempTbl.Rows(idx)(2) Is DBNull.Value, "", TempTbl.Rows(idx)(2).ToString().Trim())
-                                Is_Optional = IIf(TempTbl.Rows(idx)(3) Is DBNull.Value, "", TempTbl.Rows(idx)(3).ToString().Trim())
-                                Dim CustomerID As String = "0"
-                                Dim SiteID As String = "0"
-                                Dim SID As String = "0"
+                                Qty = IIf(TempTbl.Rows(idx)(2) Is DBNull.Value, "", TempTbl.Rows(idx)(2).ToString().Trim())
 
-                                If Customer_No.Trim() = "" Or Customer_No Is Nothing Then
+                                If Org_id.Trim() = "" Or Org_id Is Nothing Then
                                     RowNo = idx + 2
-                                    ErrorText = ErrorText + "Customer No: is mandatory " + Customer_No + " ,"
-                                    isValidRow = False
-                                    TotFailed += 1
-                                End If
-
-                                If Site_No.Trim() = "" Or Site_No Is Nothing Then
-                                    RowNo = idx + 2
-                                    ErrorText = ErrorText + "Site No: is mandatory " + Site_No + " ,"
-                                    isValidRow = False
-                                    TotFailed += 1
-                                End If
-                                If Van_Code.Trim() = "" Or Van_Code Is Nothing Then
-                                    RowNo = idx + 2
-                                    ErrorText = ErrorText + "Van Code is mandatory " + Van_Code + " ,"
+                                    ErrorText = ErrorText + "Organisation Id: is mandatory " + Org_id + " ,"
                                     isValidRow = False
                                     TotFailed += 1
                                 Else
                                     Dim dt_fsr As New DataTable
-                                    dt_fsr = objCustomer.ValidateExportDistribution_ctl_FSR(Err_No, Err_Desc, Van_Code)
+                                    dt_fsr = objcommon.ValidateExportOrganisationId(Err_No, Err_Desc, Org_id)
                                     If dt_fsr.Rows.Count = 0 Then
                                         RowNo = idx + 2
-                                        ErrorText = ErrorText + "Invalid Van No: " + Van_Code + " ,"
+                                        ErrorText = ErrorText + "Invalid Organization ID: " + Org_id + " ,"
                                         isValidRow = False
                                         TotFailed += 1
                                     Else
-                                        SID = dt_fsr.Rows(0)("SalesRep_ID")
+
                                     End If
                                 End If
 
-
-                                Dim dt_org As DataTable
-
-                                dt_org = objcommon.GetOrganisationName(Err_No, Err_Desc, Site_No.Trim())
-
-                                If dt_org.Rows.Count = 0 And Site_No.Trim() <> "0" And Site_No.Trim() <> "" And Not Site_No Is Nothing Then
+                                If Item_code.Trim() = "" Or Item_code Is Nothing Then
                                     RowNo = idx + 2
-                                    ErrorText = ErrorText + "Invalid Site No:  " + Site_No + " ,"
+                                    ErrorText = ErrorText + "Item Code: is mandatory " + Item_code + " ,"
                                     isValidRow = False
                                     TotFailed += 1
 
                                 Else
-                                    If objCustomer.ValidateExportDistribution_ctl_FSR(Err_No, Err_Desc, Van_Code).Rows.Count > 0 Then
-
-                                        If Customer_No <> "" And Not Customer_No Is Nothing And Customer_No.Trim() <> "0" Then
-                                            Dim dt_cust As New DataTable
-                                            dt_cust = objCustomer.ValidateExportDistribution_ctl(Err_No, Err_Desc, Customer_No, "", "", "1")
-                                            If dt_cust.Rows.Count = 0 Then
-                                                RowNo = idx + 2
-                                                ErrorText = ErrorText + "Invalid Customer No: " + Customer_No + " ,"
-                                                isValidRow = False
-                                                TotFailed += 1
-                                            Else
-                                                If Customer_No <> "" And Not Customer_No Is Nothing Then
-                                                    If Site_No <> "" And Not Site_No Is Nothing Then
-                                                        Dim dt_site As New DataTable
-                                                        If Customer_No.Trim() <> "0" Then
-                                                            dt_site = objCustomer.ValidateExportDistribution_ctl(Err_No, Err_Desc, Customer_No, Site_No, "", "2")
-                                                            If dt_site.Rows.Count = 0 Then
-                                                                RowNo = idx + 2
-                                                                ErrorText = ErrorText + "Customer No:" + Customer_No + " is not assigned to the Site No: " + Site_No + " ,"
-                                                                isValidRow = False
-                                                                TotFailed += 1
-                                                            End If
-                                                        End If
-                                                    End If
-                                                End If
-                                                If Customer_No <> "" And Not Customer_No Is Nothing Then
-                                                    If Site_No <> "" And Not Site_No Is Nothing Then
-                                                        If Van_Code <> "" And Not Van_Code Is Nothing Then
-                                                            Dim dt_van As New DataTable
-                                                            If Customer_No.Trim() <> "0" Then
-                                                                dt_van = objCustomer.ValidateExportDistribution_ctl(Err_No, Err_Desc, Customer_No, Site_No, Van_Code, "3")
-                                                                If dt_van.Rows.Count = 0 Then
-                                                                    RowNo = idx + 2
-                                                                    ErrorText = ErrorText + "Customer No:" + Customer_No + " is not assigned to the Van No: " + Van_Code + " ,"
-                                                                    isValidRow = False
-                                                                    TotFailed += 1
-                                                                Else
-                                                                    CustomerID = dt_van.Rows(0)("Customer_ID")
-                                                                    SiteID = dt_van.Rows(0)("Site_Use_ID")
-                                                                    SID = dt_van.Rows(0)("SalesRep_ID")
-                                                                End If
-                                                            End If
-                                                        End If
-                                                    End If
-                                                End If
-                                            End If
-                                        End If
-
-
-
-
-                                        If Customer_No.Trim() = "0" Then
-                                            CustomerID = "0"
-                                            SiteID = "0"
-                                        End If
-
-
-
-
-                                        If Is_Optional.Trim.ToUpper() <> "Y" And Is_Optional.Trim.ToUpper() <> "N" Then
-                                            RowNo = idx + 2
-                                            ErrorText = ErrorText + "Invalid  Values in Is_Optional:  " + Is_Optional + " ,"
-                                            isValidRow = False
-                                            TotFailed += 1
-                                        End If
-
-
-                                    End If
+                                Dim dt_fsr As New DataTable
+                                dt_fsr = objcommon.ValidateExportProductItemCode(Err_No, Err_Desc, Item_code)
+                                If dt_fsr.Rows.Count = 0 Then
+                                    RowNo = idx + 2
+                                    ErrorText = ErrorText + "Invalid Item Code: " + Item_code + " ,"
+                                    isValidRow = False
+                                    TotFailed += 1
+                                Else
 
                                 End If
+                                End If
+
+
+                        If Qty.Trim() = "" Or Qty Is Nothing Then
+                                    RowNo = idx + 2
+                                    ErrorText = ErrorText + "Quantity is mandatory " + Qty + " ,"
+                                    isValidRow = False
+                                    TotFailed += 1
+                                End If
+
+
+
+
+
 
                                 If Not (RowNo Is Nothing And ErrorText Is Nothing) Then
                                     Dim h As DataRow = dtErrors.NewRow()
@@ -1202,7 +1073,7 @@ Public Class ProductMinimumStock
                                 Else
 
 
-                                    If objCustomer.SaveDistribution_CTL(Err_No, Err_Desc, "", SID, CustomerID, SiteID, Is_Optional.Trim().ToUpper(), CType(Session("User_Access"), UserAccess).UserID) = True Then
+                                    If (objcommon.SaveProductMinimumStock(Err_No, Err_Desc, Org_id, Item_code, Qty, CType(Session("User_Access"), UserAccess).UserID)) = True Then
                                         TotSuccess = TotSuccess + 1
                                         Dim h As DataRow = dtErrors.NewRow()
                                         h("RowNo") = idx + 2
@@ -1211,28 +1082,29 @@ Public Class ProductMinimumStock
                                         RowNo = Nothing
                                         ErrorText = Nothing
                                         isValidRow = True
+                                        BindProductStock()
                                     Else
                                         Dim h As DataRow = dtErrors.NewRow()
-                                        h("RowNo") = idx + 2
-                                        h("LogInfo") = "Error occured while uploading this row"
-                                        dtErrors.Rows.Add(h)
-                                        RowNo = Nothing
-                                        ErrorText = Nothing
-                                        isValidRow = True
+                                            h("RowNo") = idx + 2
+                                            h("LogInfo") = "Error occured while uploading this row"
+                                            dtErrors.Rows.Add(h)
+                                            RowNo = Nothing
+                                            ErrorText = Nothing
+                                            isValidRow = True
+                                        End If
                                     End If
-                                End If
 
                             Next
                         End If
 
 
-                        ' If TotSuccess > 0 Then
+
 
                         DeleteExcel()
                         lblUpMsg.Text = IIf(TotFailed = 0, "Successfully uploaded", "One or more rows has invalid data. Please check the log")
                         Me.MPEImport.VisibleOnPageLoad = True
-                        'BindDistribution_ctl()
-                        'End If
+                        BindProductStock()
+
                     End If
 
                     dgvErros.Visible = False
@@ -1244,7 +1116,7 @@ Public Class ProductMinimumStock
                     Me.dgvErros.DataSource = dtErrors
                     Me.dgvErros.DataBind()
                     Session.Remove("dtDisCtl")
-                    Session("dtDisCtl") = dtErrors.Copy
+                    Session("dtProMinStock") = dtErrors.Copy
 
 
                     Dim fn As String = System.Configuration.ConfigurationManager.AppSettings("ExcelPath") & "UploadLog\" & "DisCtlLog_" & Now.ToString("yyyyMMdd") + ".txt"
@@ -1280,64 +1152,25 @@ Public Class ProductMinimumStock
 
     End Sub
 
+    Private Sub btnImportWindow_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnImportWindow.Click
 
+        Me.lblUpMsg.Text = ""
+        Session("dtProMinStock") = Nothing
+        dgvErros.DataSource = Nothing
+        dgvErros.DataBind()
+        dgvErros.Visible = False
+        lbLog.Visible = False
+        Me.MPEImport.VisibleOnPageLoad = True
 
-    Protected Sub lbLog_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lbLog.Click
-        Try
-
-
-            If Not Session("SimpleLogInfo") Is Nothing Then
-                Dim fileValue As String = Session("SimpleLogInfo")
-                Dim file As System.IO.FileInfo = New FileInfo(fileValue)
-                If file.Exists Then
-                    Response.Clear()
-                    Response.ContentType = "text/plain"
-                    Dim filePath As String = fileValue
-                    Response.ContentType = ContentType
-                    Response.AddHeader("Content-Disposition", ("attachment; filename=" + Path.GetFileName(file.Name)))
-                    Response.TransmitFile(filePath)
-                    Response.Flush()
-                    Response.End()
-                    'Response.End()
-                    '
-
-                    'Response.AddHeader("Content-Disposition", "attachment; filename=" & file.Name)
-
-                    'Response.AddHeader("Content-Length", file.Length.ToString())
-
-                    'Response.WriteFile(file.FullName)
-
-
-                    'Response.[End]()
-                Else
-                    lblUpMsg.Text = "File does not exist"
-                    'lblMessage.ForeColor = Drawing.Color.Green
-                    'lblinfo.Text = "Information"
-                    MPEImport.VisibleOnPageLoad = True
-                    Exit Sub
-
-                End If
-
-            Else
-                lblUpMsg.Text = "There is no log to show."
-                'lblMessage.ForeColor = Drawing.Color.Green
-                'lblinfo.Text = "Information"
-                MPEImport.VisibleOnPageLoad = True
-                Exit Sub
-
-            End If
-        Catch ex As Exception
-            log.Error(GetExceptionInfo(ex))
-
-        Finally
-        End Try
     End Sub
+
+
     Sub DataTable2CSV(ByVal table As DataTable, ByVal filename As String, ByVal sepChar As String)
         Dim writer As System.IO.StreamWriter
         Try
             writer = New System.IO.StreamWriter(filename)
 
-            ' first write a line with the columns name
+
             Dim sep As String = ""
             Dim builder As New System.Text.StringBuilder
             For Each col As DataColumn In table.Columns
@@ -1346,7 +1179,7 @@ Public Class ProductMinimumStock
             Next
             writer.WriteLine(builder.ToString())
 
-            ' then write all the rows
+
             For Each row As DataRow In table.Rows
                 sep = ""
                 builder = New System.Text.StringBuilder
@@ -1458,63 +1291,32 @@ Public Class ProductMinimumStock
         End Try
         Return dtImport
     End Function
+    Private Function SetErrorsTable() As DataTable
+        Dim col As DataColumn
+        Dim dtErrors As New DataTable
+
+        col = New DataColumn()
+        col.ColumnName = "RowNo"
+        col.DataType = System.Type.[GetType]("System.String")
+        col.[ReadOnly] = False
+        col.Unique = False
+        dtErrors.Columns.Add(col)
+
+        col = New DataColumn()
+        col.ColumnName = "LogInfo"
+        col.DataType = System.Type.[GetType]("System.String")
+        col.[ReadOnly] = False
+        col.Unique = False
+        dtErrors.Columns.Add(col)
+
+        Return dtErrors
+    End Function
 
 
+#End Region
 
 
-
-
-    Protected Sub btnCancel_Click(ByVal sender As Object, ByVal e As EventArgs)
-        MPEAdd.VisibleOnPageLoad = False
-        Panel.Update()
-        Return
-    End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    'Private Sub ddl_FilterVan_SelectedIndexChanged(sender As Object, e As RadComboBoxSelectedIndexChangedEventArgs) Handles ddl_FilterVan.SelectedIndexChanged
-    '    Try
-    '        If ddl_FilterVan.SelectedIndex > 0 Then
-    '            ddl_FilterCustomer.ClearSelection()
-    '            ddl_FilterCustomer.Items.Clear()
-    '            ddl_FilterCustomer.Text = ""
-
-    '            BindDistribution_ctl()
-    '            Panel.Update()
-    '        End If
-    '    Catch ex As Exception
-    '        log.Error(GetExceptionInfo(ex))
-    '        log.Error(ex.Message.ToString())
-    '    End Try
-    'End Sub
-
-
-
-
+#Region "Other Events and functions"
     Private Sub DeleteExcelTemplate()
         Try
             Dim Filename As String = ViewState("SampleTemplate")
@@ -1528,12 +1330,23 @@ Public Class ProductMinimumStock
 
         End Try
     End Sub
+    Sub MessageBoxValidation(ByVal str As String, ByVal Title As String)
+        RadWindowManager1.RadAlert(str, 330, 180, Title, "alertCallBackFn")
+        Exit Sub
+    End Sub
+
+    Protected Sub btnCancel_Click(ByVal sender As Object, ByVal e As EventArgs)
+        MPEAdd.VisibleOnPageLoad = False
+        Panel.Update()
+        Return
+    End Sub
+
 
     Private Sub btndownloadTemp_Click(sender As Object, e As EventArgs) Handles btndownloadTemp.Click
-        Dim Filename As String = System.Configuration.ConfigurationManager.AppSettings("ExcelTemplatePath") & "Distribution_CTL.xls"
+        Dim Filename As String = System.Configuration.ConfigurationManager.AppSettings("ExcelTemplatePath") & "ProductMinimumStock.xlsx"
         Dim TheFile As FileInfo = New FileInfo(Filename)
         If TheFile.Exists Then
-            Dim strFileName As String = "Template" + Now.ToString("ddMMMyyHHmmss") + ".xls"
+            Dim strFileName As String = "Template" + Now.ToString("ddMMMyyHHmmss") + ".xlsx"
 
 
             ViewState("SampleTemplate") = strFileName
@@ -1552,6 +1365,49 @@ Public Class ProductMinimumStock
             DeleteExcelTemplate()
         End If
     End Sub
+
+    Protected Sub lbLog_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lbLog.Click
+        Try
+
+
+            If Not Session("SimpleLogInfo") Is Nothing Then
+                Dim fileValue As String = Session("SimpleLogInfo")
+                Dim file As System.IO.FileInfo = New FileInfo(fileValue)
+                If file.Exists Then
+                    Response.Clear()
+                    Response.ContentType = "text/plain"
+                    Dim filePath As String = fileValue
+                    Response.ContentType = ContentType
+                    Response.AddHeader("Content-Disposition", ("attachment; filename=" + Path.GetFileName(file.Name)))
+                    Response.TransmitFile(filePath)
+                    Response.Flush()
+                    Response.End()
+
+                Else
+                    lblUpMsg.Text = "File does not exist"
+
+                    MPEImport.VisibleOnPageLoad = True
+                    Exit Sub
+
+                End If
+
+            Else
+                lblUpMsg.Text = "There is no log to show."
+
+                MPEImport.VisibleOnPageLoad = True
+                Exit Sub
+
+            End If
+        Catch ex As Exception
+            log.Error(GetExceptionInfo(ex))
+
+        Finally
+        End Try
+    End Sub
+
+#End Region
+
+
 End Class
 
 

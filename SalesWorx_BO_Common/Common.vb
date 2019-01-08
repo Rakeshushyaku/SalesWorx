@@ -416,45 +416,7 @@ Public Class Common
 
 
 
-    'task 1
-    Function GetAllProductsStock(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Product_ID As String) As DataTable
-        Try
-            Return ObjDALCommon.GetProductsByOrgById(Err_No, Err_Desc, OrgID, Product_ID)
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
 
-    Function GetProductsDescription(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Product_ID As String) As DataTable
-        Try
-            Return ObjDALCommon.GetProductsDetailsByOrgById(Err_No, Err_Desc, OrgID, Product_ID)
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
-
-    Function SaveDistribution_CTL(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, ByVal SID As String, ByVal Qty As String, ByVal CreatedBy As Integer) As Boolean
-        Try
-            Return ObjDALCommon.SaveDistribution_CTL(Error_No, Error_Desc, OrgId, SID, Qty, CreatedBy)
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
-
-    Function DeleteDistribution_CTL(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, InventoryItemId As String) As Boolean
-        Try
-            Return ObjDALCommon.DeleteDistribution_CTL(Err_No, Err_Desc, OrgID, InventoryItemId)
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
-    Function GetCustfromOrgtext_Distribution_ctl(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Text As String) As DataTable
-        Try
-            Return ObjDALCommon.GetProductsByOrgById(Err_No, Err_Desc, OrgId, Text)
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
 
 
 
@@ -617,6 +579,61 @@ Public Class Common
     End Function
 
 
+    'task 1 Product Stock
+    Function GetAllProductsStock(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Product_ID As String) As DataTable
+        Try
+            Return ObjDALCommon.GetProductsByOrgById(Err_No, Err_Desc, OrgID, Product_ID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function GetProductsDescription(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Product_ID As String) As DataTable
+        Try
+            Return ObjDALCommon.GetProductsDetailsByOrgById(Err_No, Err_Desc, OrgID, Product_ID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function SaveProductMinimumStock(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal OrgId As String, ByVal SID As String, ByVal Qty As String, ByVal CreatedBy As Integer) As Boolean
+        Try
+            Return ObjDALCommon.SaveProductMinimumStock(Error_No, Error_Desc, OrgId, SID, Qty, CreatedBy)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function DeleteProductMinimumStock(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, InventoryItemId As String) As Boolean
+        Try
+            Return ObjDALCommon.DeleteProductMinimumStock(Err_No, Err_Desc, OrgID, InventoryItemId)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Function GetCustfromOrgtext_Distribution_ctl(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Text As String) As DataTable
+        Try
+            Return ObjDALCommon.GetProductsByOrgById(Err_No, Err_Desc, OrgId, Text)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function ValidateExportProductItemCode(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal Itemcode_Number As String) As DataTable
+        Try
+            Return ObjDALCommon.ValidateExportProductMinimumStock(Err_No, Err_Desc, Itemcode_Number)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function ValidateExportOrganisationId(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrganisationId As String) As DataTable
+        Try
+            Return ObjDALCommon.ValidateExportOrganisationId(Err_No, Err_Desc, OrganisationId)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
 
 
