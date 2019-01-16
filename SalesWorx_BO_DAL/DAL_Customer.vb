@@ -3109,7 +3109,9 @@ Public Class DAL_Customer
         Try
             objSQLConn = _objDB.GetSQLConnection
 
-            Dim QueryString As String = "SELECT Distinct Customer_Type as Category from dbo.app_GetOrgCustomers('" & OrgID & "')"
+            ' on Dec-19-2018 Dim QueryString As String = "SELECT Distinct Customer_Type as Category from dbo.app_GetOrgCustomers('" & OrgID & "')"
+            Dim QueryString As String = "SELECT Distinct Customer_Type as Category ,Customer_Type +'-'+(SELECT Dim_Description from TBL_Org_Dimensions where Dim_Code= Customer_Type ) as Category_Desc from dbo.app_GetOrgCustomers('" & OrgID & "')"
+
             objSQLCmd = New SqlCommand(QueryString, objSQLConn)
             objSQLCmd.CommandType = CommandType.Text
 
@@ -3709,7 +3711,7 @@ Public Class DAL_Customer
             End If
 
             If text <> "" Then
-                QueryString = QueryString & " AND  (Customer_no LIKE '%' + @txt + '%' OR Customer_no +'-'+ Customer_name LIKE '%' + @txt + '%')"
+                QueryString = QueryString & " AND  (Customer_ID LIKE '%' + @txt + '%' OR Customer_no +'-'+ Customer_name LIKE '%' + @txt + '%')"
             End If
             objSQLCmd = New SqlCommand(QueryString, objSQLConn)
             objSQLCmd.CommandType = CommandType.Text
@@ -3787,7 +3789,7 @@ Public Class DAL_Customer
 
 
         Try
-          
+
             objSQLConn = _objDB.GetSQLConnection
 
             sQry = "DELETE FROM TBL_Distribution_CTL where Distribution_CTL_ID=@Distribution_CTL_ID "
@@ -3865,5 +3867,96 @@ Public Class DAL_Customer
             _objDB.CloseSQLConnection(objSQLConn)
         End Try
         Return MsgDs.Tables(0)
+    End Function
+
+    Public Function GetReceiptMethods(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal SId As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As New SqlCommand
+        Dim sQry As String
+        Dim sucess As Boolean = False
+        Dim iRowsAffected As Integer = 0
+        Dim dtReceipt As New DataTable
+
+        Try
+            'getting MSSQL DB connection.....
+            'Insert TBL_BNS_promotion
+            objSQLConn = _objDB.GetSQLConnection
+
+            sQry = "app_GetReceiptMethods"
+            objSQLCmd = New SqlCommand(sQry, objSQLConn)
+            objSQLCmd.CommandType = CommandType.StoredProcedure
+            'objSQLCmd.Parameters.AddWithValue("@SID", SId)
+
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(dtReceipt)
+
+
+            Dim t As DataRow = dtReceipt.NewRow
+            t(0) = "0$0$0$0"
+            t(1) = ""
+            dtReceipt.Rows.InsertAt(t, 0)
+
+
+            objSQLCmd.Dispose()
+
+
+
+        Catch ex As Exception
+            Err_No = "740243"
+            Err_Desc = ex.Message
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+        Return dtReceipt
+
+    End Function
+
+    ''
+    Public Function GetBankAccounts(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal SId As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As New SqlCommand
+        Dim sQry As String
+        Dim sucess As Boolean = False
+        Dim iRowsAffected As Integer = 0
+        Dim dtReceipt As New DataTable
+
+        Try
+            'getting MSSQL DB connection.....
+            'Insert TBL_BNS_promotion
+            objSQLConn = _objDB.GetSQLConnection
+
+            sQry = "app_GetBankAccounts"
+            objSQLCmd = New SqlCommand(sQry, objSQLConn)
+            objSQLCmd.CommandType = CommandType.StoredProcedure
+            'objSQLCmd.Parameters.AddWithValue("@SID", SId)
+
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(dtReceipt)
+
+
+            Dim t As DataRow = dtReceipt.NewRow
+            t(0) = "0$0$0$0"
+            t(1) = ""
+            dtReceipt.Rows.InsertAt(t, 0)
+
+
+            objSQLCmd.Dispose()
+
+
+
+        Catch ex As Exception
+            Err_No = "740243"
+            Err_Desc = ex.Message
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+        Return dtReceipt
+
     End Function
 End Class

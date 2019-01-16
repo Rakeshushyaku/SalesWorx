@@ -629,6 +629,65 @@ Public Class DAL_Reports
         End Try
         Return dt
     End Function
+
+    Public Function GetPreSalesSummary(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, Type As String, FromDate As String, ToDate As String, Agency As String, Brand As String, Item As String, Customer As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim dt As New DataTable
+        Dim dr As DataRow = Nothing
+        Dim ProductPath As String = Nothing
+        Dim objSQLDA As SqlDataAdapter
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            objSQLDA = New SqlDataAdapter("Rep_PreSalesSummary", objSQLConn)
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.CommandTimeout = 600
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@OID", OrgId)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", SID)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Uid", Uid)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@FromDate", FromDate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@ToDate", ToDate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Type", Type.ToLower)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Agency", Agency)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Brand", Brand)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Item", Item)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Customer", Customer)
+            'If Customer = "0" Then
+            '    objSQLDA.SelectCommand.Parameters.AddWithValue("@Customer", 0)
+            '    objSQLDA.SelectCommand.Parameters.AddWithValue("@SiteID", 0)
+            'Else
+
+            '    Dim arrCustomers() As String
+            '    Dim strCustomer As String = ""
+            '    Dim strSiteID As String = ""
+            '    arrCustomers = Customer.Split(",")
+            '    For Each a In arrCustomers
+            '        Dim ids() As String
+            '        ids = a.Split("$")
+            '        strCustomer = strCustomer & ids(0) & ","
+            '        strSiteID = strSiteID & ids(1) & ","
+            '    Next
+            '    If strCustomer <> "" Then
+            '        strCustomer = strCustomer.Substring(0, strCustomer.Length - 1)
+            '    End If
+            '    If strSiteID <> "" Then
+            '        strSiteID = strSiteID.Substring(0, strSiteID.Length - 1)
+            '    End If
+            '    objSQLDA.SelectCommand.Parameters.AddWithValue("@Customer", strCustomer)
+            '    objSQLDA.SelectCommand.Parameters.AddWithValue("@SiteID", strSiteID)
+            'End If
+            objSQLDA.Fill(dt)
+
+        Catch ex As Exception
+            Err_No = "24069"
+            Err_Desc = ex.Message
+
+            Throw ex
+        Finally
+
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return dt
+    End Function
     Public Function GetSalesReturnsbyVan(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, Type As String, FromDate As String, ToDate As String, Agency As String, Item As String, Customer As String) As DataTable
         Dim objSQLConn As SqlConnection
         Dim dt As New DataTable
@@ -5838,46 +5897,6 @@ Public Class DAL_Reports
         Return dt
     End Function
 
-    'task 8
-    Function GetSalesByProductValue(Err_No As Long, Err_Desc As String, SearchQuery As String, Organization As String, Payment As String, van As String, UID As Integer) As DataTable
-        Dim objSQLConn As SqlConnection
-        Dim dt As New DataTable
-        Dim dr As DataRow = Nothing
-        Dim ProductPath As String = Nothing
-        Dim objSQLDA As SqlDataAdapter
-        Try
-            If Not Payment = "0" Then
-                SearchQuery = " AND CN.Cash_cust='" + Payment + "' " + SearchQuery
-            End If
-
-
-            objSQLConn = _objDB.GetSQLConnection
-            objSQLDA = New SqlDataAdapter("Rep_SaleRep_Vat", objSQLConn)
-           
-
-            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
-            objSQLDA.SelectCommand.CommandTimeout = 600
-            objSQLDA.SelectCommand.Parameters.AddWithValue("@SearchParams", SearchQuery)
-            objSQLDA.SelectCommand.Parameters.AddWithValue("@OrgId", Organization)
-            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", van)
-            objSQLDA.SelectCommand.Parameters.AddWithValue("@UID", UID)
-           
-
-            objSQLDA.Fill(dt)
-
-        Catch ex As Exception
-            Err_No = "24069"
-            Err_Desc = ex.Message
-
-            Throw ex
-        Finally
-
-            _objDB.CloseSQLConnection(objSQLConn)
-        End Try
-        Return dt
-    End Function
-
-
     Public Function GetEmpIncentive(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, ByVal EMP_CODE As String, ByVal YEAR As String) As DataTable
         Dim objSQLConn As SqlConnection
         Dim dt As New DataTable
@@ -6378,9 +6397,11 @@ Public Class DAL_Reports
             objSQLConn = _objDB.GetSQLConnection
             Dim QueryString As String
             If Type = "R" Then
-                QueryString = String.Format("SELECT Row_ID  from TBL_RMA  WHERE Orig_Sys_Document_Ref='" & DocNO & "'")
+                QueryString = String.Format("SELECT Row_ID  from TBL_RMA  WHERE Orig_Sys_Document_Ref='" & DocNO & "' union SELECT Row_ID  from TBL_SR  WHERE Orig_Sys_Document_Ref='" & DocNO & "'")
             ElseIf Type = "O" Then
-                QueryString = String.Format("SELECT Row_ID  from TBL_Order  WHERE Orig_Sys_Document_Ref='" & DocNO & "'")
+                QueryString = String.Format("SELECT Row_ID  from TBL_Order  WHERE Orig_Sys_Document_Ref='" & DocNO & "' union SELECT Row_ID  from TBL_SO  WHERE Orig_Sys_Document_Ref='" & DocNO & "'")
+            ElseIf Type = "SO" Then
+                QueryString = String.Format("SELECT Row_ID  from TBL_SO  WHERE Orig_Sys_Document_Ref='" & DocNO & "'")
             End If
 
             objSQLCmd = New SqlCommand(QueryString, objSQLConn)
@@ -6693,6 +6714,32 @@ Public Class DAL_Reports
         End Try
         Return dt
     End Function
+    Public Function GetLPOpdf(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, RefNo As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim dt As New DataTable
+        Dim dr As DataRow = Nothing
+        Dim ProductPath As String = Nothing
+        Dim objSQLDA As SqlDataAdapter
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            objSQLDA = New SqlDataAdapter("app_GetLPOPdf", objSQLConn)
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.CommandTimeout = 600
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@RefNo", RefNo)
+
+            objSQLDA.Fill(dt)
+
+        Catch ex As Exception
+            Err_No = "54069"
+            Err_Desc = ex.Message
+
+            Throw ex
+        Finally
+
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return dt
+    End Function
 
     Public Function GetCollectionHeaderDetails(ByRef Err_No As Long, ByRef Err_Desc As String, RowID As String) As DataTable
         Dim objSQLConn As SqlConnection
@@ -6978,67 +7025,134 @@ Public Class DAL_Reports
         End Try
         Return dt
     End Function
-
-    Public Function DeleteCollection(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal SurvId As String, ByVal DeletedBy As String) As Boolean
+    Function GetSalesByProductValue(Err_No As Long, Err_Desc As String, SearchQuery As String, Organization As String, Payment As String, van As String, UID As Integer) As DataTable
         Dim objSQLConn As SqlConnection
-        Dim objSQLCmd As SqlCommand
-        Dim sQry As String
-        Dim retVal As Boolean = False
-
+        Dim dt As New DataTable
+        Dim dr As DataRow = Nothing
+        Dim ProductPath As String = Nothing
+        Dim objSQLDA As SqlDataAdapter
         Try
-            'getting MSSQL DB connection.....
+            If Not Payment = "0" Then
+                SearchQuery = " AND CN.Cash_cust='" + Payment + "' " + SearchQuery
+            End If
+
+
             objSQLConn = _objDB.GetSQLConnection
-            sQry = "DELETE FROM TBL_Collection WHERE collection_ref_no=@Doc_id;"
-            sQry = sQry & "insert into TBL_Doc_Deletion_Requests ([Doc_ID],[Doc_Type],[Status],[Logged_At],[Logged_By],[Last_Updated_At],[Last_Updated_By]) values (@Doc_id,'C','N',getdate(),@LogedBY,getdate(),@updatedBy)"
-            objSQLCmd = New SqlCommand(sQry, objSQLConn)
-            objSQLCmd.CommandType = CommandType.Text
-            objSQLCmd.Parameters.Add("@Doc_id", SqlDbType.VarChar, 100).Value = SurvId
-            objSQLCmd.Parameters.Add("@LogedBY", SqlDbType.BigInt).Value = DeletedBy
-            objSQLCmd.Parameters.Add("@updatedBy", SqlDbType.BigInt).Value = DeletedBy
+            objSQLDA = New SqlDataAdapter("Rep_SaleRep_Vat", objSQLConn)
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.CommandTimeout = 600
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SearchParams", SearchQuery)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@OrgId", Organization)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", van)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@UID", UID)
 
 
-            objSQLCmd.ExecuteNonQuery()
-            objSQLCmd.Dispose()
-            retVal = True
+
+            objSQLDA.Fill(dt)
 
         Catch ex As Exception
-            Error_No = 79001
-            Error_Desc = String.Format("Error while Delete survey: {0}", ex.Message)
+            Err_No = "24069"
+            Err_Desc = ex.Message
+
+            Throw ex
+        Finally
+
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return dt
+    End Function
+    Public Function GetDailyPresSalesReport_Order(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim dt As New DataTable
+        Dim dr As DataRow = Nothing
+        Dim ProductPath As String = Nothing
+        Dim objSQLDA As SqlDataAdapter
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            objSQLDA = New SqlDataAdapter("Rep_DailySalesReport_PresalesOrder", objSQLConn)
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.CommandTimeout = 600
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@OID", OrgId)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", SID)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Uid", Uid)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@FromDate", FromDate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@ToDate", ToDate)
+            objSQLDA.Fill(dt)
+
+        Catch ex As Exception
+            Err_No = "24069"
+            Err_Desc = ex.Message
+
+            Throw ex
+        Finally
+
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return dt
+    End Function
+    Public Function GetDailyPresSalesReport_Return(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim dt As New DataTable
+        Dim dr As DataRow = Nothing
+        Dim ProductPath As String = Nothing
+        Dim objSQLDA As SqlDataAdapter
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            objSQLDA = New SqlDataAdapter("Rep_DailySalesReport_Returns_presale", objSQLConn)
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.CommandTimeout = 600
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@OID", OrgId)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", SID)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Uid", Uid)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@FromDate", FromDate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@ToDate", ToDate)
+            objSQLDA.Fill(dt)
+
+        Catch ex As Exception
+            Err_No = "24069"
+            Err_Desc = ex.Message
+
+            Throw ex
+        Finally
+
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return dt
+    End Function
+    Public Function GetCustomerfromOrgtext_Outlet(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, Optional text As String = "") As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+
+        Try
+            Dim QueryString As String
+            objSQLConn = _objDB.GetSQLConnection
+
+            QueryString = "SELECT (LTRIM(STR(Customer_ID)) + '$' + LTRIM(STR(Site_Use_ID))) as CustomerID,'['+IsNULL(Customer_No,'N/A')+']-'+IsNULL(Customer_Name,'N/A') as Customer from dbo.app_GetOrgCustomerShipAddress ('" & OrgID & "')"
+
+
+            If text <> "" Then
+                QueryString = QueryString & " where (Customer_no LIKE '%' + @txt + '%' OR Customer_no +'-'+ Customer_name LIKE '%' + @txt + '%')"
+            End If
+            objSQLCmd = New SqlCommand(QueryString, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+            If text <> "" Then
+                objSQLCmd.Parameters.Add("@txt", SqlDbType.VarChar, 100).Value = text
+            End If
+            Dim MsgDs As New DataSet
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(MsgDs, "VanTbl")
+
+            GetCustomerfromOrgtext_Outlet = MsgDs.Tables("VanTbl")
+            objSQLCmd.Dispose()
+
+        Catch ex As Exception
+            Err_No = "74058"
+            Err_Desc = ex.Message
         Finally
             objSQLCmd = Nothing
             _objDB.CloseSQLConnection(objSQLConn)
         End Try
-        Return retVal
     End Function
-
-    'Function DeleteCollection1(ByRef Error_No As Long, ByRef Error_Desc As String, ByVal SurvId As String) As DataTable
-    '    Dim objSQLConn As SqlConnection
-    '    Dim dt As New DataTable
-    '    Dim dr As DataRow = Nothing
-    '    Dim ProductPath As String = Nothing
-    '    Dim objSQLDA As SqlDataAdapter
-    '    Try
-    '        objSQLConn = _objDB.GetSQLConnection
-    '        objSQLDA = New SqlDataAdapter("Rep_EOTDetailed_PreSale", objSQLConn)
-    '        objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
-    '        objSQLDA.SelectCommand.CommandTimeout = 600
-    '        objSQLDA.SelectCommand.Parameters.AddWithValue("@OID", OrgId)
-    '        objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", SID)
-    '        objSQLDA.SelectCommand.Parameters.AddWithValue("@FromDate", Fromdate)
-
-    '        objSQLDA.Fill(dt)
-    '        Dim i As String
-    '    Catch ex As Exception
-    '        Err_No = "24069"
-    '        Err_Desc = ex.Message
-
-    '        Throw ex
-    '    Finally
-
-    '        _objDB.CloseSQLConnection(objSQLConn)
-    '    End Try
-    '    Return dt
-    'End Function
-
 
 End Class

@@ -635,6 +635,22 @@ Public Class Common
         End Try
     End Function
 
+    'Task report
+
+    Function GetHeadersForTradeEffects(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Sid As String, Fromdate As String, Todate As String, Channel As String, Mode As String, Planid As Int16, Uid As Int16) As DataTable
+        Try
+            Return ObjDALCommon.GetHeadersForTradeEffects(Err_No, Err_Desc, OrgId, Sid, Fromdate, Todate, Channel, Mode, Planid, Uid)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Function GetDetailsForTradeEffects(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Sid As String, Fromdate As Date, Todate As Date, Channel As String, Mode As String, Planid As Int16, Uid As Int16) As DataTable
+        Try
+            Return ObjDALCommon.GetDetailsForTradeEffects(Err_No, Err_Desc, OrgId, Sid, Fromdate, Todate, Channel, Mode, Planid, Uid)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
 
 End Class

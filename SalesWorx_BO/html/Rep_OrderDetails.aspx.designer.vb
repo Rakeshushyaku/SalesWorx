@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class Rep_OrderDetails
-
+    
     '''<summary>
     '''Head1 control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
-
+    
     '''<summary>
     '''form1 control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
     '''ScriptManager1 control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-
+    
     '''<summary>
     '''l control.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents l As Global.Telerik.Web.UI.RadAjaxPanel
-
+    
     '''<summary>
     '''HOrgID control.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents HOrgID As Global.System.Web.UI.WebControls.HiddenField
-
+    
     '''<summary>
     '''HDocID control.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents HDocID As Global.System.Web.UI.WebControls.HiddenField
-
+    
     '''<summary>
     '''HType control.
     '''</summary>
@@ -75,7 +75,16 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents HType As Global.System.Web.UI.WebControls.HiddenField
-
+    
+    '''<summary>
+    '''HOrderType control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HOrderType As Global.System.Web.UI.WebControls.HiddenField
+    
     '''<summary>
     '''lblDecimal control.
     '''</summary>
@@ -84,7 +93,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblDecimal As Global.System.Web.UI.WebControls.HiddenField
-
+    
     '''<summary>
     '''lblCurrency control.
     '''</summary>
@@ -93,7 +102,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCurrency As Global.System.Web.UI.WebControls.HiddenField
-
+    
     '''<summary>
     '''Detailed control.
     '''</summary>
@@ -102,7 +111,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Detailed As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
+    
     '''<summary>
     '''Salestab control.
     '''</summary>
@@ -111,7 +120,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Salestab As Global.Telerik.Web.UI.RadTabStrip
-
+    
     '''<summary>
     '''RadMultiPage21 control.
     '''</summary>
@@ -120,7 +129,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadMultiPage21 As Global.Telerik.Web.UI.RadMultiPage
-
+    
     '''<summary>
     '''RadPageView1 control.
     '''</summary>
@@ -129,7 +138,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadPageView1 As Global.Telerik.Web.UI.RadPageView
-
+    
     '''<summary>
     '''HRowID control.
     '''</summary>
@@ -138,7 +147,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents HRowID As Global.System.Web.UI.WebControls.HiddenField
-
+    
     '''<summary>
     '''lbl_refno control.
     '''</summary>
@@ -147,7 +156,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_refno As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_Date control.
     '''</summary>
@@ -156,7 +165,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Date As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_Salesep control.
     '''</summary>
@@ -165,7 +174,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Salesep As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_Status control.
     '''</summary>
@@ -174,7 +183,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Status As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_OrderType control.
     '''</summary>
@@ -183,7 +192,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_OrderType As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_TransType control.
     '''</summary>
@@ -192,7 +201,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_TransType As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_CurrDesc control.
     '''</summary>
@@ -201,7 +210,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_CurrDesc As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_Customer control.
     '''</summary>
@@ -210,7 +219,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Customer As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_creditCustomername control.
     '''</summary>
@@ -219,7 +228,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_creditCustomername As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_CCName control.
     '''</summary>
@@ -228,7 +237,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_CCName As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''ImageButton1 control.
     '''</summary>
@@ -237,7 +246,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ImageButton1 As Global.System.Web.UI.WebControls.ImageButton
-
+    
     '''<summary>
     '''ImageButton2 control.
     '''</summary>
@@ -246,7 +255,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ImageButton2 As Global.System.Web.UI.WebControls.ImageButton
-
+    
     '''<summary>
     '''gvItems control.
     '''</summary>
@@ -255,7 +264,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents gvItems As Global.Telerik.Web.UI.RadGrid
-
+    
     '''<summary>
     '''discountRow control.
     '''</summary>
@@ -264,7 +273,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents discountRow As Global.System.Web.UI.HtmlControls.HtmlTableRow
-
+    
     '''<summary>
     '''lbl_DiscountHead control.
     '''</summary>
@@ -273,7 +282,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_DiscountHead As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_discount control.
     '''</summary>
@@ -282,7 +291,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_discount As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_NetHead control.
     '''</summary>
@@ -291,7 +300,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_NetHead As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_Net control.
     '''</summary>
@@ -300,7 +309,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Net As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_VATHead control.
     '''</summary>
@@ -309,7 +318,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_VATHead As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_vatAmount control.
     '''</summary>
@@ -318,7 +327,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_vatAmount As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_TotalHead control.
     '''</summary>
@@ -327,7 +336,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_TotalHead As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_total control.
     '''</summary>
@@ -336,7 +345,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_total As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''RadPageView2 control.
     '''</summary>
@@ -345,7 +354,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadPageView2 As Global.Telerik.Web.UI.RadPageView
-
+    
     '''<summary>
     '''lbl_approvalCode control.
     '''</summary>
@@ -354,7 +363,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_approvalCode As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_approvedBy control.
     '''</summary>
@@ -363,7 +372,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_approvedBy As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_reason control.
     '''</summary>
@@ -372,7 +381,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_reason As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_CustomerpO control.
     '''</summary>
@@ -381,7 +390,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_CustomerpO As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_StartTime control.
     '''</summary>
@@ -390,7 +399,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_StartTime As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_EndTime control.
     '''</summary>
@@ -399,7 +408,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_EndTime As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_note control.
     '''</summary>
@@ -408,7 +417,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_note As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lbl_ShippingNote control.
     '''</summary>
@@ -417,7 +426,16 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_ShippingNote As Global.System.Web.UI.WebControls.Label
-
+    
+    '''<summary>
+    '''lbl_Deliverydate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl_Deliverydate As Global.System.Web.UI.WebControls.Label
+    
     '''<summary>
     '''lbl_Signed control.
     '''</summary>
@@ -426,7 +444,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Signed As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''Img_Signature control.
     '''</summary>
@@ -435,7 +453,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Img_Signature As Global.System.Web.UI.WebControls.Image
-
+    
     '''<summary>
     '''RadPageView3 control.
     '''</summary>
@@ -444,7 +462,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadPageView3 As Global.Telerik.Web.UI.RadPageView
-
+    
     '''<summary>
     '''lbl_msgimg control.
     '''</summary>
@@ -453,7 +471,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_msgimg As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''ImgList control.
     '''</summary>
@@ -462,7 +480,16 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ImgList As Global.System.Web.UI.WebControls.DataList
-
+    
+    '''<summary>
+    '''PdfList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PdfList As Global.System.Web.UI.WebControls.DataList
+    
     '''<summary>
     '''BtnExportExcel control.
     '''</summary>
@@ -471,7 +498,7 @@ Partial Public Class Rep_OrderDetails
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtnExportExcel As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''BtnExportPDF control.
     '''</summary>

@@ -1010,7 +1010,7 @@ Partial Public Class AssignBonusPlanToCustomer
                     If Item.Selected Then
                         If Item.Value <> "0" Then
                             CustSite = Item.Value.Split("$")
-
+                            log.Error(CustSite(0).ToString() & "," & CustSite(1).ToString() & "," & Me.ddOraganisation.SelectedItem.Value & "," & hfPlanID.Value & "," & "Single" & "," & hfPlanType.Value)
                             ObjCustomer.InsertBonusPlanToCustomer(CustSite(0).ToString(), CustSite(1).ToString(), Me.ddOraganisation.SelectedItem.Value, hfPlanID.Value, "Single", Err_No, Err_Desc, DtError, hfPlanType.Value)
                             If DtError.Rows.Count > 0 Then
                                 MessageBoxValidation(DtError.Rows(0)(0), "Information")

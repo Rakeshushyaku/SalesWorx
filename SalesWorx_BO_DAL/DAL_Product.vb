@@ -2314,7 +2314,10 @@ Public Class DAL_Product
 
         Try
             objSQLConn = _objDB.GetSQLConnection
-            Dim QueryString As String = String.Format("SELECT DISTINCT A.Assortment_Plan_ID,A.Description,A.Organization_ID AS OrgID,B.Site AS OrgName,A.Valid_From,A.Valid_To,A.Last_Updated_At AS UpdatedAt ,(SELECT userName FROM TBL_user WHERE User_ID=A.Last_Updated_BY)AS UpdatedBy,CASE WHEN A.Is_Active='Y' THEN 'Yes' ELSE 'No' END AS IsActive,CASE WHEN A.Is_Active='Y' THEN CASt('1' AS Bit) ELSE CASt('0' AS Bit) END AS IsAddItems, ISNULL(Plan_Type,'N')AS PlanType,CASE WHEN ISNULL(Plan_Type,'N')='N' THEN 'Overall Quantity' ELSE 'Minimum Quantity' END AS Plan_Type,isnull(Transaction_Type,'0')as Transaction_Type  FROM TBL_BNS_Assortment_Plan  AS A INNER JOIN  app_GetControlInfo(@UID) AS B ON A.Organization_Id=B.Mas_Org_ID WHERE  Is_Active='Y'  ORDER BY A.Last_Updated_At DESC")
+            'Commented on Jan'02 2019 As per Harpal Sir "for now please exclude any plans having Plan_Type as V from the assortment bonus plan listing screen."  Dim QueryString As String = String.Format("SELECT DISTINCT A.Assortment_Plan_ID,A.Description,A.Organization_ID AS OrgID,B.Site AS OrgName,A.Valid_From,A.Valid_To,A.Last_Updated_At AS UpdatedAt ,(SELECT userName FROM TBL_user WHERE User_ID=A.Last_Updated_BY)AS UpdatedBy,CASE WHEN A.Is_Active='Y' THEN 'Yes' ELSE 'No' END AS IsActive,CASE WHEN A.Is_Active='Y' THEN CASt('1' AS Bit) ELSE CASt('0' AS Bit) END AS IsAddItems, ISNULL(Plan_Type,'N')AS PlanType,CASE WHEN ISNULL(Plan_Type,'N')='N' THEN 'Overall Quantity' ELSE 'Minimum Quantity' END AS Plan_Type,isnull(Transaction_Type,'0')as Transaction_Type  FROM TBL_BNS_Assortment_Plan  AS A INNER JOIN  app_GetControlInfo(@UID) AS B ON A.Organization_Id=B.Mas_Org_ID WHERE  Is_Active='Y'  ORDER BY A.Last_Updated_At DESC")
+            ' Dim QueryString As String = String.Format("SELECT DISTINCT A.Assortment_Plan_ID,A.Description,A.Organization_ID AS OrgID,B.Site AS OrgName,A.Valid_From,A.Valid_To,A.Last_Updated_At AS UpdatedAt ,(SELECT userName FROM TBL_user WHERE User_ID=A.Last_Updated_BY)AS UpdatedBy,CASE WHEN A.Is_Active='Y' THEN 'Yes' ELSE 'No' END AS IsActive,CASE WHEN A.Is_Active='Y' THEN CASt('1' AS Bit) ELSE CASt('0' AS Bit) END AS IsAddItems, ISNULL(Plan_Type,'N')AS PlanType,CASE WHEN ISNULL(Plan_Type,'N')='N' THEN 'Overall Quantity' ELSE 'Minimum Quantity' END AS Plan_Type,isnull(Transaction_Type,'0')as Transaction_Type  FROM TBL_BNS_Assortment_Plan  AS A INNER JOIN  app_GetControlInfo(@UID) AS B ON A.Organization_Id=B.Mas_Org_ID WHERE  Is_Active='Y' AND LTRIM(RTRIM(Plan_Type))<>'V' ORDER BY A.Last_Updated_At DESC")
+            Dim QueryString As String = String.Format("SELECT DISTINCT A.Assortment_Plan_ID,A.Description,A.Organization_ID AS OrgID,B.Site AS OrgName,A.Valid_From,A.Valid_To,A.Last_Updated_At AS UpdatedAt ,(SELECT userName FROM TBL_user WHERE User_ID=A.Last_Updated_BY)AS UpdatedBy,CASE WHEN A.Is_Active='Y' THEN 'Yes' ELSE 'No' END AS IsActive,CASE WHEN A.Is_Active='Y' THEN CASt('1' AS Bit) ELSE CASt('0' AS Bit) END AS IsAddItems, ISNULL(Plan_Type,'N')AS PlanType,CASE ISNULL(Plan_Type,'N') WHEN 'N' THEN 'Overall Quantity' WHEN 'V' THEN 'Overall Value' ELSE   'Minimum Quantity' END AS Plan_Type,isnull(Transaction_Type,'0')as Transaction_Type  FROM TBL_BNS_Assortment_Plan  AS A INNER JOIN  app_GetControlInfo(@UID) AS B ON A.Organization_Id=B.Mas_Org_ID WHERE  Is_Active='Y' ORDER BY A.Last_Updated_At DESC")
+
             objSQLCmd = New SqlCommand(QueryString, objSQLConn)
             objSQLCmd.CommandType = CommandType.Text
             objSQLCmd.Parameters.AddWithValue("@UID", UID)
@@ -3006,7 +3009,7 @@ Public Class DAL_Product
             objSQLCmd.Parameters.Add("@ItemCode", SqlDbType.VarChar, 122).Value = ItemCode
             objSQLCmd.Parameters.Add("@OrgID", SqlDbType.VarChar, 100).Value = OrgID
             objSQLCmd.Parameters.Add("@UOM", SqlDbType.VarChar, 100).Value = UOM
-             
+
             Dim MsgDs As New DataTable
             Dim SqlAd As SqlDataAdapter
             SqlAd = New SqlDataAdapter(objSQLCmd)
@@ -5689,7 +5692,7 @@ Public Class DAL_Product
             objSQLCmd.Parameters.AddWithValue("@PlanName", PlanName)
             objSQLCmd.Parameters.AddWithValue("@OrgId", OrgId)
             objSQLCmd.Parameters.AddWithValue("@CreatedBy", CreatedBy)
-            objSQLCmd.Parameters.AddWithValue("@Transaction_Type", TransactionType) 
+            objSQLCmd.Parameters.AddWithValue("@Transaction_Type", TransactionType)
 
             objSQLCmd.ExecuteNonQuery()
             objSQLCmd.Dispose()
@@ -6101,7 +6104,7 @@ Public Class DAL_Product
             End If
 
 
-            
+
 
         Catch ex As Exception
 
@@ -7074,5 +7077,69 @@ Public Class DAL_Product
         End Try
 
         Return dt
+    End Function
+    Public Function CheckAssortmentItemNew(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, ByVal PlanID As String, ByVal ItemCode As String, ByVal TranType As String) As Boolean
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+        Dim success As Boolean = False
+
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            Dim QueryString As String = String.Format("SELECT    COUNT(B.Item_Code) AS Total FROM  TBL_BNS_Assortment_Plan AS A INNER JOIN TBL_BNS_Assortment_Items AS B ON A.Assortment_Plan_ID = B.Assortment_Plan_ID  WHERE A.Is_Active ='Y' AND B.Is_Get_Item='N' AND B.Item_Code =@ItemCode AND A.Assortment_Plan_ID <>@PlanID  AND A.Organization_ID =@OrgID AND Transaction_Type =@TranType ")
+            objSQLCmd = New SqlCommand(QueryString, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+            objSQLCmd.Parameters.Add("@PlanID", SqlDbType.VarChar, 100).Value = PlanID
+            objSQLCmd.Parameters.Add("@OrgID", SqlDbType.VarChar, 100).Value = OrgID
+            objSQLCmd.Parameters.Add("@ItemCode", SqlDbType.VarChar, 100).Value = ItemCode
+            objSQLCmd.Parameters.Add("@TranType", SqlDbType.VarChar, 100).Value = TranType
+            Dim cnt As Integer = 0
+            cnt = Convert.ToInt32(objSQLCmd.ExecuteScalar())
+
+            If cnt > 0 Then
+                success = True
+
+            End If
+            Err_Desc = cnt.ToString() & "'" & success.ToString()
+            objSQLCmd.Dispose()
+        Catch ex As Exception
+            Err_No = "24066"
+            Err_Desc = ex.Message
+            Throw ex
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+        Return success
+    End Function
+    Public Function GetProductUOM_ItemCode(ByRef Err_No As Long, ByRef Err_Desc As String, OrgID As String, ItemCode As String) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+        Try
+            'getting MSSQL DB connection.....
+            objSQLConn = _objDB.GetSQLConnection
+
+            'Dim QueryString As String = String.Format("SELECT DISTINCT MAS_Org_ID, Site FROM TBL_Org_CTL_DTL WHERE SalesRep_ID IN ({0}) ORDER BY MAS_Org_ID DESC", QueryStr)
+            Dim QueryString As String = "SELECT DISTINCT Item_UOM AS UOM FROM TBL_Item_UOM   WHERE Organization_ID=@OrgID AND Item_Code=@ItemCode ORDER BY Item_Uom"
+            objSQLCmd = New SqlCommand(QueryString, objSQLConn)
+            objSQLCmd.CommandType = CommandType.Text
+
+            objSQLCmd.Parameters.AddWithValue("@orgid", OrgID)
+            objSQLCmd.Parameters.AddWithValue("@ItemCode", ItemCode)
+            Dim MsgDs As New DataSet
+            Dim SqlAd As SqlDataAdapter
+            SqlAd = New SqlDataAdapter(objSQLCmd)
+            SqlAd.Fill(MsgDs, "OrgTbl")
+
+            GetProductUOM_ItemCode = MsgDs.Tables(0)
+            objSQLCmd.Dispose()
+        Catch ex As Exception
+            Err_No = "74091"
+            Err_Desc = ex.Message
+            Throw ex
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
     End Function
 End Class

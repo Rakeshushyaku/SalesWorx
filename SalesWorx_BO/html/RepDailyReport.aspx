@@ -25,7 +25,7 @@
                 }
 
                 
-    </script>
+             </script>
 
  <style type="text/css">
     div.RadGrid .rgHeader {
@@ -428,9 +428,9 @@
                     </ProgressTemplate>
                 </asp:UpdateProgress>
 
-                <rsweb:ReportViewer ID="RVMain" runat="server" BorderStyle="Groove" ShowBackButton="true"
+              <%--  <rsweb:ReportViewer ID="RVMain" runat="server" BorderStyle="Groove" ShowBackButton="true"
                     ProcessingMode="Remote" Width="58%"
                     SizeToReportContent="true" AsyncRendering="false"
                     DocumentMapWidth="100%" ShowParameterPrompts="False" Visible="False">
-                </rsweb:ReportViewer>
+                </rsweb:ReportViewer>--%>
 </asp:Content>

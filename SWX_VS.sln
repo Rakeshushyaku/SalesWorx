@@ -18,13 +18,25 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0BB4B09D-0647-4766-ADFC-BF7A0174BE03}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExcelFolder", "ExcelFolder", "{A2BEBC3E-5999-4523-9B80-7D110F67178E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UploadLog", "UploadLog", "{44F75798-21A4-4D52-ABA8-0C7C46BA021E}"
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "NuGet", "D:\Jan\SalesWorx\.nuget\NuGet.exe", "{314B8A25-246F-4CA5-A810-09754D838055}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\Jan\SalesWorx\.nuget\NuGet.exe
+		RemoteMachine = DESKTOP-OTKR41E
+		StartingDirectory = D:\Jan\SalesWorx\.nuget
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,11 +68,14 @@ Global
 		{6CFCC528-8D4A-49EB-A800-4D5ADABEBB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CFCC528-8D4A-49EB-A800-4D5ADABEBB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CFCC528-8D4A-49EB-A800-4D5ADABEBB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314B8A25-246F-4CA5-A810-09754D838055}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{314B8A25-246F-4CA5-A810-09754D838055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{44F75798-21A4-4D52-ABA8-0C7C46BA021E} = {A2BEBC3E-5999-4523-9B80-7D110F67178E}
+		{314B8A25-246F-4CA5-A810-09754D838055} = {0BB4B09D-0647-4766-ADFC-BF7A0174BE03}
 	EndGlobalSection
 EndGlobal

@@ -94,3 +94,15 @@ D:\Jan\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateReso
 D:\Jan\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
 D:\Jan\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
 D:\Jan\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll.config
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\bin\Debug\SalesWorx_BO_DAL.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\bin\Debug\log4net.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\bin\Debug\log4net.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbprojResolveAssemblyReference.cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx.BO.DAL.Resources.resources
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.vbproj.GenerateResource.Cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_DAL\obj\Debug\SalesWorx_BO_DAL.pdb

@@ -42,10 +42,10 @@
 	  <tr> 
           <td valign="top"  >
         
-              <rsweb:ReportViewer ID="RVMain" runat="server" BorderStyle="Groove" 
+            <%--  <rsweb:ReportViewer ID="RVMain" runat="server" BorderStyle="Groove" 
                   ProcessingMode="Remote" Width="100%"
                  SizeToReportContent="true" AsyncRendering="false"  DocumentMapWidth="100%" > 
-              </rsweb:ReportViewer>
+              </rsweb:ReportViewer>--%>
         
           </td>
         </tr>

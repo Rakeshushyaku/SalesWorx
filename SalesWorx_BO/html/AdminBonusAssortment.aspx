@@ -66,12 +66,7 @@
                                   
                                    
                                     <telerik:RadComboBox Skin="Simple"   ID="ddlType"  TabIndex ="1"  runat="server" Width ="100%" CssClass="inputSM">
-                                        <Items>
-<telerik:RadComboBoxItem Value ="N"  Text ="Overall Quantity"/>
-                                         
-                                            <telerik:RadComboBoxItem Value ="I"  Text ="Minimum Quantity"/>
-                                         
-                                        </Items>
+                                       
                                     </telerik:RadComboBox>
                                  </div>
                                            </div>

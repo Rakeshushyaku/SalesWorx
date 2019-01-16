@@ -27,3 +27,13 @@ D:\Jan\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification
 D:\Jan\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.dll
 D:\Jan\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.xml
 D:\Jan\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\bin\Debug\SalesWorx_PushNotification.dll.config
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\bin\Debug\SalesWorx_PushNotification.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\bin\Debug\SalesWorx_PushNotification.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\bin\Debug\SalesWorx_PushNotification.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.vbprojResolveAssemblyReference.cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.Resources.resources
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.vbproj.GenerateResource.Cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_PushNotification\obj\Debug\SalesWorx_PushNotification.pdb

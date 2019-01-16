@@ -307,9 +307,23 @@ Public Class Reports
             Throw ex
         End Try
     End Function
+    Public Function GetDailyPresSalesReport_Order(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String) As DataTable
+        Try
+            Return ObjDALReport.GetDailyPresSalesReport_Order(Err_No, Err_Desc, OrgId, SID, Uid, FromDate, ToDate)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     Function GetSalesManWiseAgencyWiseSalesAndReturns(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String, Agency As String) As DataTable
         Try
             Return ObjDALReport.GetSalesManWiseAgencyWiseSalesAndReturns(Err_No, Err_Desc, OrgId, SID, Uid, FromDate, ToDate, Agency)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Function GetDailyPresSalesReport_Return(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String) As DataTable
+        Try
+            Return ObjDALReport.GetDailyPresSalesReport_Return(Err_No, Err_Desc, OrgId, SID, Uid, FromDate, ToDate)
         Catch ex As Exception
             Throw ex
         End Try
@@ -707,6 +721,14 @@ Public Class Reports
     Function GetSalesReturnsbyVan(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, Type As String, FromDate As String, ToDate As String, Agency As String, Item As String, Customer As String) As DataTable
         Try
             Return ObjDALReport.GetSalesReturnsbyVan(Err_No, Err_Desc, OrgId, SID, Uid, Type, FromDate, ToDate, Agency, Item, Customer)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function GetPreSalesSummary(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, Type As String, FromDate As String, ToDate As String, Agency As String, Brand As String, Item As String, Customer As String) As DataTable
+        Try
+            Return ObjDALReport.GetPreSalesSummary(Err_No, Err_Desc, OrgId, SID, Uid, Type, FromDate, ToDate, Agency, Brand, Item, Customer)
         Catch ex As Exception
             Throw ex
         End Try
@@ -1557,6 +1579,13 @@ Public Class Reports
             Throw ex
         End Try
     End Function
+    Function GetLPOpdf(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, RefNo As String) As DataTable
+        Try
+            Return ObjDALReport.GetLPOpdf(Err_No, Err_Desc, OrgID, RefNo)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     Function GetCollectionHeaderDetails(ByRef Err_No As Long, ByRef Err_Desc As String, RowID As String) As DataTable
         Try
             Return ObjDALReport.GetCollectionHeaderDetails(Err_No, Err_Desc, RowID)
@@ -1632,7 +1661,6 @@ Public Class Reports
             Throw ex
         End Try
     End Function
-
     Function GetSalesByProductVatamount(Err_No As Long, Err_Desc As String, SearchQuery As String, Organization As String, Payment As String, van As String, UID As Integer) As DataTable
         Try
             Return ObjDALReport.GetSalesByProductValue(Err_No, Err_Desc, SearchQuery, Organization, Payment, van, UID)
@@ -1640,13 +1668,25 @@ Public Class Reports
             Throw ex
         End Try
     End Function
-
-    Public Function RemoveCollection(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal SurvId As String, ByVal deletedby As String) As Boolean
+    Function GetDailySalesReport_SO(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String) As DataTable
         Try
-            Return ObjDALReport.DeleteCollection(Err_No, Err_Desc, SurvId, deletedby)
+            Return ObjDALReport.GetDailyPresSalesReport_Order(Err_No, Err_Desc, OrgId, SID, Uid, FromDate, ToDate)
         Catch ex As Exception
             Throw ex
         End Try
     End Function
-
+    Function GetDailySalesReport_SR(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, SID As String, Uid As String, FromDate As String, ToDate As String) As DataTable
+        Try
+            Return ObjDALReport.GetDailyPresSalesReport_Return(Err_No, Err_Desc, OrgId, SID, Uid, FromDate, ToDate)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Function GetCustomerfromOrgtext_Outlet(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Text As String) As DataTable
+        Try
+            Return ObjDALReport.GetCustomerfromOrgtext_Outlet(Err_No, Err_Desc, OrgId, Text)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

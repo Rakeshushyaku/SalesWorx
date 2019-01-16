@@ -13,16 +13,28 @@ Public Class Rep_OrderDetails
     Dim Err_No As Long
     Dim Err_Desc As String
     Dim DECDigit As String = "2"
+    Dim dtLPOimages As New DataTable
     Private Shared ReadOnly log As ILog = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             If Not IsPostBack Then
                 If (Request.QueryString("ID") Is Nothing Or Request.QueryString("OrgID") Is Nothing) And Request.QueryString("Refno") Is Nothing Then
                 Else
-                    If Request.QueryString("Type").Trim().ToUpper = "LO" Then
+                    If Request.QueryString("Type").Trim().ToUpper = "SO" And Not Request.QueryString("Refno") Is Nothing Then
+
+                        Dim Row_ID As String = (New SalesWorx.BO.Common.Reports).GetRowIDFromOrigSysDocNo(Request.QueryString("Refno"), "SO")
+                        HDocID.Value = Row_ID
+                        HType.Value = "SO"
+                    ElseIf Request.QueryString("Type").Trim().ToUpper = "LO" Then
+
                         Dim Row_ID As String = (New SalesWorx.BO.Common.Reports).GetRowIDFromOrigSysDocNo(Request.QueryString("Refno"), "O")
                         HDocID.Value = Row_ID
                         HType.Value = "O"
+                    ElseIf Request.QueryString("Type").Trim().ToUpper = "LR" Then
+
+                        Dim Row_ID As String = (New SalesWorx.BO.Common.Reports).GetRowIDFromOrigSysDocNo(Request.QueryString("Refno"), "R")
+                        HDocID.Value = Row_ID
+                        HType.Value = "R"
                     Else
                         HDocID.Value = Request.QueryString("ID") '
                         HType.Value = Request.QueryString("Type")
@@ -58,7 +70,7 @@ Public Class Rep_OrderDetails
             Dim DtHead As New DataTable
             Dim DtDetail As New DataTable
             Dim DtDiscount As New DataTable
-            Dim dtLPOimages As New DataTable
+            Dim dtLPOpdf As New DataTable
             Dim DtCurrency As New DataTable
             Dim dtfiletype As New DataTable
 
@@ -67,7 +79,22 @@ Public Class Rep_OrderDetails
             DtDetail.Columns.Add("Product")
             DtDetail.Columns.Add("NetTotal", System.Type.GetType("System.Double"))
             DtDetail.Columns.Add("DiscountVal")
-            DtDiscount = ObjReport.GetDiscountDetails(Err_No, Err_Desc, OrgId, RowID, HType.Value)
+
+            If DtHead.Rows.Count > 0 Then
+                If DtHead.Rows(0)("OrderType").ToString().ToUpper() = "SALES ORDER" Then
+                    HOrderType.Value = "SO"
+                ElseIf DtHead.Rows(0)("OrderType").ToString().ToUpper() = "PROFORMA ORDER" Then
+                    HOrderType.Value = "PO"
+                Else
+                    HOrderType.Value = "O"
+                End If
+
+                'DtDiscount = ObjReport.GetDiscountDetails(Err_No, Err_Desc, OrgId, RowID, HType.Value)
+                DtDiscount = ObjReport.GetDiscountDetails(Err_No, Err_Desc, OrgId, RowID, HOrderType.Value)
+            End If
+
+
+
 
             DtCurrency = ObjReport.GetCurrency(Err_No, Err_Desc, OrgId)
             dtfiletype = (New SalesWorx.BO.Common.Common).GetFileTypes(Err_No, Err_Desc, "SIGNATURE")
@@ -83,6 +110,8 @@ Public Class Rep_OrderDetails
             End If
             If DtHead.Rows.Count > 0 Then
                 dtLPOimages = ObjReport.GetLPOImages(Err_No, Err_Desc, OrgId, DtHead.Rows(0)("Orig_Sys_Document_Ref").ToString)
+                dtLPOpdf = ObjReport.GetLPOpdf(Err_No, Err_Desc, OrgId, DtHead.Rows(0)("Orig_Sys_Document_Ref").ToString)
+
                 lbl_refno.Text = DtHead.Rows(0)("Orig_Sys_Document_Ref").ToString
                 lbl_Date.Text = CDate(DtHead.Rows(0)("System_Order_Date").ToString).ToString("dd-MMM-yyyy")
                 lbl_Salesep.Text = DtHead.Rows(0)("SalesRep_Name").ToString
@@ -102,7 +131,17 @@ Public Class Rep_OrderDetails
                 lbl_approvedBy.Text = IIf(DtHead.Rows(0)("ApprovedBy").ToString.Trim = "", "N/A", DtHead.Rows(0)("ApprovedBy").ToString.Trim)
                 lbl_reason.Text = IIf(DtHead.Rows(0)("UsedFor").ToString.Trim = "", "N/A", DtHead.Rows(0)("UsedFor").ToString.Trim)
 
-              
+                If DtHead.Rows(0)("OrderType").ToString().ToUpper() = "SALES ORDER" Then
+                    HOrderType.Value = "SO"
+                    If IsDate(DtHead.Rows(0)("SShip_Date").ToString) = True Then
+                        lbl_Deliverydate.Text = CDate(DtHead.Rows(0)("SShip_Date").ToString).ToString("dd-MMM-yyyy")
+                    End If
+                Else
+
+                    lbl_Deliverydate.Text = "N/A"
+                End If
+
+
                 If DtDiscount.Rows.Count > 0 Then
                     lbl_discount.Text = FormatNumber(Val(DtDiscount.Rows(0)("Discount").ToString), DecimalDigit)
                 Else
@@ -115,7 +154,7 @@ Public Class Rep_OrderDetails
                     dr("Product") = dr("Item_Code").ToString + dr("Description").ToString
                     dr("NetTotal") = Val(dr("ItemPrice").ToString) + Val(dr("VAT_Amount").ToString)
 
-                   
+
                     If DtDetail.Columns.Contains("Discount") And DtDetail.Columns.Contains("DisType") Then
                         If dr("DisType").ToString.Trim.ToUpper() = "P" Then
                             If Val(dr("Discount").ToString) > 0 Then
@@ -190,13 +229,35 @@ Public Class Rep_OrderDetails
                         dv.Sort = (ViewState("SortField") & " ") + SortDirection
                     End If
 
+
                     Me.ImgList.DataSource = dv
                     Me.ImgList.DataBind()
                 Else
-                    Me.lbl_msgimg.Text = "No LPO images are added to this order."
+                    ' Me.lbl_msgimg.Text = "No LPO images are added to this order."
                     Me.ImgList.DataSource = Nothing
                     Me.ImgList.DataBind()
                 End If
+
+
+                If dtLPOpdf.Rows.Count > 0 Then
+                    Dim dv As New DataView(dtLPOpdf)
+                    If ViewState("SortField") <> "" Then
+                        dv.Sort = (ViewState("SortField") & " ") + SortDirection
+                    End If
+
+
+                    Me.PdfList.DataSource = dv
+                    Me.PdfList.DataBind()
+                Else
+                    'Me.lbl_msgimg.Text = "No LPO Pdf are added to this order."
+                    Me.PdfList.DataSource = Nothing
+                    Me.PdfList.DataBind()
+                End If
+
+                If (dtLPOpdf.Rows.Count <= 0 And dtLPOimages.Rows.Count <= 0) Then
+                    Me.lbl_msgimg.Text = "No LPO images are added to this order."
+                End If
+
             End If
         Catch ex As Exception
             log.Debug(ex.Message.ToString())
@@ -339,7 +400,8 @@ Public Class Rep_OrderDetails
         ApprovalCode = New ReportParameter("ApprovalCode", "")
 
         Dim type As New ReportParameter
-        type = New ReportParameter("type", "O")
+        type = New ReportParameter("type", HOrderType.Value)  'type = New ReportParameter("type", "O")
+
 
          
         rview.ServerReport.SetParameters(New ReportParameter() {RowID, OrgID, type, ApprovalCode})
@@ -390,4 +452,6 @@ Public Class Rep_OrderDetails
             log.Error(GetExceptionInfo(ex))
         End Try
     End Sub
+
+
 End Class

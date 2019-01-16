@@ -78,12 +78,7 @@
                                   
                                    
                                     <telerik:RadComboBox Skin="Simple"   ID="ddlType"  TabIndex ="3"  runat="server" Width ="100%" CssClass="inputSM">
-                                        <Items>
-<telerik:RadComboBoxItem Value ="N"  Text ="By Item Quantity"/>
                                          
-                                            <telerik:RadComboBoxItem Value ="I"  Text ="By Invoice Value"/>
-                                         
-                                        </Items>
                                     </telerik:RadComboBox>
                                  </div>
                                            </div>

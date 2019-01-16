@@ -3931,4 +3931,86 @@ Public Class DAL_Common
     End Function
 
 
+    'task reprt 
+    Public Function GetHeadersForTradeEffects(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Sid As String, Fromdate As String, Todate As String, Channel As String, Mode As String, Planid As Int16, Uid As Int16) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+        Dim objSQLDA As SqlDataAdapter
+        Dim ds As New DataSet
+        Dim dt As New DataTable
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            'objSQLDA = New SqlDataAdapter("Rep_GetTradeDealEffSimpleDetailed_H", objSQLConn)
+            objSQLDA = New SqlDataAdapter("reptest_D", objSQLConn)
+
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Org", OrgId)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", Sid)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Fromdate", Fromdate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Todate", Todate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Channel", Channel)
+
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Mode", Mode)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@UID", Uid)
+
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@PlanID", Planid)
+
+
+
+            objSQLDA.Fill(ds)
+            objSQLDA.Dispose()
+            dt = ds.Tables(0)
+            Return dt
+        Catch ex As Exception
+            Err_No = "74061"
+            Err_Desc = ex.Message
+            Throw ex
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+    End Function
+
+    Public Function GetDetailsForTradeEffects(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgId As String, Sid As String, Fromdate As Date, Todate As Date, Channel As String, Mode As String, Planid As Int16, Uid As Int16) As DataTable
+        Dim objSQLConn As SqlConnection
+        Dim objSQLCmd As SqlCommand
+        Dim objSQLDA As SqlDataAdapter
+        Dim ds As New DataSet
+        Dim dt As New DataTable
+        Try
+            objSQLConn = _objDB.GetSQLConnection
+            'objSQLDA = New SqlDataAdapter("Rep_GetTradeDealEffSimpleDetailed_D", objSQLConn)
+            objSQLDA = New SqlDataAdapter("reptest_H", objSQLConn)
+
+            objSQLDA.SelectCommand.CommandType = CommandType.StoredProcedure
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Org", OrgId)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@SID", Sid)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Fromdate", Fromdate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Todate", Todate)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Channel", Channel)
+
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@Mode", Mode)
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@UID", Uid)
+
+            objSQLDA.SelectCommand.Parameters.AddWithValue("@PlanID", Planid)
+
+
+
+            objSQLDA.Fill(ds)
+            objSQLDA.Dispose()
+            dt = ds.Tables(0)
+            Return dt
+        Catch ex As Exception
+            Err_No = "74061"
+            Err_Desc = ex.Message
+            Throw ex
+        Finally
+            objSQLCmd = Nothing
+            _objDB.CloseSQLConnection(objSQLConn)
+        End Try
+
+    End Function
+
+
 End Class

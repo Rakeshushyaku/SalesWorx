@@ -272,7 +272,10 @@
     <Content Include="html\AdminUserGroup.aspx" />
     <Content Include="html\ApproveReturnNotes.aspx" />
     <Content Include="html\ASRDashboard.aspx" />
+    <Content Include="html\AssignBonusPlanToCustomer1.aspx" />
+    <Content Include="html\AssignBonusPlanToCustomers.aspx" />
     <Content Include="html\AssignDiscountPlanToCustomer.aspx" />
+    <Content Include="html\AssignMSLGroupToCustomer1.aspx" />
     <Content Include="html\AssignPriceListToCustomer.aspx" />
     <Content Include="html\AdminRedemptionRule.aspx" />
     <Content Include="html\AdminMultiTransRule.aspx" />
@@ -281,6 +284,7 @@
     <Content Include="html\AdminProductMSLGroup.aspx" />
     <Content Include="html\AssignMSLGroupToCustomer.aspx" />
     <Content Include="html\AssignCollectionGroupToFSR.aspx" />
+    <Content Include="html\AssortmentDefinitionValue.aspx" />
     <Content Include="html\BlockCustomers.aspx" />
     <Content Include="html\BankCodes.aspx" />
     <Content Include="html\AssortmentDefinitionMinQty.aspx" />
@@ -288,12 +292,15 @@
     <Content Include="html\Admin_DistributionCheck_ctl.aspx" />
     <Content Include="html\EOT_RepEOTDetailed.aspx" />
     <Content Include="html\EOT_RepSummary.aspx" />
+    <Content Include="html\ImportAssortmentPlan.aspx" />
+    <Content Include="html\ImportAssortmentPlanValue.aspx" />
     <Content Include="html\ProductMinimumStock.aspx" />
     <Content Include="html\RepDeleteCollectionListing.aspx" />
     <Content Include="html\Rep_CollectionDetails.aspx" />
     <Content Include="html\Rep_SRDetails.aspx" />
     <Content Include="html\Rep_ReturnDetails.aspx" />
     <Content Include="html\Rep_OrderDetails.aspx" />
+    <Content Include="html\Rep_TradeEffecSimpleDetail.aspx" />
     <Content Include="html\ShowAssetHistoryImage_Tab.aspx" />
     <Content Include="html\ShowAssetHistoryImages.aspx" />
     <Content Include="html\Rep_ViewAssetHistory.aspx" />
@@ -634,12 +641,33 @@
       <DependentUpon>ASRDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="html\AssignBonusPlanToCustomer1.aspx.designer.vb">
+      <DependentUpon>AssignBonusPlanToCustomer1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\AssignBonusPlanToCustomer1.aspx.vb">
+      <DependentUpon>AssignBonusPlanToCustomer1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\AssignBonusPlanToCustomers.aspx.designer.vb">
+      <DependentUpon>AssignBonusPlanToCustomers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\AssignBonusPlanToCustomers.aspx.vb">
+      <DependentUpon>AssignBonusPlanToCustomers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="html\AssignDiscountPlanToCustomer.aspx.designer.vb">
       <DependentUpon>AssignDiscountPlanToCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="html\AssignDiscountPlanToCustomer.aspx.vb">
       <DependentUpon>AssignDiscountPlanToCustomer.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="html\AssignMSLGroupToCustomer1.aspx.designer.vb">
+      <DependentUpon>AssignMSLGroupToCustomer1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\AssignMSLGroupToCustomer1.aspx.vb">
+      <DependentUpon>AssignMSLGroupToCustomer1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="html\AssignProductGroupToFSR.aspx.designer.vb">
       <DependentUpon>AssignProductGroupToFSR.aspx</DependentUpon>
@@ -653,6 +681,13 @@
     </Compile>
     <Compile Include="html\AssignProductToFSR.aspx.vb">
       <DependentUpon>AssignProductToFSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\AssortmentDefinitionValue.aspx.designer.vb">
+      <DependentUpon>AssortmentDefinitionValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\AssortmentDefinitionValue.aspx.vb">
+      <DependentUpon>AssortmentDefinitionValue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="html\BlockCustomers.aspx.designer.vb">
@@ -750,6 +785,20 @@
       <DependentUpon>EOT_RepSummary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="html\ImportAssortmentPlan.aspx.designer.vb">
+      <DependentUpon>ImportAssortmentPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ImportAssortmentPlan.aspx.vb">
+      <DependentUpon>ImportAssortmentPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\ImportAssortmentPlanValue.aspx.designer.vb">
+      <DependentUpon>ImportAssortmentPlanValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ImportAssortmentPlanValue.aspx.vb">
+      <DependentUpon>ImportAssortmentPlanValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="html\ProductMinimumStock.aspx.designer.vb">
       <DependentUpon>ProductMinimumStock.aspx</DependentUpon>
     </Compile>
@@ -791,6 +840,13 @@
     <Compile Include="html\Rep_OrderDetails.aspx.vb">
       <DependentUpon>Rep_OrderDetails.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="html\Rep_TradeEffecSimpleDetail.aspx.designer.vb">
+      <DependentUpon>Rep_TradeEffecSimpleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\Rep_TradeEffecSimpleDetail.aspx.vb">
+      <DependentUpon>Rep_TradeEffecSimpleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="html\ShowAssetHistoryImage_Tab.aspx.designer.vb">
       <DependentUpon>ShowAssetHistoryImage_Tab.aspx</DependentUpon>

@@ -1606,4 +1606,19 @@ Public Class Product
             Throw ex
         End Try
     End Function
+    Public Function CheckAssortmentItemNew(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal OrgID As String, ByVal PlanID As String, ByVal ItemCode As String, ByVal TranType As String) As Boolean
+        Try
+            Return ObjDALProduct.CheckAssortmentItemNew(Err_No, Err_Desc, OrgID, PlanID, ItemCode, TranType)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Function GetProductUOM_ItemCode(ByRef Err_No As Long, ByRef Err_Desc As String, OrgID As String, ItemCode As String) As DataTable
+        Try
+            Return ObjDALProduct.GetProductUOM_ItemCode(Err_No, Err_Desc, OrgID, ItemCode)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

@@ -33,7 +33,7 @@ Partial Public Class AdminBonusAssortment
                 Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_Unauthorized") & "&next=Welcome.aspx&Title=Message", False)
             End If
 
-
+            LoadBonusType()
             LoadOrgHeads()
             ResetDetails()
             Dim OID As String = Nothing
@@ -47,7 +47,7 @@ Partial Public Class AdminBonusAssortment
             ENABLE_BONUS_BY_TRANSACTION_TYPE = (New SalesWorx.BO.Common.Common).GetAppConfig(Err_No, Err_Desc, "ENABLE_BONUS_BY_TRANSACTION_TYPE")
 
             If ENABLE_BONUS_BY_TRANSACTION_TYPE.ToUpper = "Y" Then
-                
+
                 divtransactiontype.Visible = True
             Else
                 ddl_transactionType.Items.Insert(0, New RadComboBoxItem("All", "0"))
@@ -79,6 +79,14 @@ Partial Public Class AdminBonusAssortment
             Me.MPEAlloc.VisibleOnPageLoad = False
         End If
     End Sub
+    Sub LoadBonusType()
+        ddlType.Items.Clear()
+        ' ddlType.DataSource = (New SalesWorx.BO.Common.AppControl).LoadAppCode(Err_No, Err_Desc, "ASSORTMENT_BONUS_TYPE")
+
+        ddlType.DataValueField = "Code_Value"
+        ddlType.DataTextField = "Code_Description"
+        ddlType.DataBind()
+    End Sub
     Sub LoadCategory()
         Dim objCommon As New SalesWorx.BO.Common.Common
         Dim SubQry As String = objCommon.GetSalesRepQry(CType(Session("User_Access"), UserAccess).UserID)
@@ -94,7 +102,7 @@ Partial Public Class AdminBonusAssortment
 
         ddl_category.AppendDataBoundItems = True
         ddl_category.DataValueField = "Category"
-        ddl_category.DataTextField = "Category"
+        ddl_Category.DataTextField = "Category_Desc"
         ddl_category.DataBind()
 
     End Sub
@@ -231,7 +239,7 @@ Partial Public Class AdminBonusAssortment
                     End If
                 End If
 
-                
+
 
 
                 success = objProduct.SaveAssortmentBonusCategoryMap(Err_No, Err_Desc, Me.lblPlanId.Text, dtCategory, CType(Session("User_Access"), UserAccess).UserID, ddlType.SelectedItem.Value, "U", ddl_org.SelectedItem.Value, ddl_transactionType.SelectedItem.Value, dt)
@@ -278,10 +286,13 @@ Partial Public Class AdminBonusAssortment
         Dim ORGID As String = Me.ddl_org.SelectedValue.ToString()
         Dim ORGName As String = Me.ddl_org.SelectedItem.Text
         Dim lblPlanType As String = ddlType.SelectedValue
+        Dim TRANTYPE As String = ddl_transactionType.SelectedValue
         If lblPlanType = "N" Then
-            Response.Redirect("AssortmentDefinition.aspx?Desc=" & PlanName & "&PGID=" & PlanID & "&ORGID=" & ORGID & "&ORGNAME=" & ORGName, False)
-        Else
+            Response.Redirect("AssortmentDefinition.aspx?Desc=" & PlanName & "&PGID=" & PlanID & "&ORGID=" & ORGID & "&ORGNAME=" & ORGName & "&TRANTYPE=" & TRANTYPE, False)
+        ElseIf lblPlanType = "I" Then
             Response.Redirect("AssortmentDefinitionMinQty.aspx?Desc=" & PlanName & "&PGID=" & PlanID & "&ORGID=" & ORGID & "&ORGNAME=" & ORGName, False)
+        ElseIf lblPlanType = "V" Then
+            Response.Redirect("AssortmentDefinitionValue.aspx?Desc=" & PlanName & "&PGID=" & PlanID & "&ORGID=" & ORGID & "&ORGNAME=" & ORGName & "&TRANTYPE=" & TRANTYPE, False)
         End If
 
     End Sub
@@ -346,10 +357,14 @@ Partial Public Class AdminBonusAssortment
                 Dim ORGID As Label = DirectCast(row.FindControl("lblOrgID"), Label)
                 Dim ORGName As String = Convert.ToString(dgv.Rows(row.RowIndex).Cells(2).Text)
                 Dim lblPlanType As Label = DirectCast(row.FindControl("lblPlanType"), Label)
+                Dim lblTransType As Label = DirectCast(row.FindControl("lblTransType"), Label)
+
                 If lblPlanType.Text = "N" Then
-                    Response.Redirect("AssortmentDefinition.aspx?Desc=" & PlanName.Text & "&PGID=" & PlanID & "&ORGID=" & ORGID.Text & "&ORGNAME=" & ORGName, False)
-                Else
+                    Response.Redirect("AssortmentDefinition.aspx?Desc=" & PlanName.Text & "&PGID=" & PlanID & "&ORGID=" & ORGID.Text & "&ORGNAME=" & ORGName & "&TRANTYPE=" & lblTransType.Text, False)
+                ElseIf lblPlanType.Text = "I" Then
                     Response.Redirect("AssortmentDefinitionMinQty.aspx?Desc=" & PlanName.Text & "&PGID=" & PlanID & "&ORGID=" & ORGID.Text & "&ORGNAME=" & ORGName, False)
+                ElseIf lblPlanType.Text = "V" Then
+                    Response.Redirect("AssortmentDefinitionValue.aspx?Desc=" & PlanName.Text & "&PGID=" & PlanID & "&ORGID=" & ORGID.Text & "&ORGNAME=" & ORGName & "&TRANTYPE=" & lblTransType.Text, False)
                 End If
             End If
             If (e.CommandName = "EditPlan") Then
@@ -396,7 +411,7 @@ Partial Public Class AdminBonusAssortment
                 End If
                 Dim lblTransType As Label = DirectCast(row.FindControl("lblTransType"), Label)
                 H_TransType.Value = lblTransType.Text
-                 
+
                 Dim ENABLE_BONUS_BY_TRANSACTION_TYPE As String
                 ENABLE_BONUS_BY_TRANSACTION_TYPE = (New SalesWorx.BO.Common.Common).GetAppConfig(Err_No, Err_Desc, "ENABLE_BONUS_BY_TRANSACTION_TYPE")
 

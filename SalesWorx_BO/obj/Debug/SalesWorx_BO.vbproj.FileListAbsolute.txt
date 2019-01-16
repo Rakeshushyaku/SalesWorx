@@ -261,3 +261,46 @@ D:\Jan\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll.licenses
 D:\Jan\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll
 D:\Jan\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.xml
 D:\Jan\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO.dll.config
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\AjaxControlToolkit.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\DropCheck.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\EPPlus.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\ExcelLibrary.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Ionic.BZip2.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Ionic.Zip.Reduced.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\log4net.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Microsoft.ReportViewer.Common.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Microsoft.ReportViewer.DataVisualization.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO_Common.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO_DAL.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_PushNotification.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\System.Net.Http.Formatting.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Telerik.Web.Design.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Telerik.Web.Device.Detection.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Telerik.Web.UI.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Telerik.Web.UI.Skins.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\EnvDTE.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\stdole.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO_Common.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO_Common.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO_DAL.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_BO_DAL.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_PushNotification.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\SalesWorx_PushNotification.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\log4net.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\System.Net.Http.Formatting.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Telerik.Web.Device.Detection.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Telerik.Web.UI.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\EnvDTE.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbprojResolveAssemblyReference.cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.Resources.resources
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.vbproj.GenerateResource.Cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\obj\Debug\SalesWorx_BO.dll.licenses
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO\bin\Newtonsoft.Json.dll

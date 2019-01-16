@@ -1718,6 +1718,789 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._TopPanel">
+<summary>
+TopPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblnote">
+<summary>
+lblnote control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnExport">
+<summary>
+btnExport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnImportWindow">
+<summary>
+btnImportWindow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblOrgName">
+<summary>
+lblOrgName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._ddOraganisation">
+<summary>
+ddOraganisation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblPlanName">
+<summary>
+lblPlanName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._hfPlanID">
+<summary>
+hfPlanID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblPlanType">
+<summary>
+lblPlanType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._hfPlanType">
+<summary>
+hfPlanType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._txtFilter">
+<summary>
+txtFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnFilter">
+<summary>
+btnFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnReset">
+<summary>
+btnReset control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnBack">
+<summary>
+btnBack control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblProdAvailed">
+<summary>
+lblProdAvailed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblProdAssign">
+<summary>
+lblProdAssign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lbLog1">
+<summary>
+lbLog1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lstDefault">
+<summary>
+lstDefault control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnAdd">
+<summary>
+btnAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnRemove">
+<summary>
+btnRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnRemoveAll">
+<summary>
+btnRemoveAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnAddAll">
+<summary>
+btnAddAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lstSelected">
+<summary>
+lstSelected control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._UPModal">
+<summary>
+UPModal control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._MPEImport">
+<summary>
+MPEImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblMessage">
+<summary>
+lblMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._HFV">
+<summary>
+HFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._Label6">
+<summary>
+Label6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._UpdatePanel3">
+<summary>
+UpdatePanel3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._ExcelFileUpload">
+<summary>
+ExcelFileUpload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnImport">
+<summary>
+btnImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._btnCancelImport">
+<summary>
+btnCancelImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._DummyImBtn">
+<summary>
+DummyImBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._BtnReimport">
+<summary>
+BtnReimport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._DummyReimBtn">
+<summary>
+DummyReimBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lbLog">
+<summary>
+lbLog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._UpPanel">
+<summary>
+UpPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._lblUpMsg">
+<summary>
+lblUpMsg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._dgvErros">
+<summary>
+dgvErros control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomer1._UpdateProgress1">
+<summary>
+UpdateProgress1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._TopPanel">
+<summary>
+TopPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnBack">
+<summary>
+btnBack control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblnote">
+<summary>
+lblnote control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnExport">
+<summary>
+btnExport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnImportWindow">
+<summary>
+btnImportWindow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblOrgName">
+<summary>
+lblOrgName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._ddOraganisation">
+<summary>
+ddOraganisation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblPlanName">
+<summary>
+lblPlanName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._hfPlanID">
+<summary>
+hfPlanID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblPlanType">
+<summary>
+lblPlanType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._hfPlanType">
+<summary>
+hfPlanType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._txtFilter">
+<summary>
+txtFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnFilter">
+<summary>
+btnFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnReset">
+<summary>
+btnReset control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._txtFilterCAssign">
+<summary>
+txtFilterCAssign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnFilterCAssigned">
+<summary>
+btnFilterCAssigned control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnResetCAssigned">
+<summary>
+btnResetCAssigned control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblProdAvailed">
+<summary>
+lblProdAvailed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblProdAssign">
+<summary>
+lblProdAssign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lbLog1">
+<summary>
+lbLog1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._ClassUpdatePnl">
+<summary>
+ClassUpdatePnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._gvCustumerAvail">
+<summary>
+gvCustumerAvail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnAdd">
+<summary>
+btnAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnRemove">
+<summary>
+btnRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnRemoveAll">
+<summary>
+btnRemoveAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnAddAll">
+<summary>
+btnAddAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._UpdatePanelCustomerAssign">
+<summary>
+UpdatePanelCustomerAssign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._gvCustumerAssign">
+<summary>
+gvCustumerAssign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._UPModal">
+<summary>
+UPModal control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._MPEImport">
+<summary>
+MPEImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblMessage">
+<summary>
+lblMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._HFV">
+<summary>
+HFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._Label6">
+<summary>
+Label6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._UpdatePanel3">
+<summary>
+UpdatePanel3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._ExcelFileUpload">
+<summary>
+ExcelFileUpload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnImport">
+<summary>
+btnImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._btnCancelImport">
+<summary>
+btnCancelImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._DummyImBtn">
+<summary>
+DummyImBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._BtnReimport">
+<summary>
+BtnReimport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._DummyReimBtn">
+<summary>
+DummyReimBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lbLog">
+<summary>
+lbLog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._UpPanel">
+<summary>
+UpPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._lblUpMsg">
+<summary>
+lblUpMsg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._dgvErros">
+<summary>
+dgvErros control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssignBonusPlanToCustomers._UpdateProgress1">
+<summary>
+UpdateProgress1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:SalesWorx_BO.AssignDiscountPlanToCustomer._RadWindowManager1">
 <summary>
 RadWindowManager1 control.
@@ -2655,6 +3438,402 @@ To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:SalesWorx_BO.AssignProductToFSR._UpdateProgress1">
+<summary>
+UpdateProgress1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnGoBack">
+<summary>
+btnGoBack control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._TopPnl">
+<summary>
+TopPnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._Panel1">
+<summary>
+Panel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lblOrgID">
+<summary>
+lblOrgID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lblOrgName">
+<summary>
+lblOrgName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lblPlanId">
+<summary>
+lblPlanId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lblPlanName">
+<summary>
+lblPlanName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lblTransType">
+<summary>
+lblTransType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlOrdCode">
+<summary>
+ddlOrdCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlOrdDesc">
+<summary>
+ddlOrdDesc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlOrdUOM">
+<summary>
+ddlOrdUOM control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnOrdAdd">
+<summary>
+btnOrdAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnOrdRemove">
+<summary>
+btnOrdRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lstOrderd">
+<summary>
+lstOrderd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlGetCode">
+<summary>
+ddlGetCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlgetDesc">
+<summary>
+ddlgetDesc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlGetUOM">
+<summary>
+ddlGetUOM control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnGetAdd">
+<summary>
+btnGetAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnGetRemove">
+<summary>
+btnGetRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnCopy">
+<summary>
+btnCopy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._lstGet">
+<summary>
+lstGet control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ZoneReg">
+<summary>
+ZoneReg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._txtFromQty">
+<summary>
+txtFromQty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._rfv1">
+<summary>
+rfv1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._txtToQty">
+<summary>
+txtToQty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._rfv2">
+<summary>
+rfv2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._QtyCompareValidator">
+<summary>
+QtyCompareValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._ddlType">
+<summary>
+ddlType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._txtGetQty">
+<summary>
+txtGetQty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._rfv3">
+<summary>
+rfv3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._hfRow">
+<summary>
+hfRow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._hfDeletedSlabs">
+<summary>
+hfDeletedSlabs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnAddSlab">
+<summary>
+btnAddSlab control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._hfSlabID">
+<summary>
+hfSlabID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._hfOldFrom">
+<summary>
+hfOldFrom control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._hfOldTo">
+<summary>
+hfOldTo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnCanSlab">
+<summary>
+btnCanSlab control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._dgvSlabs">
+<summary>
+dgvSlabs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._btnConfirm">
+<summary>
+btnConfirm control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._MPInfo">
+<summary>
+MPInfo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._GV_Item_error">
+<summary>
+GV_Item_error control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._Button1">
+<summary>
+Button1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.AssortmentDefinitionValue._UpdateProgress1">
 <summary>
 UpdateProgress1 control.
 </summary>
@@ -6830,6 +8009,816 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._AjaxLoadingPanel1">
+<summary>
+AjaxLoadingPanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._Panel1">
+<summary>
+Panel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._TopPanle">
+<summary>
+TopPanle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblOrgID">
+<summary>
+lblOrgID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblOrgName">
+<summary>
+lblOrgName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblPlanId">
+<summary>
+lblPlanId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblPlanName">
+<summary>
+lblPlanName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblTransType">
+<summary>
+lblTransType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnAdd">
+<summary>
+btnAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnImportWindow">
+<summary>
+btnImportWindow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnExport">
+<summary>
+btnExport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btndownloadTemp">
+<summary>
+btndownloadTemp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._UpdatePanel1">
+<summary>
+UpdatePanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._Panel">
+<summary>
+Panel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._MPEImport">
+<summary>
+MPEImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._HFV">
+<summary>
+HFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._Label6">
+<summary>
+Label6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblUpMsg">
+<summary>
+lblUpMsg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._UpdatePanel3">
+<summary>
+UpdatePanel3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._ExcelFileUpload">
+<summary>
+ExcelFileUpload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnImport">
+<summary>
+btnImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnCancelImport">
+<summary>
+btnCancelImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._DummyImBtn">
+<summary>
+DummyImBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._BtnReimport">
+<summary>
+BtnReimport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._DummyReimBtn">
+<summary>
+DummyReimBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lbLog">
+<summary>
+lbLog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._UpPanel">
+<summary>
+UpPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._dgvErros">
+<summary>
+dgvErros control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._MPEAdd">
+<summary>
+MPEAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._UpdatePanel2">
+<summary>
+UpdatePanel2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._HidVal">
+<summary>
+HidVal control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._lblmsgPopUp">
+<summary>
+lblmsgPopUp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._ddl_OrgAdd">
+<summary>
+ddl_OrgAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._ddl_VanAdd">
+<summary>
+ddl_VanAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._ddl_Customer">
+<summary>
+ddl_Customer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._chkIsOptional">
+<summary>
+chkIsOptional control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnUpdate">
+<summary>
+btnUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._Panel12">
+<summary>
+Panel12 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._PnlGridData">
+<summary>
+PnlGridData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._dgvItems">
+<summary>
+dgvItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._UpdateProgress1">
+<summary>
+UpdateProgress1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlan._UpdateProgress2">
+<summary>
+UpdateProgress2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._AjaxLoadingPanel1">
+<summary>
+AjaxLoadingPanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._Panel1">
+<summary>
+Panel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._TopPanle">
+<summary>
+TopPanle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblOrgID">
+<summary>
+lblOrgID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblOrgName">
+<summary>
+lblOrgName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblPlanId">
+<summary>
+lblPlanId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblPlanName">
+<summary>
+lblPlanName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblTransType">
+<summary>
+lblTransType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnAdd">
+<summary>
+btnAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnImportWindow">
+<summary>
+btnImportWindow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnExport">
+<summary>
+btnExport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btndownloadTemp">
+<summary>
+btndownloadTemp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._UpdatePanel1">
+<summary>
+UpdatePanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._Panel">
+<summary>
+Panel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._MPEImport">
+<summary>
+MPEImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._HFV">
+<summary>
+HFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._Label6">
+<summary>
+Label6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblUpMsg">
+<summary>
+lblUpMsg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._UpdatePanel3">
+<summary>
+UpdatePanel3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._ExcelFileUpload">
+<summary>
+ExcelFileUpload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnImport">
+<summary>
+btnImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnCancelImport">
+<summary>
+btnCancelImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._DummyImBtn">
+<summary>
+DummyImBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._BtnReimport">
+<summary>
+BtnReimport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._DummyReimBtn">
+<summary>
+DummyReimBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lbLog">
+<summary>
+lbLog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._UpPanel">
+<summary>
+UpPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._dgvErros">
+<summary>
+dgvErros control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._MPEAdd">
+<summary>
+MPEAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._UpdatePanel2">
+<summary>
+UpdatePanel2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._HidVal">
+<summary>
+HidVal control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._lblmsgPopUp">
+<summary>
+lblmsgPopUp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._ddl_OrgAdd">
+<summary>
+ddl_OrgAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._ddl_VanAdd">
+<summary>
+ddl_VanAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._ddl_Customer">
+<summary>
+ddl_Customer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._chkIsOptional">
+<summary>
+chkIsOptional control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnUpdate">
+<summary>
+btnUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._Panel12">
+<summary>
+Panel12 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._PnlGridData">
+<summary>
+PnlGridData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._dgvItems">
+<summary>
+dgvItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._UpdateProgress1">
+<summary>
+UpdateProgress1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.ImportAssortmentPlanValue._UpdateProgress2">
+<summary>
+UpdateProgress2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:SalesWorx_BO.ProductMinimumStock._AjaxLoadingPanel1">
 <summary>
 AjaxLoadingPanel1 control.
@@ -8909,6 +10898,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:SalesWorx_BO.Rep_OrderDetails._HOrderType">
+<summary>
+HOrderType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:SalesWorx_BO.Rep_OrderDetails._lblDecimal">
 <summary>
 lblDecimal control.
@@ -9251,6 +11249,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:SalesWorx_BO.Rep_OrderDetails._lbl_Deliverydate">
+<summary>
+lbl_Deliverydate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:SalesWorx_BO.Rep_OrderDetails._lbl_Signed">
 <summary>
 lbl_Signed control.
@@ -9296,6 +11303,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:SalesWorx_BO.Rep_OrderDetails._PdfList">
+<summary>
+PdfList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:SalesWorx_BO.Rep_OrderDetails._BtnExportExcel">
 <summary>
 BtnExportExcel control.
@@ -9308,6 +11324,150 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:SalesWorx_BO.Rep_OrderDetails._BtnExportPDF">
 <summary>
 BtnExportPDF control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._RadWindowManager1">
+<summary>
+RadWindowManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._UpdatePanel1">
+<summary>
+UpdatePanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._lblUcb">
+<summary>
+lblUcb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._lblSalesCurr">
+<summary>
+lblSalesCurr control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._lblNui">
+<summary>
+lblNui control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._LblSkuO">
+<summary>
+LblSkuO control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._Label3">
+<summary>
+Label3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._LblSkuF">
+<summary>
+LblSkuF control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._divCurrency">
+<summary>
+divCurrency control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._lbl_Currency">
+<summary>
+lbl_Currency control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._innerPanel">
+<summary>
+innerPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._gvRep">
+<summary>
+gvRep control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._BtnExportExcel">
+<summary>
+BtnExportExcel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._BtnExportPDF">
+<summary>
+BtnExportPDF control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:SalesWorx_BO.Rep_TradeEffecSimpleDetail._BtnExportBiffExcel">
+<summary>
+BtnExportBiffExcel control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -79136,15 +81296,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:SalesWorx_BO.RepDailyReport._RVMain">
-<summary>
-RVMain control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:SalesWorx_BO.RepDistributionCheck._RadWindowManager1">
 <summary>
 RadWindowManager1 control.
@@ -94817,15 +96968,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:SalesWorx_BO.ViewReports._lblTitle">
 <summary>
 lblTitle control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:SalesWorx_BO.ViewReports._RVMain">
-<summary>
-RVMain control.
 </summary>
 <remarks>
 Auto-generated field.

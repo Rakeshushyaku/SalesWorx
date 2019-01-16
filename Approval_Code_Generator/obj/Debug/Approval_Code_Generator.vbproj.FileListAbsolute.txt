@@ -35,3 +35,22 @@ F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vb
 F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
 F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
 F:\Rakesh\SWX_VS_V2\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb
+D:\Jan\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll.config
+D:\Jan\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll
+D:\Jan\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.pdb
+D:\Jan\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.xml
+D:\Jan\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.Resources.resources
+D:\Jan\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbproj.GenerateResource.Cache
+D:\Jan\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
+D:\Jan\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
+D:\Jan\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll.config
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.dll
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.pdb
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\bin\Debug\Approval_Code_Generator.xml
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbprojResolveAssemblyReference.cache
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.Resources.resources
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.vbproj.GenerateResource.Cache
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.dll
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.xml
+E:\temporaryfor checking\SalesWorx\Approval_Code_Generator\obj\Debug\Approval_Code_Generator.pdb

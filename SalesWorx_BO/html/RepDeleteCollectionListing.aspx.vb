@@ -1077,15 +1077,15 @@ Partial Public Class RepDeleteCollectionListing
                 '    MessageBoxValidation("You can delete a survey only if the status is New", "Information")
                 '    Exit Sub
                 'End If
+                ' commented as it giving error after update 08012019
+                'If ObjReport.RemoveCollection(Err_No, Err_Desc, SurveyID.Text, user) Then
+                '    MessageBoxValidation("Successfully deleted", "Information")
+                '    BindReport()
 
-                If ObjReport.RemoveCollection(Err_No, Err_Desc, SurveyID.Text, user) Then
-                    MessageBoxValidation("Successfully deleted", "Information")
-                    BindReport()
-
-                Else
-                    MessageBoxValidation("Error while deleting", "Validation")
-                    Exit Sub
-                End If
+                'Else
+                '    MessageBoxValidation("Error while deleting", "Validation")
+                '    Exit Sub
+                'End If
             End If
 
 

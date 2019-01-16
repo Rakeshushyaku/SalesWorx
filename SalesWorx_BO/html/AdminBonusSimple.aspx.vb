@@ -32,6 +32,7 @@ Partial Public Class AdminBonusSimple
                 Response.Redirect("information.aspx?mode=1&errno=" & Err_No & "&msg=" & AppMsgHandler.GetErrorMessage("E_BO_Unauthorized") & "&next=Welcome.aspx&Title=Message", False)
             End If
 
+            LoadBonusType()
             Dim CustBonusflag As Boolean = False
 
             CustBonusflag = objProduct.CheckCustBonusFlag(Err_No, Err_Desc)
@@ -93,6 +94,14 @@ Partial Public Class AdminBonusSimple
             MPError.VisibleOnPageLoad = False
         End If
     End Sub
+    Sub LoadBonusType()
+        ddlType.Items.Clear()
+        'ddlType.DataSource = (New SalesWorx.BO.Common.AppControl).LoadAppCode(Err_No, Err_Desc, "SIMPLE_BONUS_TYPE")
+
+        ddlType.DataValueField = "Code_Value"
+        ddlType.DataTextField = "Code_Description"
+        ddlType.DataBind()
+    End Sub
     Sub LoadCategory()
         Dim objCommon As New SalesWorx.BO.Common.Common
         Dim SubQry As String = objCommon.GetSalesRepQry(CType(Session("User_Access"), UserAccess).UserID)
@@ -108,7 +117,7 @@ Partial Public Class AdminBonusSimple
 
         ddl_category.AppendDataBoundItems = True
         ddl_category.DataValueField = "Category"
-        ddl_category.DataTextField = "Category"
+        ddl_Category.DataTextField = "Category_Desc"
         ddl_category.DataBind()
 
     End Sub

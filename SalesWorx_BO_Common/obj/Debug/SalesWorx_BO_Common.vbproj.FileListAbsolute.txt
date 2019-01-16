@@ -138,3 +138,19 @@ D:\Jan\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.Genera
 D:\Jan\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
 D:\Jan\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
 D:\Jan\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_Common.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\log4net.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.pdb
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\SalesWorx_BO_DAL.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\bin\Debug\log4net.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbprojResolveAssemblyReference.cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.Resources.resources
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.ErrorMessages.resources
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx.BO.Common.InfoMessages.resources
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.vbproj.GenerateResource.Cache
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.dll
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.xml
+E:\temporaryfor checking\SalesWorx\SalesWorx_BO_Common\obj\Debug\SalesWorx_BO_Common.pdb

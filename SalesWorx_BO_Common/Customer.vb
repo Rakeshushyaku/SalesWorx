@@ -754,4 +754,21 @@ Public Class Customer
             Throw ex
         End Try
     End Function
+
+    Public Function GetReceiptMethods(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal SID As String) As DataTable
+        Try
+            Return ObjDALCustomer.GetReceiptMethods(Err_No, Err_Desc, SID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+
+    Public Function GetBankAccounts(ByRef Err_No As Long, ByRef Err_Desc As String, ByVal SID As String) As DataTable
+        Try
+            Return ObjDALCustomer.GetBankAccounts(Err_No, Err_Desc, SID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

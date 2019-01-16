@@ -84,15 +84,15 @@ Partial Public Class ViewReports
 
 
             If Not Me.IsPostBack Then
-                With RVMain
-                    .Reset()
-                    .ServerReport.ReportServerCredentials = New CustomReportServerCredentials()
-                    .ServerReport.ReportServerUrl = New System.Uri(AppSettings("ReportServer"))
-                    .ServerReport.ReportPath = String.Format("{0}{1}", AppSettings("ReportPath"), Me.ReportPath)
-                    .ServerReport.SetParameters(New ReportParameter() {myParamUserId})
-                    '.ServerReport.Refresh()
+                'With RVMain
+                '    .Reset()
+                '    .ServerReport.ReportServerCredentials = New CustomReportServerCredentials()
+                '    .ServerReport.ReportServerUrl = New System.Uri(AppSettings("ReportServer"))
+                '    .ServerReport.ReportPath = String.Format("{0}{1}", AppSettings("ReportPath"), Me.ReportPath)
+                '    .ServerReport.SetParameters(New ReportParameter() {myParamUserId})
+                '    '.ServerReport.Refresh()
 
-                End With
+                'End With
 
             End If
         Catch Ex As Exception
@@ -101,26 +101,26 @@ Partial Public Class ViewReports
     End Sub
 
     Private Sub GetPageIDAndReportName(ByVal encryptedID As String, ByRef pageID As String, ByRef reportName As String)
-        pageID = ""
-        reportName = ""
-        encryptedID = encryptedID.Replace(" ", "+")
-        If Not String.IsNullOrEmpty(encryptedID) Then
-            Dim decryptedID As String = (New Crypto()).DecryptReportName(encryptedID)
+        'pageID = ""
+        'reportName = ""
+        '' encryptedID = encryptedID.Replace(" ", "+")
+        'If Not String.IsNullOrEmpty(encryptedID) Then
+        '    Dim decryptedID As String = (New Crypto()).DecryptReportName(encryptedID)
 
-            If Not String.IsNullOrEmpty(decryptedID) Then
+        '    If Not String.IsNullOrEmpty(decryptedID) Then
 
-                Dim oMatch As Match = Regex.Match(decryptedID, "<p>(.*?)</p>")
-                If Not oMatch Is Nothing AndAlso Not oMatch.Groups Is Nothing AndAlso oMatch.Groups.Count > 1 Then
-                    pageID = oMatch.Groups(1).Value
+        '        Dim oMatch As Match = Regex.Match(decryptedID, "<p>(.*?)</p>")
+        '        If Not oMatch Is Nothing AndAlso Not oMatch.Groups Is Nothing AndAlso oMatch.Groups.Count > 1 Then
+        '            pageID = oMatch.Groups(1).Value
 
-                    oMatch = Regex.Match(decryptedID, "<r>(.*?)</r>")
-                    If Not oMatch Is Nothing AndAlso Not oMatch.Groups Is Nothing AndAlso oMatch.Groups.Count > 1 Then
-                        reportName = oMatch.Groups(1).Value
+        '            oMatch = Regex.Match(decryptedID, "<r>(.*?)</r>")
+        '            If Not oMatch Is Nothing AndAlso Not oMatch.Groups Is Nothing AndAlso oMatch.Groups.Count > 1 Then
+        '                reportName = oMatch.Groups(1).Value
 
-                    End If
-                End If
-            End If
-        End If
+        '            End If
+        '        End If
+        '    End If
+        'End If
     End Sub
 
 
@@ -132,12 +132,12 @@ Partial Public Class ViewReports
     Private Function GetDateParameters() As String
         ' I'm assuming report view control id as reportViewer
         Dim dtp As String = ""
-        For Each info As ReportParameterInfo In RVMain.ServerReport.GetParameters()
-            If info.DataType = ParameterDataType.DateTime Then
-                dtp = dtp & String.Format("[{0}]", info.Prompt) & ","
-            End If
-        Next
-       
+        'For Each info As ReportParameterInfo In RVMain.ServerReport.GetParameters()
+        '    If info.DataType = ParameterDataType.DateTime Then
+        '        dtp = dtp & String.Format("[{0}]", info.Prompt) & ","
+        '    End If
+        'Next
+
         Return dtp
     End Function
 End Class
